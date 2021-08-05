@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AUSZEIT</title>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@400;600&family=Staatliches&family=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<img class="banner" src="images/logo_bg.jpg">
+		<a href="index.html"><img class="logo" src="images/logo.png"></a>
+		<div class="toggle"></div>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="meditation.html">MEDITATION</a></li>
+				<li><a href="lob.html">LOB</a></li>
+				<li><a href="wunsch.html">WUNSCHSTERN</a></li>
+				<li><a href="#">KONKAKT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<script>
+		window.addEventListener("scroll", function(){
+			const header = document.querySelector('header');
+			header.classList.toggle('sticky', window.scrollY > 0);
+		});
+
+		const navigation = document.querySelector('nav');
+		document.querySelector('.toggle').onclick = function(){
+			this.classList.toggle('active');
+			navigation.classList.toggle('active');
+		};
+	</script>
+
+	<section class="global-width">
+		<div class="global-width">
+			<h2 class="page-title">Wie steht es um Ihr Arbeitsleben ?</h2>
+			<p>
+				Aktuelle Prognosen vom WHO deuten darauf hin, dass Depressionen bis 2030 die Hauptursache für die Krankheitslast weltweit sein werden.  
+				Rund ein Drittel unserer ganzen Lebenszeit verbringen wir am Arbeitsplatz. 
+				Das ist nach dem Schlafen die zweithäufigste Beschäftigung. Das heißt, Arbeitszeit ist ein großer Anteil im Leben und wir sollten uns sich im Job um psychische Gesundheit kümmern, 
+				um fitter zu leben. 
+			</p>
+		</div>
+	</section> 
+
+	<section class="scroll-content">
+		<div class="scroll-graphic">
+			<div class="graphic-item"><img class="scene-img" src="images/00.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/01.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/02.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/bird.gif" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/03.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/04.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/05.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/06.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/back.gif" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/07.png" alt=""></div>
+		</div>
+		<div class="scroll-text global-width">
+			<div class="balloons">
+				<p>
+					Lorem ipsum dolor sit amet
+					<br><br>Blanditiis ullam culpa ab, laborum repellat ut quae deleniti nostrum sapiente illum
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Qui impedit numquam atque quidem quos facere obcaecati deleniti labore culpa esse nostrum dicta earum rem ducimus, 
+					<br>voluptates eligendi voluptate exercitationem dolorem
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Nam provident voluptatum numquam dolorum, quod odio.
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Blanditiis ullam culpa ab, laborum repellat ut quae deleniti nostrum sapiente illum
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					LEAVE THE OFFICE, 
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					LEAVE THE CITY, 
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					Leave the office,<br><br>
+					leave the city,<br><br>
+					leave the country
+				</p>
+			</div>
+			<div class="balloons">
+				<p>
+					and work better
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="normal-content global-width">
+			<a href="meditation.html"><h2>Achtsamkeitsmeditation für Arbeiter</h2></a>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ullam culpa ab, laborum repellat ut quae deleniti nostrum sapiente illum!</p>
+			
+			<a href="lob.html"><h2>Motivationsspiel</h2></a>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam provident voluptatum numquam dolorum, quod odio.</p>
+			
+			<a href="wunsch.html"><h2>Wunschstern</h2></a>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui impedit numquam atque quidem quos facere obcaecati deleniti labore culpa esse nostrum dicta earum rem ducimus, voluptates eligendi voluptate exercitationem dolorem!</p>
+	</section>
+
+	<script class="", src="intro.js"></script>
+</body>
+</html>
