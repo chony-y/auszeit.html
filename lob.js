@@ -6,7 +6,7 @@ var lob_ex = new Array(
     'Du hast richtig gute Augen.',
     'Wow, du hast wirklich immer einen sehr guten Überblick!',
     'Niemand ist ohne Fehler.',
-    'Kein Mensch ist unfehlbar.',
+    'Kein Mensch ist unfehlbar und es wird schon richtig sein.',
     'Du weißt, dass deine Rolle für unseren Erfolg wichtig ist. Ohne dich können wir uns nicht weiter verbessern.',
     'Du bist einfach Klasse.',
     'Ich möchte Ihnen einfach wissen lassen, wie viel Sie unserem Team bedeuten.',
@@ -19,11 +19,13 @@ var lob_ex = new Array(
     'Sie haben eine Gabe dafür, Vorgaben konkret zu formulieren.',
     'Alles wird gut :)',
     'Alles in Butter.',
+    'Kein Ding, alles wird schon gehen.',
+    'Das wird dir eine Lehre sein.',
     'Du bist wirklich ein klasse Team!',
     'Danke, dass du so flexibel bist. Ohne dich hätte ich es nicht geschafft.',
-    'Das Leben geht weiter.',
     'Mach dir keine Sorge. Ich vertraue bei deiner Entscheidung.',
     'Ich glaube an dich.',
+    'Ich bin sicher, du wirst’s schon überstehen!',
     'Ich bewundere deine tolle Einstellung – auch in dieser harten Phase.'
 );
 
@@ -53,7 +55,7 @@ function showName(text){ // 입력받은 이름을 화면에 노출하는 함수
     `${text}` + typeWriter(lob_ex);
 }
 
-// random 
+// Random 
 function randomItem(a) {
     return a[Math.floor(Math.random() * lob_ex.length)];
 }
@@ -78,11 +80,33 @@ function core() { //askName과 showName 함수가 실행될 조건을 설정
 }
 core(); 
 
+
 // Buttons
 
 
+// Button_save
+function save(){
+    html2canvas(document.querySelector('#대상'), {}).then(function (canvas) {
+        saveAs(canvas.toDataURL(), 'name.png');
+    });    
+}
 
-// 배경색 변경
+function saveAs(uri, filename) {
+	var link = document.createElement('a');
+	if (typeof link.download === 'string') {
+		link.href = uri;
+		link.download = filename;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	} else {
+		window.open(uri);
+	}
+}
+
+
+
+// Changing background colors
 function bgColor() {
     var color = ["#FC5C7D", "#6A82FB", "#38ef7d", "#fffbd5", "#b20a2c", "#CAC531"];
     var num = Math.floor(Math.random() * color.length);

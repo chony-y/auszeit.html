@@ -21,10 +21,12 @@ body {
 	font-family: 'Rajdhani', sans-serif;
 	font-size: 20px;
 	height: auto;
-	/*background: linear-gradient(120deg, #3A1C71 100%, #D76D77 100%, #FFAF7B 100%);
-	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)*/
+	background: linear-gradient(150deg, #ffffff 20%, #5a89a5 45%, #006a78 61%, #01375b 71%, #04202e 88%);
+	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) 
+	(150deg, #ffffff 20%, #fffbfe 30%, #ffb69f 55%, #aa98ca 61%, #3e4a7c 71%, #171d41 85%)
+	(150deg, #FFFFFF 20%, #FFAF7B 31%, #D76D77 40%, #3A1C71 60%);*/
 }
-div, footer, p, h1 {
+div, footer, p, h1, h2 {
 	box-sizing: border-box;
 } 
 a {
@@ -43,7 +45,7 @@ header {
 	align-items: center;
 	transition: 1s;
 }
-header.sticky {
+header.sticky, header.normal {
 	height: 60px;
 }
 header .banner {
@@ -55,7 +57,7 @@ header .banner {
 	object-fit: cover;
 	transition: 1s;
 }
-header.sticky .banner {
+header.sticky .banner, header.normal .banner {
 	opacity: 0.5;
 }
 header .logo {
@@ -67,7 +69,7 @@ header .logo {
 	transition: 1s;
 	z-index: 1; /*우선순위로 끌어올리려고*/
 }
-header.sticky .logo {
+header.sticky .logo, header.normal .logo {
 	position: absolute;
 	width: 70px;
 	left: 100px;
@@ -86,7 +88,7 @@ nav ul {
 	transform: translateX(100px);  
 	opacity: 0;   
 }
-header.sticky nav ul {
+header.sticky nav ul, header.normal nav ul {
 	transform: translate(100px);
 	opacity: 1;
 	transition-delay: 0.75s;
@@ -122,15 +124,15 @@ section p {
 @media (max-width: 991px)
 {
 	section, header {
-		padding: 40px;
+		padding: 20px; /* 줄였을 때 헤더 높이 */
 	}
 	section h2 {
 		font-size: 2em;
 	}
-	header.sticky .logo {
+	header.sticky .logo, header.normal .logo {
 		left: 40px;
 	}
-	header.sticky .banner {
+	header.sticky .banner, header.normal .banner {
 		opacity: 0;
 	}
 	nav ul {
@@ -144,7 +146,8 @@ section p {
 		left: 0;
 		width: 100vw;
 		margin-left: -100px;
-		height: calc(100% - 80px);
+		margin-top: -20px;
+		height: calc(100% - 60px);
 		background: black;
 		display: flex;
 		justify-content: center;
@@ -152,14 +155,16 @@ section p {
 		flex-direction: column;
 		opacity: 1;
 		visibility: visible;
+		z-index: 8;
 	}
 	nav ul li a {
 		font-size: 1.3em;
-		padding: 10px 15px;
+		padding: 10px 15px; /* 토글시 글자 간격 */
+		z-index: 8;
 	}
-	header.sticky .toggle {
+	header.sticky .toggle, header.normal .toggle {
 		position: fixed;
-		top: 15px;
+		top: 5px;
 		right: 20px;
 		width: 50px;
 		height: 50px;
@@ -168,8 +173,9 @@ section p {
 		background-size: 5px;
 		background-repeat: no-repeat;
 		background-position: center;
+		z-index: 8;
 	}
-	header.sticky .toggle.active {
+	header.sticky .toggle.active, header.normal .toggle.active {
 		background: url(images/close01.png);
 		background-size: 22px;
 		background-repeat: no-repeat;
@@ -190,7 +196,7 @@ img {
 	padding-bottom: 20px;
 }
 .global-width {
-	max-width: 800px;
+	max-width: 850px;
 	margin: 0 auto;
 	padding: 0 1rem;
 }
@@ -229,14 +235,32 @@ img {
 .balloons { /* 말풍선 */
 	color: rgba(0, 0, 0, 0.9);
 	font-size: 20px;
-	margin-bottom: 60vh; /* 창 사이즈의 60% */
-	padding: 1rem 1.2rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
+	margin-bottom: 70vh; /* 창 사이즈의 60% */
+	padding: 1.4rem 2rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
 	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.88);
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
+.logo2 {
+	position: relative;
+	max-width: 50%;
+	z-index: -3;
+	padding: 50px;
+}
+.ending-text {
+	color: white;
+	position: relative;
+	margin: 20px;
+	box-sizing: border-box;
+	font-size: 20px;
+	text-align: center;
+	align-items: center;
+}
 
 /* meditation */
+body.meditation {
+	background: white;
+}
 .webgl {
     position: fixed;
     top: 0;
@@ -336,4 +360,26 @@ input {
 
 
 
+/* sternenwunsch */
+body.wunsch {
+	background: black;
+}
+.sternen { 
+	top: 60px;
+	left: 0;
+	width: 100%;
+	padding: 0; 
+	background: black;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	justify-content: center; 
+	position: absolute;
+	z-index: -1;
+}
 
+
+/* kontakt */
+body.kontakt {
+	background: white;
+}
