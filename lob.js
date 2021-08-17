@@ -1,33 +1,41 @@
 var lob_ex = new Array(
-    'Es ist so erfrischend, mit Ihnen zu arbeiten.', 
-    'Wie toll! Ich bin immer wieder beeindruckt von deinen Ergebnissen!',
-    'Das haben Sie super gemacht!',
-    'Ich weiß, wie schwer dieses Projekt ist, aber ich kann mir gar nicht vorstellen, ohne dich zu arbeiten.',
-    'Du hast richtig gute Augen.',
-    'Wow, du hast wirklich immer einen sehr guten Überblick!',
-    'Niemand ist ohne Fehler.',
-    'Kein Mensch ist unfehlbar und es wird schon richtig sein.',
-    'Du weißt, dass deine Rolle für unseren Erfolg wichtig ist. Ohne dich können wir uns nicht weiter verbessern.',
-    'Du bist einfach Klasse.',
-    'Ich möchte Ihnen einfach wissen lassen, wie viel Sie unserem Team bedeuten.',
-    'Du hast hier wirklich einen gewaltigen Unterschied gemacht, und ich bin dankbar, dass du Teil dieses Teams bist.',
-    'Du bist perfekt so wie du bist.',
-    'Keine Sorge, das Leben geht weiter.',
-    'Sie haben diese Woche mehr als genug getan.',
-    'Ich bin richtig Stolz auf Sie!',
-    'Du bist einer der zuverlässigsten Mitarbeiter, die ich je hatte.',
-    'Sie haben eine Gabe dafür, Vorgaben konkret zu formulieren.',
-    'Alles wird gut :)',
-    'Alles in Butter.',
-    'Kein Ding, alles wird schon gehen.',
-    'Das wird dir eine Lehre sein.',
-    'Du bist wirklich ein klasse Team!',
-    'Danke, dass du so flexibel bist. Ohne dich hätte ich es nicht geschafft.',
-    'Mach dir keine Sorge. Ich vertraue bei deiner Entscheidung.',
-    'Ich glaube an dich.',
-    'Ich bin sicher, du wirst’s schon überstehen!',
-    'Ich bewundere deine tolle Einstellung – auch in dieser harten Phase.'
+    'es ist so erfrischend, mit Ihnen zu arbeiten.', 
+    'wie toll! Ich bin immer wieder beeindruckt von deinen Ergebnissen!',
+    'das haben Sie super gemacht!',
+    'ich weiß, wie schwer dieses Projekt ist, aber ich kann mir gar nicht vorstellen, ohne dich zu arbeiten.',
+    'du hast richtig gute Augen.',
+    'wow, du hast wirklich immer einen sehr guten Überblick!',
+    'niemand ist ohne Fehler.',
+    'kein Mensch ist unfehlbar und es wird schon richtig sein.',
+    'du weißt, dass deine Rolle für unseren Erfolg wichtig ist. Ohne dich können wir uns nicht weiter verbessern.',
+    'du bist einfach Klasse.',
+    'du hast hier wirklich einen gewaltigen Unterschied gemacht, und ich bin dankbar, dass du Teil dieses Teams bist.',
+    'du bist perfekt so wie du bist.',
+    'keine Sorge, das Leben geht weiter.',
+    'sie haben diese Woche mehr als genug getan.',
+    'ich bin richtig Stolz auf Sie!',
+    'du bist einer der zuverlässigsten Mitarbeiter, die ich je hatte.',
+    'sie haben eine Gabe dafür, Vorgaben konkret zu formulieren.',
+    'alles wird gut :)',
+    'alles in Butter.',
+    'kein Ding, alles wird schon gehen.',
+    'das wird dir eine Lehre sein.',
+    'du verdienst jetzt eine Umarmung',
+    'du bist wirklich ein klasse Team!',
+    'danke, dass du so flexibel bist. Ohne dich hätte ich es nicht geschafft.',
+    'ich möchte Sie einfach wissen lassen, wie viel Sie unserem Team bedeuten.',
+    'mach dir keine Sorge. Ich vertraue auf deine Entscheidung.',
+    'du bereicherst unser Team stets mit deiner Mitarbeit und deinen Ideen.',
+    'du bist mit deiner Zielstrebigkeit und deiner zuverlässigen Arbeit ein Vorbild für viele deiner Kolleg*innen.',
+    'ich glaube an dich.',
+    'ich bin sicher, du wirst’s schon überstehen!',
+    'deine nette und sympathische Art wird besonders von neuen Kolleg*innen geschätzt, die sich dadurch sehr schnell in ihrer neuen Position wohl fühlen.',
+    'dein selbstständiges und aufgabenorientiertes arbeiten beeinflusst und motiviert deine Kolleg*innen positiv.',
+    'wir schätzen besonders deine offene, sympathische Art und arbeiten gerne mit dir zusammen.',
+    'deine stets offene Art für neue Ideen sind hoch angesehen in unserem Team.',
+    'ich bewundere deine tolle Einstellung – auch in dieser harten Phase.'
 );
+
 
 // Writing a name
 const form = document.querySelector('.name'), //  name 이라는 class를 가져와 form 이라는 변수로 선언
@@ -55,15 +63,19 @@ function showName(text){ // 입력받은 이름을 화면에 노출하는 함수
     `${text}` + typeWriter(lob_ex);
 }
 
-// Random 
+/**
+ * Random
+ */
 function randomItem(a) {
     return a[Math.floor(Math.random() * lob_ex.length)];
 }
 // document.write(randomItem(lob), ' ');
 
-// Typing effect 
+/**
+ * Typing effect
+ */
 var i = 0;
-var txt = randomItem(lob_ex);
+var txt =  randomItem(lob_ex);
 var speed = 90;
 
 function typeWriter() {
@@ -80,9 +92,9 @@ function core() { //askName과 showName 함수가 실행될 조건을 설정
 }
 core(); 
 
-
-// Buttons
-
+/**
+ * Buttons
+ */
 
 // Button_save
 function save(){
@@ -105,8 +117,9 @@ function saveAs(uri, filename) {
 }
 
 
-
-// Changing background colors
+/**
+ * Changing bgcolors
+ */
 function bgColor() {
     var color = ["#FC5C7D", "#6A82FB", "#38ef7d", "#fffbd5", "#b20a2c", "#CAC531"];
     var num = Math.floor(Math.random() * color.length);

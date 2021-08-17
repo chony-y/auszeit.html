@@ -17,11 +17,12 @@ html {
 body {
 	min-height: 1000px;
 	margin: 50;    /* 체크 */
+	margin-bottom: 50px;
 	color: black;
 	font-family: 'Rajdhani', sans-serif;
 	font-size: 20px;
 	height: auto;
-	background: linear-gradient(150deg, #ffffff 20%, #5a89a5 45%, #006a78 61%, #01375b 71%, #04202e 88%);
+	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 65%, #01375b 75%, #04202e 88%);
 	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) 
 	(150deg, #ffffff 20%, #fffbfe 30%, #ffb69f 55%, #aa98ca 61%, #3e4a7c 71%, #171d41 85%)
 	(150deg, #FFFFFF 20%, #FFAF7B 31%, #D76D77 40%, #3A1C71 60%);*/
@@ -31,6 +32,7 @@ div, footer, p, h1, h2 {
 } 
 a {
 	color: whitesmoke;
+	text-decoration: none;
 }
 header {
 	position: fixed;
@@ -44,6 +46,7 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	transition: 1s;
+	z-index: 100;
 }
 header.sticky, header.normal {
 	height: 60px;
@@ -67,7 +70,7 @@ header .logo {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: 1s;
-	z-index: 1; /*우선순위로 끌어올리려고*/
+	z-index: 100; /*우선순위로 끌어올리려고*/
 }
 header.sticky .logo, header.normal .logo {
 	position: absolute;
@@ -78,7 +81,7 @@ header.sticky .logo, header.normal .logo {
 nav {
 	position: relative;
 	display: flex;
-	z-index: 1;
+	z-index: 100;
 	padding-right: 50px;
 }
 nav ul {
@@ -103,6 +106,7 @@ nav ul li a {
 	padding: 12px 18px;
 	font-size: 1em;
 	text-decoration: none;
+	z-index: 100;
 }
 nav ul li a:hover {
 	color: darkcyan;
@@ -121,13 +125,14 @@ section p {
 	font-size: 1.2em;
 }
 
-@media (max-width: 991px)
+@media (max-width: 971px)
 {
 	section, header {
 		padding: 20px; /* 줄였을 때 헤더 높이 */
 	}
 	section h2 {
 		font-size: 2em;
+		z-index: 100;
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -155,12 +160,10 @@ section p {
 		flex-direction: column;
 		opacity: 1;
 		visibility: visible;
-		z-index: 8;
 	}
 	nav ul li a {
 		font-size: 1.3em;
 		padding: 10px 15px; /* 토글시 글자 간격 */
-		z-index: 8;
 	}
 	header.sticky .toggle, header.normal .toggle {
 		position: fixed;
@@ -173,13 +176,15 @@ section p {
 		background-size: 5px;
 		background-repeat: no-repeat;
 		background-position: center;
-		z-index: 8;
 	}
 	header.sticky .toggle.active, header.normal .toggle.active {
 		background: url(images/close01.png);
 		background-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+	footer.grid .grid-item {    /* 체크 */
+		display: block;
 	}
 }
 
@@ -206,7 +211,7 @@ img {
 	top: 0;
 	height: 110vh; /* view point height */
 	max-height: 90%;
-	z-index: -2;
+	z-index: -1;
 }
 .graphic-item { /* 각각의 이미지 덩어리 클래스 */
 	display: flex;
@@ -225,7 +230,7 @@ img {
 	opacity: 1;
 }
 .scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
-	max-height: 100vh;
+	max-height: 80vh;
 }
 .scroll-text {
 	position: relative;
@@ -234,7 +239,8 @@ img {
 }
 .balloons { /* 말풍선 */
 	color: rgba(0, 0, 0, 0.9);
-	font-size: 20px;
+	font-size: 23px;
+	font-weight: 400;
 	margin-bottom: 70vh; /* 창 사이즈의 60% */
 	padding: 1.4rem 2rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
 	border-radius: 12px;
@@ -243,18 +249,39 @@ img {
 }
 .logo2 {
 	position: relative;
-	max-width: 50%;
-	z-index: -3;
-	padding: 50px;
+	width: 50vw;
+	min-width: 200px;
+	padding: 30px;
 }
 .ending-text {
 	color: white;
 	position: relative;
-	margin: 20px;
+	margin-left: 20vw;
+	margin-right: 20vw;
 	box-sizing: border-box;
-	font-size: 20px;
+	font-size: 25px;
+	font-weight: 500;
 	text-align: center;
 	align-items: center;
+	z-index: 0;
+}
+.grid {
+	border-top: 0.2px solid whitesmoke;
+	padding-top: 50px;
+	font-size: 22px;
+	font-weight: 300;
+	list-style: none;
+	text-align: center;
+	align-items: center;
+	padding-bottom: 50px;
+}
+.grid-item {
+	color: whitesmoke;
+	margin: 5px;
+	padding-bottom: 50px;
+}
+footer ul li a:hover {
+	color: darkcyan;
 }
 
 /* meditation */
@@ -299,7 +326,7 @@ body.meditation {
 .nameInput {
 	color : gray;
 	width: 15rem;
-	font-size: 23px;
+	font-size: 27px;
 	font-family: 'Rajdhani', sans-serif;
 	text-align: center;
 	border: none;
@@ -328,7 +355,7 @@ input {
 	width: 75%;
 	font-size: 45px;
 	font-family: 'Rajdhani', sans-serif;
-	text-transform: lowercase; /*다 소문자로*/
+	/*text-transform: lowercase; /*다 소문자로*/
 	text-align: center;
 	/* display: flex;
 	align-items: center; 
@@ -362,20 +389,78 @@ input {
 
 /* sternenwunsch */
 body.wunsch {
-	background: black;
+	background: orange;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
 }
-.sternen { 
-	top: 60px;
-	left: 0;
-	width: 100%;
-	padding: 0; 
-	background: black;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	justify-content: center; 
+canvas {
+	display: block;
+}
+#cosmos { 
+	position: absolute; 
+    top: 25px; 
+    width: 100%; 
+    text-align: 
+    center; 
+    z-index: 10; 
+    display:block;
+}
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+.point {
 	position: absolute;
-	z-index: -1;
+	top: 50%;
+	left: 50%;
+}
+.point .label {
+	position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 동그라미 */
+    background: #00000077;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 20px;
+	cursor: help;
+	transform: scale(0, 0);
+	transition: transform 0.4s;
+}
+.point.visible .label {
+	transform: scale(1, 1);
+}
+.point .label-text {
+    position: absolute;
+    top: 30px;
+    left: -120px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #00000077;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
+    line-height: 1.3em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+	opacity: 1;
+	transition: transform 0.4s;
+	pointer-events: none;
+}
+.point:hover .label-text {
+	opacity: 1;
 }
 
 

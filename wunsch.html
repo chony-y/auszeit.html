@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : STERNENWUNSCH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@400;600&family=Staatliches&family=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="wunsch">
@@ -32,8 +32,17 @@
 	</script>
 
 	<section>
-		<img class="sternen" src="images/sternenwunsch_bg.png">
+		<!--<img class="sternen" src="images/sternenwunsch_bg.png">-->
+		<canvas class="webgl"></canvas>
+ 		<h2><div id="cosmos"></div></h2> 
+		
+		<div class="point point-0">
+			<div class="label">1</div>
+			<div class="label-text">Ich hoffe meine Famile alle sind gesund und glücklich</div>
+		</div>
 	</section>
 
+	<script src="wunsch.js"></script>
+	<script src="GLTFLoader.js"></script>
 </body>
 </html>
