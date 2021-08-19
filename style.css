@@ -15,13 +15,15 @@ html {
 	font-family: 'Rajdhani', sans-serif;
 }
 body {
-	min-height: 1000px;
-	margin: 50;    /* 체크 */
-	margin-bottom: 50px;
 	color: black;
 	font-family: 'Rajdhani', sans-serif;
 	font-size: 20px;
 	height: auto;
+}
+body.index {
+	min-height: 1000px;
+	margin: 50;    /* 체크 */
+	margin-bottom: 50px;
 	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 65%, #01375b 75%, #04202e 88%);
 	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) 
 	(150deg, #ffffff 20%, #fffbfe 30%, #ffb69f 55%, #aa98ca 61%, #3e4a7c 71%, #171d41 85%)
@@ -46,7 +48,7 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	transition: 1s;
-	z-index: 100;
+	z-index: 1000;
 }
 header.sticky, header.normal {
 	height: 60px;
@@ -81,7 +83,7 @@ header.sticky .logo, header.normal .logo {
 nav {
 	position: relative;
 	display: flex;
-	z-index: 100;
+	z-index: 1000;
 	padding-right: 50px;
 }
 nav ul {
@@ -106,7 +108,6 @@ nav ul li a {
 	padding: 12px 18px;
 	font-size: 1em;
 	text-decoration: none;
-	z-index: 100;
 }
 nav ul li a:hover {
 	color: darkcyan;
@@ -285,9 +286,41 @@ footer ul li a:hover {
 }
 
 /* meditation */
-body.meditation {
-	background: white;
+#Option {
+	color: white;
+	text-align: center;
+	align-items: center;
+	margin-top: -30px;
+	padding: 0;
+	margin: 0;
 }
+.left, .right {
+	width: 50%;
+	min-height: 1000px;
+	z-index: -1;
+	position: absolute;
+}
+.left {
+	left: 0px;
+	background-color: lightcoral;
+}
+.right {
+	right: 0px;
+	background-color: lightseagreen;
+}
+.left-text, .right-text {
+	width: 50%;
+	z-index: 10;
+	position: absolute;
+	top: 50%
+}
+.left-text {
+	left: 0px;
+}
+.right-text {
+	right: 0px;
+}
+
 .webgl {
     position: fixed;
     top: 0;
@@ -365,106 +398,54 @@ input {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.button {
+#btn {
 	display: none;
 	position: absolute;
 	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	visibility: hidden;
+	
+	/*visibility: hidden;*/
 }
-.btn0, .btn1, .btn2, .btn3 {
-	background-color: darkcyan;
+#btn1, #btn2, #btn3 {
+	background-color: transparent;
 	color : white;
 	font-size: 23px;
 	font-family: 'Rajdhani', sans-serif;
 	text-align: center;
 	display: inline-block;
-	border: none;
+	border: 1px solid white;
+	border-radius: 5px;
 	padding: 0.5rem 0.8rem;
-	margin: 0.2rem;
+	margin: 0.3rem;
 }
 
 
 
 /* sternenwunsch */
 body.wunsch {
-	background: orange;
-	color: white;
-	width: 100vw;
-	height: 100vh;
+	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 	overflow: hidden;
-}
-canvas {
-	display: block;
-}
-#cosmos { 
-	position: absolute; 
-    top: 25px; 
-    width: 100%; 
-    text-align: 
-    center; 
-    z-index: 10; 
-    display:block;
 }
 .webgl {
     position: fixed;
     top: 0;
     left: 0;
     outline: none;
-}
-.point {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-}
-.point .label {
-	position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* 동그라미 */
-    background: #00000077;
-    border: 1px solid #ffffff77;
-    color: #ffffff;
-    font-family: 'Rajdhani', sans-serif;
-    text-align: center;
-    line-height: 40px;
-    font-weight: 100;
-    font-size: 20px;
-	cursor: help;
-	transform: scale(0, 0);
-	transition: transform 0.4s;
-}
-.point.visible .label {
-	transform: scale(1, 1);
-}
-.point .label-text {
-    position: absolute;
-    top: 30px;
-    left: -120px;
-    width: 200px;
-    padding: 20px;
-    border-radius: 4px;
-    background: #00000077;
-    border: 1px solid #ffffff77;
-    color: #ffffff;
-    line-height: 1.3em;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 100;
-    font-size: 18px;
-	opacity: 1;
-	transition: transform 0.4s;
-	pointer-events: none;
-}
-.point:hover .label-text {
-	opacity: 1;
+	z-index: -1;
 }
 
 
 /* kontakt */
 body.kontakt {
 	background: white;
+}
+
+footer.designer {
+	color: gray;
+	font-size: 13px;
+	text-align: end;
+	margin-right: 20px;
 }

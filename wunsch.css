@@ -1,0 +1,27 @@
+html {
+	box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow: hidden;
+    color: black;
+}
+.normal {
+     position: fixed; 
+     color: white;
+     top: 25px; 
+     left: 20px;
+     z-index: 1000; 
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    display: block;
+}

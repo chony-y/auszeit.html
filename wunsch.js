@@ -1,8 +1,8 @@
-import './style.css'
+import './wunsch.css'
 import * as THREE from 'three'
-import { OrbitControls } from 'bundler/OrbitControls.js'
-import { GLTFLoader } from 'bundler/GLTFLoader.js'
-import { DRACOLoader } from 'bundler/DRACOLoader.js'
+import { OrbitControls } from 'node_modules/three/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from 'node_modules/three/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'node_modules/three/examples/jsm/loaders/DRACOLoader.js'
 import * as dat from 'dat.gui'
 import { RedFormat } from 'three'
 
@@ -17,6 +17,22 @@ const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
+
+/**
+ * Doors
+ */
+// const loader = new THREE.ImageBitmapLoader()
+
+// loader.load(
+// 	// resource URL
+// 	'textures/door_01.png',
+
+// 	// onLoad callback
+// 	function ( imageBitmap ) {
+// 		const texture = new THREE.CanvasTexture( imageBitmap )
+// 		const material = new THREE.MeshBasicMaterial( { map: texture } )
+// 	}
+// )
 
 /**
  * Textures
@@ -78,13 +94,28 @@ gltfLoader.setDRACOLoader(dracoLoader)
 
 let mixer = null
 
-gltfLoader.load(
-    '/models/Planeten.glb',
-    (gltf) =>
-    {
-        scene.add(gltf.scene)
-    }
-)
+// gltfLoader.load(
+//     '/models/Planeten.glb',
+//     (gltf) =>
+//     {
+//         scene.add(gltf.scene)
+//     }
+// )
+
+/**
+ * Floor
+ */
+// const floor = new THREE.Mesh(
+//     new THREE.PlaneGeometry(50, 50),
+//     new THREE.MeshStandardMaterial({
+//         color: '#444444',
+//         metalness: 0,
+//         roughness: 0.5
+//     })
+// )
+// floor.receiveShadow = true
+// floor.rotation.x = - Math.PI * 0.5
+// scene.add(floor)
 
 /**
  * Lights
@@ -130,7 +161,7 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(40, window.innerWidth/window.innerHeight)
+const camera = new THREE.PerspectiveCamera(40, sizes.width / sizes.height, 0.1, 100)
 camera.position.set(-6, 3, -4)
 //camera.position.set(- 8, 4, 8)
 scene.add(camera)
@@ -151,8 +182,6 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.physicallyCorrectLights = true
-
-document.body.appendChild(renderer.domElement) //유튜브 따라한거 
 
 /**
  * Animate
