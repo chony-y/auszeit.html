@@ -24,7 +24,7 @@ body.index {
 	min-height: 1000px;
 	margin: 50;    /* 체크 */
 	margin-bottom: 50px;
-	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 65%, #01375b 75%, #04202e 88%);
+	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 60%, #01375b 70%, #04202e 85%);
 	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) 
 	(150deg, #ffffff 20%, #fffbfe 30%, #ffb69f 55%, #aa98ca 61%, #3e4a7c 71%, #171d41 85%)
 	(150deg, #FFFFFF 20%, #FFAF7B 31%, #D76D77 40%, #3A1C71 60%);*/
@@ -231,7 +231,7 @@ img {
 	opacity: 1;
 }
 .scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
-	max-height: 80vh;
+	max-height: 85vh;
 }
 .scroll-text {
 	position: relative;
@@ -253,6 +253,7 @@ img {
 	width: 50vw;
 	min-width: 200px;
 	padding: 30px;
+	margin-top: 15px;
 }
 .ending-text {
 	color: white;
@@ -447,5 +448,5 @@ footer.designer {
 	color: gray;
 	font-size: 13px;
 	text-align: end;
-	margin-right: 20px;
+	margin-right: 20px
 }

@@ -89,7 +89,7 @@ function core() { //askName과 showName 함수가 실행될 조건을 설정
 	const currentUser = localStorage.getItem (userLS); // 해당 페이지의 local storage 에서 가져온 userLS 를 currentUser 라는 변수로 선언
     return currentUser === null ? askName() : showName(currentUser)
 }
-core(); 
+core();
 
 /**
  * Buttons
