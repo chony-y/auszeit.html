@@ -248,6 +248,9 @@ img {
 	background: rgba(255, 255, 255, 0.88);
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
+#about {
+	padding: 40px;
+}
 .logo2 {
 	position: relative;
 	width: 50vw;
