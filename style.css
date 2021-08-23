@@ -522,7 +522,7 @@ body.wunsch {
 }
 @media (max-width: 800px) {
 	.kontakt-logo {
-		padding-top: 300px;
+		padding-top: 100px;
 		width: 200px;
 	}
 	.kontakt-bottom-text {
