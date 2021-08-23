@@ -24,7 +24,7 @@ body.index {
 	min-height: 1000px;
 	margin: 50;    /* 체크 */
 	margin-bottom: 50px;
-	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 60%, #01375b 70%, #04202e 85%);
+	background: linear-gradient(160deg, #ffffff 30%, #5a89a5 50%, #006a78 64%, #01375b 75%, #04202e 88%);
 	/*(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) 
 	(150deg, #ffffff 20%, #fffbfe 30%, #ffb69f 55%, #aa98ca 61%, #3e4a7c 71%, #171d41 85%)
 	(150deg, #FFFFFF 20%, #FFAF7B 31%, #D76D77 40%, #3A1C71 60%);*/
@@ -135,6 +135,9 @@ section p {
 		font-size: 2em;
 		z-index: 100;
 	}
+	header .logo {
+		width: 40vw; /*viewport width*/
+	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
 	}
@@ -184,8 +187,12 @@ section p {
 		background-repeat: no-repeat;
 		background-position: center;
 	}
-	footer.grid .grid-item {    /* 체크 */
-		display: block;
+	footer .logo2 {
+		width: 90vw;
+	}
+	footer.ending-text {	
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 }
 
@@ -205,6 +212,7 @@ img {
 	max-width: 850px;
 	margin: 0 auto;
 	padding: 0 1rem;
+	text-align: center;
 }
 .scroll-graphic { /* 이미지들을 총 모은 클래스 */
 	overflow-x: hidden; /* 새 날아갔을 때 그 공간에 따라 스크롤 생기는 거 방지하려고 */
@@ -240,9 +248,11 @@ img {
 }
 .balloons { /* 말풍선 */
 	color: rgba(0, 0, 0, 0.9);
-	font-size: 23px;
+	font-size: 25px;
 	font-weight: 400;
-	margin-bottom: 70vh; /* 창 사이즈의 60% */
+	text-align: center;
+	align-items: center;
+	margin-bottom: 70vh; /* 창 사이즈의 70% */
 	padding: 1.4rem 2rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
 	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.88);
@@ -325,12 +335,6 @@ footer ul li a:hover {
 	right: 0px;
 }
 
-.webgl {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}
 .music {
 	position: fixed;
 	top: 50%;
@@ -433,18 +437,85 @@ body.wunsch {
 	padding: 0;
 	overflow: hidden;
 }
-.webgl {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-	z-index: -1;
-}
 
 
 /* kontakt */
-body.kontakt {
-	background: white;
+.kontakt-body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	margin-top: 0;
+	background: #419FD5;
+}
+.kontakt-logo {
+	padding-top: 170px;
+	width: 20vw;
+}
+.kontakt-top-text {
+	color: white;
+	text-align: center;
+	align-items: center;
+}
+.wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(images/wave.png);
+	background-size: 1000px 100px;
+	animation: animate 5s ease-in-out infinite;
+	animation-delay: calc(var c(--i) * 2s);
+}
+.wave#wave1 {
+	z-index: 500;
+	opacity: 1;
+	background-position-x: -500px;
+}
+.wave#wave2 {
+	z-index: 499;
+	opacity: 0.3;
+	background-position-x: 10px;
+}
+.wave#wave3 {
+	z-index: 498;
+	opacity: 0.5;
+	background-position-x: -100px;
+}
+.wave#wave4 {
+	z-index: 497;
+	opacity: 0.2;
+	background-position-x: 20px;
+}
+.wave#wave5 {
+	z-index: 496;
+	opacity: 0.4;
+	background-position-x: 650px;
+}
+@keyframes animate {
+	0%, 100% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(25px);
+	}
+}
+.kontakt-bottom-text {
+	padding: 100px; /* 파도 아래 글씨 패딩간격 */
+	text-align: center;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+.kontakt-bottom-text h2 {
+	font-size: 3em;
+}
+.kontakt-bottom-text p {
+	font-size: 23px;
+}
+.kontakt-bottom-text p.copyright {
+	color: gray;
+	font-weight: 300;
+	font-size: 15px;
 }
 
 footer.designer {

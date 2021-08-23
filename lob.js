@@ -27,11 +27,14 @@ var lob_ex = new Array(
     'du bereicherst unser Team stets mit deiner Mitarbeit und deinen Ideen.',
     'du bist mit deiner Zielstrebigkeit und deiner zuverlässigen Arbeit ein Vorbild für uns.',
     'ich glaube an dich.',
-    'ich bin sicher, du wirst’s schon überstehen!',
+    'ich bin sicher, du wirst’s schon überstehen!', 
     'deine nette und sympathische Art wird besonders von neuen Kolleg*innen geschätzt, die sich dadurch sehr schnell in ihrer neuen Position wohl fühlen.',
     'dein selbstständiges und aufgabenorientiertes arbeiten beeinflusst und motiviert uns positiv.',
     'wir schätzen besonders deine offene, sympathische Art und arbeiten gerne mit dir zusammen.',
     'deine stets offene Art für neue Ideen sind hoch angesehen in unserem Team.',
+    'dank deiner warmherzigen und offenen Art, macht das arbeiten in unserem Team viel mehr Spaß.',
+    'du sorgst mit deiner netten und kollegialen Einstellungen für ein besseres Arbeitsklima.',
+    'es ist für unser Team sehr bereichernd, dass du immer ein offenes Ohr bei Problemen für uns hast.',
     'ich bewundere deine tolle Einstellung – auch in dieser harten Phase.'
 );
 
