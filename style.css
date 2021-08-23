@@ -452,10 +452,11 @@ body.wunsch {
 	background: #419FD5;
 }
 .kontakt-logo {
+	padding: 15px;
 	padding-top: 170px;
 	width: 20vw;
 }
-.kontakt-top-text {
+.kontakt-top {
 	color: white;
 	text-align: center;
 	align-items: center;
@@ -504,29 +505,32 @@ body.wunsch {
 		transform: translateY(25px);
 	}
 }
-.kontakt-bottom-text {
+.kontakt-bottom {
 	padding: 100px; /* 파도 아래 글씨 패딩간격 */
 	text-align: center;
 	margin-left: 200px;
 	margin-right: 200px;
 }
-.kontakt-bottom-text h2 {
-	font-size: 3em;
+.kontakt-bottom h2 {
+	font-size: 50px;
 }
-.kontakt-bottom-text p {
+.kontakt-bottom p {
 	font-size: 23px;
 }
-.kontakt-bottom-text p.copyright {
+.kontakt-bottom p.copyright {
 	color: gray;
 	font-weight: 300;
 	font-size: 15px;
+}
+.kontakt-input {
+	text-align: left;
 }
 @media (max-width: 800px) {
 	.kontakt-logo {
 		padding-top: 100px;
 		width: 200px;
 	}
-	.kontakt-bottom-text {
+	.kontakt-bottom {
 		margin: 30px;
 		padding: 0;
 	}
