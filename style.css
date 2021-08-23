@@ -126,14 +126,9 @@ section p {
 	font-size: 1.2em;
 }
 
-@media (max-width: 971px)
-{
+@media (max-width: 971px) {
 	section, header {
 		padding: 20px; /* 줄였을 때 헤더 높이 */
-	}
-	section h2 {
-		font-size: 2em;
-		z-index: 100;
 	}
 	header .logo {
 		width: 40vw; /*viewport width*/
@@ -201,7 +196,7 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-.page-title{
+.page-title {
 	font-family: 'Staatliches', cursive;
 	/*font-family: 'Caveat', cursive;*/
 	font-size: 80px;
@@ -257,6 +252,14 @@ img {
 	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.88);
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+@media (max-width: 800px) {
+	.page-title {
+		font-size: 50px;
+	}
+	.balloons {
+		font-size: 20px;
+	}
 }
 #about {
 	padding: 40px;
@@ -517,10 +520,13 @@ body.wunsch {
 	font-weight: 300;
 	font-size: 15px;
 }
-
-footer.designer {
-	color: gray;
-	font-size: 13px;
-	text-align: end;
-	margin-right: 20px
+@media (max-width: 800px) {
+	.kontakt-logo {
+		padding-top: 300px;
+		width: 200px;
+	}
+	.kontakt-bottom-text {
+		margin: 30px;
+		padding: 0;
+	}
 }
