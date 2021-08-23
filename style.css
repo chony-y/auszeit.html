@@ -204,7 +204,7 @@ img {
 	padding-bottom: 20px;
 }
 .global-width {
-	max-width: 850px;
+	max-width: 900px; 
 	margin: 0 auto;
 	padding: 0 1rem;
 	text-align: center;
@@ -240,16 +240,17 @@ img {
 	position: relative;
 	z-index: -1;
 	padding-bottom: 1px;
+	max-width: 660px; /* 말풍선 박스 가로사이즈 */
 }
 .balloons { /* 말풍선 */
 	color: rgba(0, 0, 0, 0.9);
-	font-size: 25px;
-	font-weight: 400;
+	font-size: 27px;
+	font-weight: 300;
 	text-align: center;
 	align-items: center;
-	margin-bottom: 70vh; /* 창 사이즈의 70% */
-	padding: 1.4rem 2rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
-	border-radius: 12px;
+	margin-bottom: 70vh; /* 말풍선 사이 간격 */
+	padding: 1.6rem 1.8rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
+	border-radius: 11px;
 	background: rgba(255, 255, 255, 0.88);
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
