@@ -243,16 +243,20 @@ img {
 	max-width: 660px; /* 말풍선 박스 가로사이즈 */
 }
 .balloons { /* 말풍선 */
-	color: rgba(0, 0, 0, 0.9);
-	font-size: 27px;
-	font-weight: 300;
+	color: #303030;
+	font-size: 26px;
+	font-weight: 400;
 	text-align: center;
 	align-items: center;
 	margin-bottom: 70vh; /* 말풍선 사이 간격 */
-	padding: 1.6rem 1.8rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
+	padding: 1.5rem 1.8rem; /* px을 써도 되는데 폰트 사이즈대비 하겠다 하면 rem으로 */
 	border-radius: 11px;
-	background: rgba(255, 255, 255, 0.88);
+	background: rgba(255, 255, 255, 0.86);
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+.accent { /* 말풍선 중에 마지막 강조 */
+	font-size: 30px;
+	font-weight: 500;
 }
 @media (max-width: 800px) {
 	.page-title {
