@@ -102,7 +102,7 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
     if (i == (txt.length)){
-        setTimeout(showButtons, 200);
+        setTimeout(showButtons, 1000);
     }
 }
 

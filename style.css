@@ -451,9 +451,9 @@ body.wunsch {
 .kontakt-body {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 97vh;
 	margin-top: 0;
-	background: #419FD5;
+	background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);
 }
 .kontakt-logo {
 	padding: 15px;
@@ -464,6 +464,9 @@ body.wunsch {
 	color: white;
 	text-align: center;
 	align-items: center;
+}
+.kontakt-top h2 {
+	font-size: 50px;
 }
 .wave {
 	position: absolute;
