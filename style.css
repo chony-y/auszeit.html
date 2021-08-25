@@ -267,14 +267,14 @@ img {
 	}
 }
 #about {
-	padding: 40px;
+	margin: 100px;
 }
 .logo2 {
 	position: relative;
 	width: 50vw;
 	min-width: 200px;
 	padding: 30px;
-	margin-top: 200px;
+	margin-top: 100px;
 }
 .ending-text {
 	color: white;
