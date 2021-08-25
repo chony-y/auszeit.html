@@ -47,7 +47,9 @@ const form = document.querySelector('.name'), //  name 이라는 class를 가져
 const showNM = 'showing'; // css에만 만들어져 있는 showing 이라는 class를 showNM 이라는 변수로 선언
 const userLS = 'currentUser'; // 해당 페이지에 있는 local storage 안에 들어갈 value 이름 (user가 입력한 이름)
 
-function submitName(event) { // 이름이 입력되어 제출되면 이벤트를 발생시킬 함수
+var nameForLob = '';
+
+function submitName(event) { 
 	event.preventDefault(); // 이벤트의 default 값으로 인해 input에 이름을 입력한 후 enter를 누르면 input의 값이 노출되지 않고 화면이 초기화 되는데 그걸 없애기 위한 기능
 	const inputName = input.value; // input의 value 값을 inputName 이라는 변수로 선언
 	showName(inputName); // showName 이라는 함수에 들어갈 argument를 input.value 값으로 설정
@@ -58,11 +60,24 @@ function askName() { // 이름을 입력받아 submitName 함수로 전달하기
     form.addEventListener ('submit', submitName); // input에서 입력된 이름을 submitName 이라는 함수로 제출하는 이벤트를 실행
 }
 
-function showName(text) { // 입력받은 이름을 화면에 노출하는 함수
-	form.classList.remove(showNM); // input이 보이면 안되기 때문에 form의 class list에서 .showing 이라는 class를 제거
+function showName(text) { // 입력받은 이름을 화면에 노출
+	nameForLob = text;
+    form.classList.remove(showNM); // input이 보이면 안되기 때문에 form의 class list에서 .showing 이라는 class를 제거
 	compliment.classList.add(showNM); // 입력된 이름을 노출하기 위헤 compliment의 class list 에 .showing 이라는 class를 추가
 	compliment.innerText = `${text}, `; // compliment (h4 class = "js-compliment") 에 입력될 텍스트를 작성
     `${text}` + typeWriter(lob_ex);
+}
+
+function mehrLob() { // 입력받은 이름을 화면에 노출하는 함수
+    hideButtons();
+    i = 0;
+    txt =  randomItem(lob_ex);
+    speed = 100;
+    inputName = nameForLob;
+    form.classList.remove(showNM); // input이 보이면 안되기 때문에 form의 class list에서 .showing 이라는 class를 제거
+	compliment.classList.add(showNM); // 입력된 이름을 노출하기 위헤 compliment의 class list 에 .showing 이라는 class를 추가
+	compliment.innerText = `${nameForLob}, `; // compliment (h4 class = "js-compliment") 에 입력될 텍스트를 작성
+    `${nameForLob}` + typeWriter(lob_ex);
 }
 
 /**
@@ -86,6 +101,9 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, speed);
     }
+    if (i == (txt.length)){
+        setTimeout(showButtons, 200);
+    }
 }
 
 function core() { //askName과 showName 함수가 실행될 조건을 설정
@@ -98,24 +116,17 @@ core();
  * Buttons
  */
 var buttons = document.getElementById('btn');
-
-document.querySelector('.name').onsubmit = function() {
-    window.setTimeout(showButtons, 7000);
-}
- 
 function showButtons() {
     buttons.style.display = 'block';
 }
-// var buttons = document.getElementById('btn');
-// document.querySelector('.name').onsubmit = function buttonShow() {
-//     buttons.style.display = 'block';
-// }
 
+function hideButtons() {
+    buttons.style.display = 'none';
+}
 
 // Button_weiter
 document.getElementById('btn1').onclick = function weiter() {
-    alert('weiter');
-    typeWriter();
+    mehrLob();
 }
 
 
