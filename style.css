@@ -80,6 +80,18 @@ header.sticky .logo, header.normal .logo {
 	left: 100px;
 	transform: translate(0, -50%);
 }
+header .mouse-scroll {
+	position: absolute;
+	width: 30px; /*viewport width*/
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 1s;
+	z-index: 100; /*우선순위로 끌어올리려고*/
+}
+header.sticky .mouse-scroll, header.normal .mouse-scroll {
+	display: none;
+}
 nav {
 	position: relative;
 	display: flex;
@@ -132,6 +144,9 @@ section p {
 	}
 	header .logo {
 		width: 40vw; /*viewport width*/
+	}
+	header .mouse-scroll {
+		top: 80%;
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -450,15 +465,27 @@ body.wunsch {
 /* kontakt */
 .kontakt-body {
 	position: relative;
-	width: 100%;
+	width: 100%; 
 	height: 97vh;
 	margin-top: 0;
-	background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);
+	/*background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);*/
+	z-index: 100;
+}
+.kontakt-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
 }
 .kontakt-logo {
+	margin: 5px;
 	padding: 15px;
-	padding-top: 170px;
-	width: 20vw;
+	padding-top: 180px;
+	width: 18vw;
+	z-index: 100;
 }
 .kontakt-top {
 	color: white;
@@ -467,6 +494,9 @@ body.wunsch {
 }
 .kontakt-top h2 {
 	font-size: 50px;
+}
+.kontakt-top p {
+	font-size: 22px;
 }
 .wave {
 	position: absolute;
