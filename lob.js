@@ -10,8 +10,8 @@ var lob_ex = new Array(
     'du bist einfach Klasse.',
     'du hast hier wirklich einen gewaltigen Unterschied gemacht, und ich bin dankbar, dass du Teil dieses Teams bist.',
     'du bist perfekt so wie du bist.',
-    'nur Mut, du bist immer gut vorbereitet und es wird endlich gehen.',
-    'mach dir keine Sorgen, das war doch nur ein geringer Fehler und du verbesserst ja jedes Mal Fehler.',
+    'nur Mut, du bist immer gut vorbereitet und es wird alles wird gut gehen.',
+    'mach dir keine Sorgen, das war doch nur ein kleiner Fehler und mit jedem Fehler lernst du dazu.',
     'keine Sorge, das Leben geht weiter.',
     'du hast diese Woche mehr als genug getan.',
     'ich bin richtig Stolz auf dich!',
@@ -19,12 +19,11 @@ var lob_ex = new Array(
     'du hast eine Gabe dafür, Vorgaben konkret zu formulieren.',
     'alles wird gut :)',
     'alles in Butter.',
-    'dank deiner Vorbereitung war die Aufgebe nicht so anstrengend.',
+    'dank deiner Vorbereitung war die Aufgabe nicht so anstrengend.',
     'ich bin beeindruckt von deiner Leidenschaft für diese Aufgabe.',
-    'du weißt genau, wie man die Sache anpacken soll. Du hast eine vorzügliche Auffassungsgabe.',
+    'du weißt genau, wie man die Sache anpacken soll ! Du hast eine schnelle Auffassungsgabe.',
     'kein Ding, alles wird schon gehen.',
-    'irren ist menschlich. Das wird dir eine Lehre sein.',
-    'heute ist es ziemlich anstrengend, oder? Du kannst es nicht merken, aber ich kann sehen, dass du immer bessere Aufgaben erledigst.',
+    'heute ist es ziemlich anstrengend, oder? Du kannst es nicht merken, aber ich kann sehen, dass du die Aufgaben immer besser bewältigst.',
     'du verdienst jetzt eine Umarmung',
     'du bist wirklich ein klasse Team!',
     'danke, dass du so flexibel bist. Ohne dich hätte ich es nicht geschafft.',
@@ -62,15 +61,15 @@ function submitName(event) {
 	showName(inputName); 
 }
 
-function askName() { // 이름을 받아서 submitName한테 전달
+function askName() { 
 	form.classList.add(showNM); // 이름을 입력받기 위해 form의 class list에 .showing 이라는 class를 추가
     form.addEventListener ('submit', submitName); // input에서 입력된 이름을 submitName로 제출
 }
 
-function showName(text) { // 입력받은 이름을 화면에 노출
+function showName(text) { // 화면 노출 이름
 	nameForLob = text;
-    form.classList.remove(showNM); // input된 이름 안 보이게 제거
-	compliment.classList.add(showNM); // 칭찬메세지에서 다시 이름보이게 추가
+    form.classList.remove(showNM); // input된 이름 제거
+	compliment.classList.add(showNM); // 칭찬메세지에서 다시 이름 추가
 	compliment.innerText = `${text}, `; // compliment (h4 class = "js-compliment") 에 입력될 텍스트를 작성
     `${text}` + typeWriter(lob_ex);
 }
@@ -135,7 +134,6 @@ function hideButtons() {
 document.getElementById('btn1').onclick = function weiter() {
     mehrLob();
 }
-
 
 // Button_save
 function save(){
