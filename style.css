@@ -84,7 +84,6 @@ header .mouse-scroll {
 	position: absolute;
 	width: 35px; 
 	top: 95%;
-	left: 50%;
 	z-index: 100; 
 }
 header.sticky .mouse-scroll, header.normal .mouse-scroll {
@@ -122,7 +121,7 @@ nav ul li a {
 nav ul li a:hover {
 	color: darkcyan;
 }
-section {
+section.global-width {
 	margin-top: 50vh;
 	padding: 100px;
 }
@@ -145,6 +144,7 @@ section p {
 	}
 	header .mouse-scroll {
 		top: 80%;
+		left: 50%;
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -366,7 +366,7 @@ footer ul li a:hover {
 }
 .split.left {
 	left: 0;
-	background: url(images/sea1.jpg) center center no-repeat;
+	background: url(images/12.gif) center center no-repeat;
 	background-size: cover;
 }
 .split.left:before {
@@ -379,7 +379,7 @@ footer ul li a:hover {
 }
 .split.right {
 	right: 0;
-	background: url(images/sea2.jpg) center center no-repeat;
+	background: url(images/13.gif) center center no-repeat;
 	background-size: cover;
 }
 .split.right:before {
@@ -623,11 +623,125 @@ input.nameInput {
 
 /* sternenwunsch */
 body.wunsch {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	overflow: hidden;
 }
+.stern-text {
+	position: fixed;
+	color: white;
+	top: 44%;
+	right: 32%;
+	text-align: center;
+	align-items: center;
+	z-index: 500;
+}
+.stern-text h2 {
+	padding-bottom: 20px;
+	font-size: 45px;
+}
+.stern-text p {
+	font-size: 24px;
+	font-weight: 300;
+}
+section.sternschnuppe {
+	position: absolute;
+	top: 0;
+	left: -40px;
+	width: 110%;
+	height: 110vh;
+	background: url(images/stern_bg.png);
+	background-color: rgb(2, 4, 22);
+	background-position-x: center;
+	background-size: cover;
+	animation: animateBg 7s linear infinite;
+}
+@keyframes animateBg {
+	0%, 100% {
+		transform: scale(1) rotate(1deg)/*회전 좋은데 그러면 사진을 바꿔야*/;
+	}
+	50% {
+		transform: scale(1.06);
+	}
+}
+span {
+	position: absolute;
+	top: 50%;
+	width: 7px; /*별똥별 머리 가로*/
+	height: 5px;
+	background: rgb(255, 255, 255);
+	border-radius: 100%;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
+	0 0 0 6px rgba(255, 255, 255, 0.1),
+	0 0 0 17px rgba(255, 255, 255, 0.02);
+	animation: animateS 5s linear infinite;
+}
+span::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	width: 350px; /*별똥별 꼬리 길이*/
+	height: 1.6px;
+	background: linear-gradient(270deg, rgba(255, 255, 255, 0.6) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
+}
+@keyframes animateS {
+	0% {
+		transform: rotate(37deg) translateX(0);
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(37deg) translateX(1000px);
+		opacity: 1;
+	}
+}
+span:nth-child(1) {
+	top: 13%;
+	left: 30%;
+	animation-delay: 0;
+	animation-duration: 2s;
+}
+span:nth-child(2) {
+	top: 68%;
+	left: 12%;
+	animation-delay: -0.2s;
+	animation-duration: 2.1s;
+}
+span:nth-child(3) {
+	top: 35%;
+	left: 7%;
+	animation-delay: -0.1s;
+	animation-duration: 1.8s;
+}
+span:nth-child(4) {
+	top: 20%;
+	right: 40%;
+	animation-delay: -1.6s;
+	animation-duration: 1.5s;
+}
+span:nth-child(5) {
+	top: 71%;
+	right: 3%;
+	animation-delay: -0.5s;
+	animation-duration: 2.1s;
+}
+span:nth-child(6) {
+	top: 44%;
+	right: 50%;
+	animation-delay: -2.3s;
+	animation-duration: 3.2s;
+}
+span:nth-child(7) {
+	top: 41%;
+	right: 83%;
+	animation-delay: -0.9s;
+	animation-duration: 1.7s;
+}
+
 
 
 /* kontakt */
@@ -673,7 +787,7 @@ body.wunsch {
 	height: 100px;
 	background: url(images/wave.png);
 	background-size: 1000px 100px;
-	animation: animate 5s ease-in-out infinite;
+	animation: animateW 5s ease-in-out infinite;
 	animation-delay: calc(var c(--i) * 2s);
 }
 .wave#wave1 {
@@ -701,7 +815,7 @@ body.wunsch {
 	opacity: 0.4;
 	background-position-x: 650px;
 }
-@keyframes animate {
+@keyframes animateW {
 	0%, 100% {
 		transform: translateY(10px);
 	}
