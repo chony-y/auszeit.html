@@ -84,6 +84,7 @@ header .mouse-scroll {
 	position: absolute;
 	width: 35px; 
 	top: 95%;
+	left: 50%;
 	z-index: 100; 
 }
 header.sticky .mouse-scroll, header.normal .mouse-scroll {
@@ -280,7 +281,7 @@ img {
 	}
 }
 #about {
-	margin: 100px;
+	padding: 40px;
 }
 .logo2 {
 	position: relative;
@@ -341,7 +342,9 @@ footer ul li a:hover {
 	top: 45%;
 	transform: translateX(-50%);
 	white-space: nowrap;
-	z-index: 1000;
+	z-index: 101;
+	padding:0;
+	margin:0;
 }
 .left-text, .right-text {
 	position: absolute;
@@ -353,7 +356,7 @@ footer ul li a:hover {
 	top: 55%;
 	transform: translateX(-50%);
 	white-space: nowrap;
-	z-index: 1000;
+	z-index: 101;
 }
 .left-title:hover, .right-title:hover {
 	color: darkcyan;
@@ -366,7 +369,7 @@ footer ul li a:hover {
 }
 .split.left {
 	left: 0;
-	background: url(images/12.gif) center center no-repeat;
+	background: url(images/wave_illust.jpg) center center no-repeat;
 	background-size: cover;
 }
 .split.left:before {
@@ -374,12 +377,13 @@ footer ul li a:hover {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(68, 144, 153, 0.7);
+	background-color: rgba(12, 39, 63, 0.7);
 	/*try1이랑 잘어울림 rgba(68, 144, 153, 0.7)*/
+	z-index: 1;
 }
 .split.right {
 	right: 0;
-	background: url(images/13.gif) center center no-repeat;
+	background: url(images/wave_illust2.jpg) center center no-repeat;
 	background-size: cover;
 }
 .split.right:before {
@@ -387,7 +391,8 @@ footer ul li a:hover {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(43, 71, 96, 0.7);
+	background-color: rgba(12, 39, 63, 0.7);
+	z-index: 1;
 }
 .split.left, .split.right, .split.left:before, .split.right:before {
 	transition: 2500ms all ease-in-out;
@@ -651,7 +656,7 @@ section.sternschnuppe {
 	left: -40px;
 	width: 110%;
 	height: 110vh;
-	background: url(images/stern_bg.png);
+	background: url(images/logo_bg.jpg);
 	background-color: rgb(2, 4, 22);
 	background-position-x: center;
 	background-size: cover;
@@ -659,10 +664,10 @@ section.sternschnuppe {
 }
 @keyframes animateBg {
 	0%, 100% {
-		transform: scale(1) rotate(1deg)/*회전 좋은데 그러면 사진을 바꿔야*/;
+		transform: scale(1) rotate(1.5deg)/*회전 좋은데 그러면 사진을 바꿔야*/;
 	}
 	50% {
-		transform: scale(1.06);
+		transform: scale(1.2);
 	}
 }
 span {
@@ -673,8 +678,8 @@ span {
 	background: rgb(255, 255, 255);
 	border-radius: 100%;
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
-	0 0 0 6px rgba(255, 255, 255, 0.1),
-	0 0 0 17px rgba(255, 255, 255, 0.02);
+	0 0 0 4px rgba(255, 255, 255, 0.1),
+	0 0 0 14px rgba(255, 255, 255, 0.03);
 	animation: animateS 5s linear infinite;
 }
 span::before {
@@ -682,8 +687,8 @@ span::before {
 	position: absolute;
 	top: 50%;
 	right: 100%;
-	width: 350px; /*별똥별 꼬리 길이*/
-	height: 1.6px;
+	width: 500px; /*별똥별 꼬리 길이*/
+	height: 1.8px;
 	background: linear-gradient(270deg, rgba(255, 255, 255, 0.6) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
 }
 @keyframes animateS {
@@ -750,7 +755,13 @@ span:nth-child(7) {
 	width: 100%; 
 	height: 97vh;
 	margin-top: 0;
-	/*background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);*/
+	background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);
+	z-index: -1;
+}
+.kontakt-top {
+	color: white;
+	text-align: center;
+	align-items: center;
 }
 .kontakt-background {
 	position: absolute;
@@ -764,17 +775,12 @@ span:nth-child(7) {
 .kontakt-logo {
 	margin: 5px;
 	padding: 15px;
-	padding-top: 180px;
-	width: 18vw;
+	padding-top: 30vh;
+	width: 20vw;
 	z-index: 100;
 }
-.kontakt-top {
-	color: white;
-	text-align: center;
-	align-items: center;
-}
 .kontakt-top h2 {
-	font-size: 50px;
+	font-size: 48px;
 }
 .kontakt-top p {
 	font-size: 22px;

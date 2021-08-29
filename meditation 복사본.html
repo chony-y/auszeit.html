@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="meditation-body">
+<body>
     <header class="normal">
 		<img class="banner" src="images/logo_bg.jpg">
 		<a href="index.html"><img class="logo" src="images/logo.png"></a>
@@ -33,23 +33,38 @@
 	</script>
 
 	<div class="container">
-		<div class="split left">
-			<button onclick=""><h3 class="left-title">VOR DER ARBEIT</h3></button>
-			<p class="left-text">
-				Möchten Sie den Tag gut anfangen ?<br>
-				Brauchen Sie innerlich Ruhe ?<br>
+		<div class="left-text">
+			<button class="left-title" onclick=""><h3>VOR DER ARBEIT</h3></button>
+			<p>
+				Möchten Sie einen guten Anfang ?
+				orem ipsum dolor sit amet, consetetur sadipscing elitr, 
+				sed diam nonumy eirmod tempor invidunt ut 
 			</p>
 		</div>
-		<div class="split right">
-			<button onclick=""><h3 class="right-title">NACH DER ARBEIT</h3></button>
-			<p class="right-text">
-				Möchten Sie negative Energie oder Gedanken<br>
-				nicht in ihr Privatleben mitnehmen ?<br>
+
+		<div class="right-text">
+			<button class="right-title" onclick=""><h3>NACH DER ARBEIT</h3></button>
+			<p>
+				Möchten Sie einen guten Schluss ?
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+				sed diam nonumy eirmod tempor 
 			</p>
 		</div>
+
+		<div class="slide slide1"></div>
+		<div class="slide slide2" id="slide"></div>
 	</div>
 
-	<script src="meditation.js"></script>
+
+	<!--마우스 따라서 가는
+	<script type="text/javascript">
+		var slide = document.getElementById('slide');
+		window.onmousemove = function(e){
+			var x = e.clientX;
+			slide.style.left = x + 'px';
+		}
+	</script>
+	-->
 
     <!--
 		<canvas class="webgl"></canvas>
