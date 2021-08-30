@@ -635,7 +635,7 @@ section.sternschnuppe {
 		transform: scale(1.2);
 	}
 }
-span {
+.sternschnuppe span {
 	position: absolute;
 	top: 50%;
 	width: 7px; /*별똥별 머리 가로*/
@@ -647,7 +647,7 @@ span {
 	0 0 0 14px rgba(255, 255, 255, 0.03);
 	animation: animateS 5s linear infinite;
 }
-span::before {
+.sternschnuppe span::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -669,43 +669,43 @@ span::before {
 		opacity: 1;
 	}
 }
-span:nth-child(1) {
+.sternschnuppe span:nth-child(1) {
 	top: 13%;
 	left: 30%;
 	animation-delay: 0;
 	animation-duration: 2s;
 }
-span:nth-child(2) {
+.sternschnuppe span:nth-child(2) {
 	top: 68%;
 	left: 12%;
 	animation-delay: -0.2s;
 	animation-duration: 2.1s;
 }
-span:nth-child(3) {
+.sternschnuppe span:nth-child(3) {
 	top: 35%;
 	left: 7%;
 	animation-delay: -0.1s;
 	animation-duration: 1.8s;
 }
-span:nth-child(4) {
+.sternschnuppe span:nth-child(4) {
 	top: 20%;
 	right: 40%;
 	animation-delay: -1.6s;
 	animation-duration: 1.5s;
 }
-span:nth-child(5) {
+.sternschnuppe span:nth-child(5) {
 	top: 71%;
 	right: 3%;
 	animation-delay: -0.5s;
 	animation-duration: 2.1s;
 }
-span:nth-child(6) {
+.sternschnuppe span:nth-child(6) {
 	top: 44%;
 	right: 50%;
 	animation-delay: -2.3s;
 	animation-duration: 3.2s;
 }
-span:nth-child(7) {
+.sternschnuppe span:nth-child(7) {
 	top: 41%;
 	right: 83%;
 	animation-delay: -0.9s;
@@ -750,11 +750,12 @@ main.wunsch-main{
 	margin: 5px;
 	padding: 15px;
 	padding-top: 30vh;
-	width: 20vw;
+	width: 21vw;
 	z-index: 100;
 }
 .kontakt-top h2 {
 	font-size: 48px;
+	letter-spacing: 1px;
 }
 .kontakt-top p {
 	font-size: 22px;
@@ -806,25 +807,82 @@ main.wunsch-main{
 .kontakt-bottom {
 	padding: 100px; /* 파도 아래 글씨 패딩간격 */
 	text-align: center;
-	margin-left: 200px;
-	margin-right: 200px;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 .kontakt-bottom h2 {
-	font-size: 50px;
+	letter-spacing: 1px;
+	color: rgb(70, 70, 70);
+	font-size: 48px;
 }
 .kontakt-input {
-	font-size: 22px;
+	font-size: 24px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .kontakt-input-item {
+	position: relative;
+	margin-bottom: 30px;
 	align-items: center; /* 소용이 없구나~ */
 }
+.kontakt-input-item.w50 {
+	width: 48%;
+}
+.kontakt-input-item.w100 {
+	width: 100%;
+}
+.kontakt-input-item input,
+.kontakt-input-item textarea {
+	width: 100%;
+	resize: none;
+	padding: 5px 0;
+	font-size: 20px;
+	font-weight: 300;
+	color: #333;
+	/*border: none;
+	outline: none;*/
+	border: 1px solid #419FD5;
+}
+.kontakt-input-item textarea {
+	height: 120px;
+}
+.kontakt-input-item span {
+	position: absolute;
+	left: 0;
+	padding: 5px 3px;
+	pointer-events: none;
+	font-size: 20px;
+	font-weight: 300;
+	transition: 0.4s;
+}
+.kontakt-input-item input:focus ~ span,
+.kontakt-input-item input:valid ~ span,
+.kontakt-input-item textarea:focus ~ span,
+.kontakt-input-item textarea:valid ~ span {
+	transform: translateY(-26px);
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color:#419FD5;
+}
+.kontakt-input-item input[type="submit"] {
+	font-weight: 400;
+	position: relative;
+	width: 500px;
+	cursor: pointer;
+	background: #419FD5;
+	color: white;
+	border: none;
+	max-width: 200px;
+	padding: 10px;
+}
+
 .kontakt-bottom p.copyright {
 	color: gray;
 	font-weight: 300;
 	font-size: 15px;
-}
-.kontakt-input {
-	text-align: left;
 }
 @media (max-width: 800px) {
 	.kontakt-logo {
