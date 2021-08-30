@@ -123,15 +123,10 @@ nav ul li a:hover {
 	color: darkcyan;
 }
 section.global-width {
-	margin-top: 50vh;
-	padding: 100px;
+	margin-top: 33vh;
+	padding: 50px;
 }
-section h2 {
-	font-size: 3em;
-	/* box-sizing: border-box;    /* 체크 */
-	/* padding-top: 2.7rem;    /* 체크 */
-	/* padding-bottom: 0.6rem;    /* 체크 */
-}
+
 section p {
 	font-size: 1.2em;
 }
@@ -205,17 +200,18 @@ section p {
 	}
 }
 
-
 img {
 	max-width: 100%;
 	height: auto;
 }
 .page-title {
 	font-family: 'Staatliches', cursive;
+	letter-spacing : 1px;
 	/*font-family: 'Caveat', cursive;*/
 	font-size: 80px;
-	padding-top: 500px;
-	padding-bottom: 20px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 70px;
 }
 .global-width {
 	max-width: 900px; 
@@ -258,7 +254,7 @@ img {
 }
 .balloons { /* 말풍선 */
 	color: #303030;
-	font-size: 26px;
+	font-size: 25px;
 	font-weight: 400;
 	text-align: center;
 	align-items: center;
@@ -281,7 +277,7 @@ img {
 	}
 }
 #about {
-	padding: 40px;
+	padding: 0px;
 }
 .logo2 {
 	position: relative;
@@ -293,11 +289,10 @@ img {
 .ending-text {
 	color: white;
 	position: relative;
-	margin-left: 20vw;
-	margin-right: 20vw;
+	margin-left: 21vw;
+	margin-right: 21vw;
 	box-sizing: border-box;
-	font-size: 25px;
-	font-weight: 500;
+	font-size: 26px;
 	text-align: center;
 	align-items: center;
 	z-index: 0;
@@ -305,7 +300,7 @@ img {
 .grid {
 	border-top: 0.2px solid whitesmoke;
 	padding-top: 50px;
-	font-size: 22px;
+	font-size: 21px;
 	font-weight: 300;
 	list-style: none;
 	text-align: center;
@@ -336,7 +331,7 @@ footer ul li a:hover {
 	position: absolute;
 	display: block;
 	color: white;
-	font-size: 55px;
+	font-size: 60px;
 	text-decoration: none;
 	left: 50%;
 	top: 45%;
@@ -422,8 +417,6 @@ footer ul li a:hover {
 	}
 }
 
-
-
 /*
 .container {
 	background: black;
@@ -493,43 +486,6 @@ footer ul li a:hover {
 
 
 /*
-#Option {
-	color: white;
-	text-align: center;
-	align-items: center;
-	margin-top: -30px;
-	padding: 0;
-	margin: 0;
-}
-.left, .right {
-	width: 50%;
-	min-height: 1000px;
-	z-index: -1;
-	position: absolute;
-}
-.left {
-	left: 0px;
-	background-color: #CE794E;
-}
-.right {
-	right: 0px;
-	background-color: #269096;
-}
-.left-text, .right-text {
-	width: 50%;
-	z-index: 10;
-	position: absolute;
-	top: 50%;
-	font-size: 50px;
-}
-.left-text {
-	left: 0px;
-}
-.right-text {
-	right: 0px;
-} 
-
-
 .music {
 	position: fixed;
 	top: 50%;
@@ -632,39 +588,48 @@ body.wunsch {
 	padding: 0;
 	box-sizing: border-box;
 	overflow: hidden;
+	background-color: #052536;
+	color: white;
+}
+.mouse-scroll2 {
+	position: absolute;
+	width: 35px; 
+	top: 95%;
+	left: 50%;
+	z-index: 100; 
 }
 .stern-text {
-	position: fixed;
+	position: absolute;
 	color: white;
+	width: 100%;
 	top: 44%;
-	right: 32%;
 	text-align: center;
 	align-items: center;
-	z-index: 500;
+	z-index: 200;
 }
 .stern-text h2 {
-	padding-bottom: 20px;
-	font-size: 45px;
+	font-size: 55px;
+	padding-bottom: 18px;
 }
 .stern-text p {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 300;
 }
 section.sternschnuppe {
 	position: absolute;
 	top: 0;
-	left: -40px;
+	left: -40px; /*배경 이미지 썼을 때 흰 부분 안보이게 하려고*/ 
 	width: 110%;
 	height: 110vh;
-	background: url(images/logo_bg.jpg);
-	background-color: rgb(2, 4, 22);
+	background: url(images/stern_bg.png);
 	background-position-x: center;
 	background-size: cover;
 	animation: animateBg 7s linear infinite;
+	z-index: -1;
 }
 @keyframes animateBg {
 	0%, 100% {
-		transform: scale(1) rotate(1.5deg)/*회전 좋은데 그러면 사진을 바꿔야*/;
+		transform: scale(1) rotate(1.5deg); /*회전 좋은데 그러면 사진을 바꿔야*/
 	}
 	50% {
 		transform: scale(1.2);
@@ -674,7 +639,7 @@ span {
 	position: absolute;
 	top: 50%;
 	width: 7px; /*별똥별 머리 가로*/
-	height: 5px;
+	height: 3px;
 	background: rgb(255, 255, 255);
 	border-radius: 100%;
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
@@ -745,6 +710,15 @@ span:nth-child(7) {
 	right: 83%;
 	animation-delay: -0.9s;
 	animation-duration: 1.7s;
+}
+main.wunsch-main{
+	display: none;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin: 200px;
+	margin-top: 900px;
+	z-index: 600;
 }
 
 
