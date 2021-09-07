@@ -7,7 +7,7 @@ window.addEventListener("scroll", function(){
 		explain.style.display = 'block';
 		write.style.display = 'none';
 	}
-	else {
+	else if (window.scrollY > 0) {
 		explain.style.display = 'none';
 		write.style.display = 'block';
 	}

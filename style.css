@@ -568,7 +568,7 @@ section.sternschnuppe {
 }
 @keyframes animateBg {
 	0%, 100% {
-		transform: scale(1) rotate(1.5deg); /*회전 좋은데 그러면 사진을 바꿔야*/
+		transform: scale(1) rotate(1.2deg); /*회전 좋은데 그러면 사진을 바꿔야*/
 	}
 	50% {
 		transform: scale(1.2);
