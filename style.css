@@ -423,7 +423,6 @@ footer ul li a:hover {
 	}
 }
 
-
 /*
 .music {
 	position: fixed;
@@ -526,7 +525,7 @@ body.wunsch {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	overflow: hidden;
+	/* overflow: hidden;*/
 	background-color: #052536;
 	color: white;
 }
@@ -657,13 +656,81 @@ section.sternschnuppe {
 	text-align: center;
 	margin-top: 900px;
 }
-.wunsch-main {
+#wunsch-main {
 	display: none;
 	color: white;
 	font-size: 20px;
 	text-align: center;
 	margin-top: 900px;
 	z-index: 600;
+}
+.wunsch-input {
+	font-size: 24px;
+	color: rgb(70, 70, 70);
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 40px; 
+	text-align: center;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+.wunsch-input-item {
+	position: relative;
+	margin-bottom: 20px;
+}
+.wunsch-input-item.w50 {
+	width: 200px;
+}
+.wunsch-input-item.w100 {
+	width: 100%;
+	/* height: 40px; 높이는 맞는데 하면 겹쳐짐*/ 
+}
+.wunsch-input-item input,
+.wunsch-input-item textarea {
+	width: 100%;
+	resize: none;
+	padding: 5px 0;
+	font-size: 20px;
+	font-weight: 300;
+	color: #333;
+	/*border: none;
+	outline: none;*/
+	border: 1px solid #419FD5;
+}
+.wunsch-input-item textarea {
+	height: 120px;
+}
+.wunsch-input-item span {
+	position: absolute;
+	left: 0;
+	padding: 5px 3px;
+	pointer-events: none;
+	font-size: 20px;
+	font-weight: 300;
+	transition: 0.4s;
+}
+.wunsch-input-item input:focus ~ span,
+.wunsch-input-item input:valid ~ span,
+.wunsch-input-item textarea:focus ~ span,
+.wunsch-input-item textarea:valid ~ span {
+	transform: translateY(-26px);
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color:#419FD5;
+}
+.wunsch-input-item input[type="submit"] {
+	font-weight: 400;
+	position: relative;
+	width: 500px;
+	cursor: pointer;
+	background: #419FD5;
+	color: white;
+	border: none;
+	max-width: 200px;
+	padding: 10px;
 }
 
 
