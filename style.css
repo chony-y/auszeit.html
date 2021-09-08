@@ -766,6 +766,10 @@ section.sternschnuppe {
 	}
 }
 .andere-wunsche span:nth-child(1) {
+	left: 50%;
+}
+/*
+.andere-wunsche span:nth-child(1) {
 	top: 195%;
 	left: 66%;
 	animation-delay: 0;
@@ -800,7 +804,7 @@ section.sternschnuppe {
 	left: 75%;
 	animation-delay: -2.3s;
 	animation-duration: 3.2s;
-}
+} */
 
 
 /* kontakt */
