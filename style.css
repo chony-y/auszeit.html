@@ -85,6 +85,7 @@ header .mouse-scroll {
 	width: 35px; 
 	top: 95%;
 	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 100; 
 }
 header.sticky .mouse-scroll, header.normal .mouse-scroll {
@@ -125,10 +126,6 @@ nav ul li a:hover {
 section.global-width {
 	margin-top: 33vh;
 	padding: 50px;
-}
-
-section p {
-	font-size: 1.2em;
 }
 
 @media (max-width: 971px) {
@@ -378,7 +375,7 @@ footer ul li a:hover {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(12, 39, 63, 0.7);
+	background-color: rgba(12, 39, 63, 0.6);
 	/*try1이랑 잘어울림 rgba(68, 144, 153, 0.7)*/
 	z-index: 1;
 }
@@ -392,7 +389,7 @@ footer ul li a:hover {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(12, 39, 63, 0.7);
+	background-color: rgba(12, 39, 63, 0.6);
 	z-index: 1;
 }
 .split.left, .split.right, .split.left:before, .split.right:before {
@@ -502,7 +499,6 @@ input.nameInput {
 	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	
 	/*visibility: hidden;*/
 }
 #btn1, #btn2, #btn3 {
@@ -534,6 +530,8 @@ body.wunsch {
 	width: 35px; 
 	top: 95%;
 	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
 	z-index: 100; 
 }
 .stern-text {
@@ -557,9 +555,8 @@ body.wunsch {
 section.sternschnuppe {
 	position: absolute;
 	top: 0;
-	left: -40px; /*배경 이미지 썼을 때 흰 부분 안보이게 하려고*/ 
-	width: 110%;
-	height: 110vh;
+	width: 100%;
+	height: 130%; /*배경의 높이라 높이면 아래부분도 커짐*/
 	background: url(images/stern_bg.png);
 	background-position-x: center;
 	background-size: cover;
@@ -601,7 +598,7 @@ section.sternschnuppe {
 		opacity: 1;
 	}
 	70% {
-		opacity: 1;
+		opacity: 0.6;
 	}
 	100% {
 		transform: rotate(37deg) translateX(1000px);
@@ -656,13 +653,21 @@ section.sternschnuppe {
 	text-align: center;
 	margin-top: 900px;
 }
-#wunsch-main {
-	display: none;
+#wunsch-main, #wunsch-bottom {
+	/*display: none;*/
 	color: white;
 	font-size: 20px;
 	text-align: center;
-	margin-top: 900px;
+	height: 100vh;
+	padding-top: 100px;
 	z-index: 600;
+}
+#wunsch-main h2, #wunsch-bottom h2 {
+	font-weight: 600;
+}
+#wunsch-main p, #wunsch-bottom p {
+	margin-top: 10px;
+	font-weight: 300;
 }
 .wunsch-input {
 	font-size: 24px;
@@ -719,7 +724,7 @@ section.sternschnuppe {
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: 1px;
-	color:#419FD5;
+	color:rgb(211, 211, 211);
 }
 .wunsch-input-item input[type="submit"] {
 	font-weight: 400;
