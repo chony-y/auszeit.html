@@ -544,7 +544,7 @@ body.wunsch {
 	z-index: 200;
 }
 .stern-text h2 {
-	font-size: 50px;
+	font-size: 58px;
 	font-weight: 600;
 	padding-bottom: 18px;
 }
@@ -589,8 +589,8 @@ section.sternschnuppe {
 	top: 50%;
 	right: 100%;
 	width: 500px; /*별똥별 꼬리 길이*/
-	height: 1.9px; /*별똥별 꼬리 두께*/
-	background: linear-gradient(270deg, rgba(231, 255, 165, 0.6) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
+	height: 1.7px; /*별똥별 꼬리 두께*/
+	background: linear-gradient(270deg, rgba(231, 255, 165, 0.5) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
 }
 @keyframes animateS {
 	0% {
