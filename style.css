@@ -331,9 +331,9 @@ footer ul li a:hover {
 	position: absolute;
 	display: block;
 	color: white;
-	font-size: 60px;
-	font-weight: 600;
-	letter-spacing: 0.6px;
+	font-size: 65px;
+	font-weight: 700;
+	letter-spacing: 0.3px;
 	text-decoration: none;
 	left: 50%;
 	top: 45%;
@@ -579,7 +579,7 @@ section.sternschnuppe {
 	background: rgb(255, 255, 255);
 	border-radius: 100%;
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
-	0 0 0 4px rgba(255, 255, 255, 0.1),
+	0 0 0 4px rgba(255, 255, 255, 0.2),
 	0 0 0 14px rgba(255, 255, 255, 0.03);
 	animation: animateS 5s linear infinite;
 }
@@ -590,7 +590,7 @@ section.sternschnuppe {
 	right: 100%;
 	width: 500px; /*별똥별 꼬리 길이*/
 	height: 1.9px; /*별똥별 꼬리 두께*/
-	background: linear-gradient(270deg, rgba(255, 255, 255, 0.6) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
+	background: linear-gradient(270deg, rgba(231, 255, 165, 0.6) 10%,  rgba(254, 255, 172, 0.4) 30%, rgba(255, 185, 255, 0.2) 70%, rgba(188, 255, 202, 0.1) 80%, transparent);
 }
 @keyframes animateS {
 	0% {
@@ -678,8 +678,9 @@ section.sternschnuppe {
 	flex-wrap: wrap;
 	padding: 40px; 
 	text-align: center;
-	margin-left: 30%;
-	margin-right: 30%;
+	align-items: center;
+	margin-left: 33%;
+	margin-right: 33%;
 }
 .wunsch-input-item {
 	position: relative;
@@ -687,9 +688,11 @@ section.sternschnuppe {
 }
 .wunsch-input-item.w50 {
 	width: 200px;
+	min-width: 200px;
 }
 .wunsch-input-item.w100 {
 	width: 100%;
+	min-width: 200px;
 	/* height: 40px; 높이는 맞는데 하면 겹쳐짐*/ 
 }
 .wunsch-input-item input,
