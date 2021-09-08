@@ -136,24 +136,10 @@ document.getElementById('btn1').onclick = function weiter() {
 }
 
 // Button_save
-function save(){
-    html2canvas(document.querySelector('#대상'), {}).then(function (canvas) {
-        saveAs(canvas.toDataURL(), 'name.png');
-    });    
+document.getElementById('btn3').onclick = function speichern(){
+    saveAs(canvas.toDataURL(), 'name.png'); 
 }
 
-function saveAs(uri, filename) {
-	var link = document.createElement('a');
-	if (typeof link.download === 'string') {
-		link.href = uri;
-		link.download = filename;
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-	} else {
-		window.open(uri);
-	}
-}
 
 /**
  * Changing bgcolors
