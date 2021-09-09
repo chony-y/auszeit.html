@@ -9,7 +9,7 @@ import waterFragmentShader from './shaders/water/fragment.glsl'
  * Base
  */
 // Debug
-const gui = new dat.GUI({ width: 340 })
+const gui = new dat.GUI({ width: 350 })
 const debugObject = {}  //색깔 넣어줄 때 쓰는 
 
 // Canvas
@@ -22,11 +22,11 @@ const scene = new THREE.Scene()
  * Water
  */
 // Geometry
-const waterGeometry = new THREE.PlaneGeometry(2, 2, 512, 512)
+const waterGeometry = new THREE.PlaneGeometry(3, 4, 512, 512)
 
 // Color
 debugObject.depthColor = '#186691'
-debugObject.surfaceColor = '#9bd8ff'
+debugObject.surfaceColor = '#d4eeff'
 
 
 // Material
@@ -37,32 +37,31 @@ const waterMaterial = new THREE.ShaderMaterial({
     {
         uTime : { value : 0 },
 
-        uBigWavesElevation : { value : 0.2 },
+        uBigWavesElevation : { value : 0.3 },
         uBigWavesFrequency : { value : new THREE.Vector2(4, 1.5) },
         uBigWavesSpeed : { value : 0.75 },
 
-        uSmallWavesElevation : { value : 0.15 },
-        uSmallWavesFrequency : { value : 3 },
-        uSmallWavesSpeed : { value : 0.2 },
-        uSmallWavesIterations : { value : 4.0 }, //Iteration 반복
+        uSmallWavesElevation : { value : 0.1 },
+        uSmallWavesFrequency : { value : 2.5 },
+        uSmallWavesSpeed : { value : 0.1 },
+        uSmallWavesIterations : { value : 5.0 }, //Iteration 반복
 
         uDepthColor : { value : new THREE.Color(debugObject.depthColor) },
         uSurfaceColor : { value : new THREE.Color(debugObject.surfaceColor) },
-        uColorOffset : { value : 0.08 },
-        uColorMultiplier : { value : 5 }
+        uColorOffset : { value : 0 },
+        uColorMultiplier : { value : 10 }
     }
 })
 
 // Debug
-gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.01).name('uBigWavesElevation')
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(10).step(0.01).name('uBigWavesFrequencyX')
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(10).step(0.01).name('uBigWavesFrequencyY')
-gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(4).step(0.01).name('uBigWavesSpeed')
+gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.001).name('uBigWavesElevation')
+gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(5).step(0.001).name('uBigWavesFrequencyX')
+gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(5).step(0.001).name('uBigWavesFrequencyY')
+gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(1.5).step(0.001).name('uBigWavesSpeed')
 
-gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(1).step(0.01).name('uSmallWavesElevation')
-gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(30).step(0.01).name('uSmallWavesFrequency')
-gui.add(waterMaterial.uniforms.uSmallWavesSpeed, 'value').min(0).max(4).step(0.01).name('uSmallWavesSpeed')
-gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(1).name('uSmallWavesIterations')
+gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(0.1).step(0.001).name('uSmallWavesElevation')
+gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(5).step(0.001).name('uSmallWavesFrequency')
+gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(0.001).name('uSmallWavesIterations')
 
 gui
    .addColor(debugObject, 'depthColor')
@@ -78,9 +77,6 @@ gui
    {
        waterMaterial.uniforms.uSurfaceColor.value.set(debugObject.surfaceColor)
    })
-
-gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(1).step(0.01).name('uColorOffset')
-gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(10).step(0.01).name('uColorMultiplier')
 
 // Mesh
 const water = new THREE.Mesh(waterGeometry, waterMaterial)
@@ -114,8 +110,8 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(60, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(1, 1, 1)
+const camera = new THREE.PerspectiveCamera(40, sizes.width / sizes.height, 0.1, 100)
+camera.position.set(-1, 0.5, 1)
 scene.add(camera)
 
 // Controls
