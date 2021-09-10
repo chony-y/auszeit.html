@@ -522,7 +522,8 @@ body.wunsch {
 	padding: 0;
 	box-sizing: border-box;
 	overflow-x: hidden; 
-	background-color: #052536;
+	/*background-color: #052536;*/
+	background: linear-gradient(183deg, #021c2b 13%, #052536 70%, #263554 85%, #603e56 93%, #8e4559 96%, #b3464a 99%, #c04643 100%);
 	color: white;
 }
 .mouse-scroll2 {
@@ -652,19 +653,18 @@ section.sternschnuppe {
 	text-align: center;
 	margin-top: 900px;
 }
-#wunsch-main, #wunsch-bottom {
+#wunsch-main {
 	/*display: none;*/
 	color: white;
 	font-size: 20px;
 	text-align: center;
-	height: 100vh;
 	padding-top: 250px;
 	z-index: 600;
 }
-#wunsch-main h2, #wunsch-bottom h2 {
+#wunsch-main h2 {
 	font-weight: 600;
 }
-#wunsch-main p, #wunsch-bottom p {
+#wunsch-main p {
 	margin-top: 10px;
 	font-weight: 300;
 }
@@ -738,6 +738,10 @@ section.sternschnuppe {
 	border: none;
 	max-width: 200px;
 	padding: 10px;
+}
+.andere-wunsche {
+	margin-top: 400px;
+	margin-bottom: 400px;
 }
 .andere-wunsche span {
 	position: absolute;
