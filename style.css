@@ -747,8 +747,8 @@ section.sternschnuppe {
 }
 .andere-wunsche div {
 	position: absolute;
-	width: 6px; 
-	height: 6px;
+	width: 5px; 
+	height: 5px;
 	background:  rgb(255, 255, 255);
 	border-radius: 100%;
 	box-shadow: 0px 0px 10px 0.2px rgba(255, 255, 255, 1),
@@ -765,7 +765,7 @@ section.sternschnuppe {
 	background-color: rgba(0, 0, 0, 0.3);
 	text-align: left;
 	border-radius: 4px;
-	padding: 7px 10px; /*메세지 내부 간격*/
+	padding: 16px 20px; /*메세지 내부 간격*/
 	margin-top: 25px; /*별에서 메세지 간격*/
 	/* Position the tooltip */
 	position: absolute;
@@ -803,7 +803,7 @@ section.sternschnuppe {
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(1.06);
+		transform: scale(1.04);
 	}
 	100% {
 		transform: scale(1);
