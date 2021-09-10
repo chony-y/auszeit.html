@@ -1,7 +1,7 @@
 (() => {
     const balloonsElems = document.querySelectorAll('.balloons');
-    const graphicElems = document.querySelectorAll('.graphic-item');
-    let currentItem = graphicElems[0]; //현재 활성화 된 (visible 클래스가 붙은) .graphic-item을 지정
+    const graphicElems = document.querySelectorAll('.scene-item');
+    let currentItem = graphicElems[0]; //현재 활성화 된 (visible 클래스가 붙은) .scene-item을 지정
     let ioIndex;
 
     const io = new IntersectionObserver((entries, observer) => {  //IntersectionObserver는 현재 화면에 보이는 영역 

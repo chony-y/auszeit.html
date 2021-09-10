@@ -135,11 +135,66 @@ document.getElementById('btn1').onclick = function weiter() {
     mehrLob();
 }
 
-// Button_save
-document.getElementById('btn3').onclick = function speichern(){
-    saveAs(canvas.toDataURL(), 'name.png'); 
-}
+// Button_speichern
 
+const screenshotTarget = document.body;
+
+html2canvas(screenshotTarget).then((canvas) => {
+    const base64image = canvas.toDataURL("image/png");
+    window.location.href = base64image;
+});
+// document.getElementById('btn3').onclick = function speichern(){
+//     var startX, startY;
+//     var height = window.innerHeight;
+//     var width = window.innerWidth;
+
+//     var mousedown = function(e) {
+//         e.preventDefault();
+//         selectArea = true;
+//         startX = e.clientX;
+//         startY = e.clientY;
+//         body.removeEventListner('mousedown', mousedown); //이벤트 한번만 동작하게 삭제
+    
+//     body.addEventListener('mousedown', mousedown); //마우스 누르는 이벤트
+//     }
+
+//     var mouseup = function(e) {
+//         selectArea = false; 
+//         body.removeEventListner('mousedown', mousedown);
+
+//         html2canvas(document.body).then(
+//             function(canvas) {
+//                 var img = canvas.getContext('2d').getImageData(left, top, width, height);
+//                 var c = document.createElement('canvas');
+//                 c.width = width;
+//                 c.height = height;
+//                 c.getContext('2d').putImageData(img, 0, 0);
+//                 save(c); //crop한 이미지 저장
+//             }
+//         );
+//     }
+//     body.removeEventListener('mouseup', mouseup); 
+// };
+// body.addEventListener('mouseup', mouseup); 
+
+// function mousemove(e) {
+//     var x = e.clientX;
+//     var y = e.clientY;
+
+// }
+
+// // 캡쳐한 이미지 저장
+// function save(canvas) {
+//     if(navigator.msSaveBlob) {
+//         var blob = canvas.msToBlob();
+//         return navigator.msSaveBlob(blob, 'lob.jpg');
+//     } else {
+//         var el = document.getElementById('target');
+//         el.href = canvas.toDataURL('image/jpeg');
+//         el.download = 'lob.jpg';
+//         el.click();
+//     }
+// }
 
 /**
  * Changing bgcolors
