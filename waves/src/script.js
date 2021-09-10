@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 import waterVertexShader from './shaders/water/vertex.glsl'
 import waterFragmentShader from './shaders/water/fragment.glsl'
+import { RedFormat } from 'three'
 
 /**
  * Base
@@ -17,6 +18,7 @@ const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
+// scene.background = new THREE.Color(0xffffff); 
 
 /**
  * Water
@@ -26,7 +28,7 @@ const waterGeometry = new THREE.PlaneGeometry(3, 4, 512, 512)
 
 // Color
 debugObject.depthColor = '#186691'
-debugObject.surfaceColor = '#d4eeff'
+debugObject.surfaceColor = '#99c7e8'
 
 
 // Material
@@ -37,14 +39,14 @@ const waterMaterial = new THREE.ShaderMaterial({
     {
         uTime : { value : 0 },
 
-        uBigWavesElevation : { value : 0.3 },
+        uBigWavesElevation : { value : 0.3 }, //Elevation 고도 Height
         uBigWavesFrequency : { value : new THREE.Vector2(4, 1.5) },
         uBigWavesSpeed : { value : 0.75 },
 
-        uSmallWavesElevation : { value : 0.1 },
+        uSmallWavesElevation : { value : 0.1 }, 
         uSmallWavesFrequency : { value : 2.5 },
         uSmallWavesSpeed : { value : 0.1 },
-        uSmallWavesIterations : { value : 5.0 }, //Iteration 반복
+        uSmallWavesIterations : { value : 5.0 }, //Iteration 반복 Repeat
 
         uDepthColor : { value : new THREE.Color(debugObject.depthColor) },
         uSurfaceColor : { value : new THREE.Color(debugObject.surfaceColor) },
@@ -54,25 +56,25 @@ const waterMaterial = new THREE.ShaderMaterial({
 })
 
 // Debug
-gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.001).name('uBigWavesElevation')
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(5).step(0.001).name('uBigWavesFrequencyX')
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(5).step(0.001).name('uBigWavesFrequencyY')
-gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(1.5).step(0.001).name('uBigWavesSpeed')
+gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(0.6).step(0.001).name('(B) WavesHeight')
+gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(5).step(0.001).name('(B) WavesFrequencyX')
+gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(5).step(0.001).name('(B) WavesFrequencyY')
+gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(1.5).step(0.001).name('(B) WavesSpeed')
 
-gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(0.1).step(0.001).name('uSmallWavesElevation')
-gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(5).step(0.001).name('uSmallWavesFrequency')
-gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(0.001).name('uSmallWavesIterations')
+gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(0.15).step(0.001).name('(S) WavesHeight')
+gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(5).step(0.001).name('(S) WavesFrequency')
+gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(0.001).name('(S) WavesRepeat')
 
 gui
    .addColor(debugObject, 'depthColor')
-   .name('depthColor')
+   .name('Inside')
    .onChange(() =>
    {
        waterMaterial.uniforms.uDepthColor.value.set(debugObject.depthColor)
    })
 gui
    .addColor(debugObject, 'surfaceColor')
-   .name('surfaceColor')
+   .name('Outside')
    .onChange(() =>
    {
        waterMaterial.uniforms.uSurfaceColor.value.set(debugObject.surfaceColor)
@@ -111,8 +113,11 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(40, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(-1, 0.5, 1)
+camera.position.set(-1, 0.4, 0.9)
 scene.add(camera)
+// const helper = new THREE.CameraHelper( camera );
+// scene.add( helper );
+
 
 // Controls
 const controls = new OrbitControls(camera, canvas)

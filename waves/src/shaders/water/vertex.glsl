@@ -10,8 +10,6 @@ uniform float uSmallWavesIterations;
 
 varying float vElevation;
 
-// Classic Perlin 3D Noise 
-// by Stefan Gustavson
 //
 vec4 permute(vec4 x)
 {
@@ -108,7 +106,7 @@ void main()
     //elevation += cnoise(vec3(modelPosition.xz * 3.0, uTime * 0.2)) * 0.15; //동글동글하게
     for(float i = 1.0; i <= uSmallWavesIterations; i++) //frequency빈도를 더 올려주려고 
     {
-    elevation -= abs(  //abs써서 절대값 만들고 -씌워서 파도처럼 해준거 
+    elevation -= abs ( //abs써서 절대값 만들고 -씌워서 파도처럼 해준거 
         cnoise(
             vec3(
                 modelPosition.xz * uSmallWavesFrequency * i, 
