@@ -741,10 +741,11 @@ section.sternschnuppe {
 	padding: 10px;
 }
 .andere-wunsche {
+	position: relative;
 	margin-top: 600px;
 	margin-bottom: 150px;
 }
-.andere-wunsche span {
+.andere-wunsche div {
 	position: absolute;
 	width: 6px; 
 	height: 6px;
@@ -752,19 +753,35 @@ section.sternschnuppe {
 	border-radius: 100%;
 	box-shadow: 0px 0px 10px 0.2px rgba(255, 255, 255, 1),
 	0px 0px 20px 10px rgba(255, 255, 255, 0.1),
-	0px 0px 30px 30px rgba(255, 255, 255, 0.1);
+	0px 0px 30px 30px rgba(255, 255, 255, 0.07);
 	animation: animateA 2s infinite;
+}
+.andere-wunsche span {  /* andere Wunsche */
+	font-size: 18px;
+	visibility: hidden;
+    width: 330px;
+	margin-left: -165px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
+	color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: left;
+	border-radius: 4px;
+	padding: 7px 10px; /*메세지 내부 간격*/
+	margin-top: 25px; /*별에서 메세지 간격*/
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
 }
 @keyframes animateA {
 	0% {
 		transform: scale(1);
 		opacity: 0.9;
 	}
-	35% {
+	25% {
+		transform: translateY(0.6px);
 		opacity: 1;
 	}
-	70% {
-		transform: scale(1.8);
+	60% {
+		transform: scale(1.8) translateY(-0.6px);
 		opacity: 0.9;
 	}
 	100% {
@@ -772,11 +789,27 @@ section.sternschnuppe {
 		opacity: 0.8;
 	}
 }
-.andere-wunsche span:hover {
+.andere-wunsche div:hover {
 	background-color: rgb(255, 255, 234);
-	animation: animateB 0.1s linear infinite;
+	animation: animateB 20s linear infinite;
+	/*animateB 0.1s linear infinite*/
+}
+.andere-wunsche div:hover .wunsch-text {
+	visibility: visible;
+	animation: none;
 }
 @keyframes animateB {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.06);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* @keyframes animateB {
 	0% {
 		transform: scale(1.5);
 	}
@@ -797,40 +830,40 @@ section.sternschnuppe {
 	100% {
 		transform: scale(1.5);
 	}
-}
+} */
 .andere-wunsche #wunsch1 {
-	left: 11%;
-	margin-top: -350px;
+	left: 14%;
+	margin-top: -300px;
 	animation-delay: -1.6s;
 	animation-duration: 1.5s;
 }
 .andere-wunsche #wunsch2 {
 	left: 31%;
-	margin-top: -480px;
+	margin-top: -430px;
 	animation-delay: -0.5s;
 	animation-duration: 2.1s;
 }
 .andere-wunsche #wunsch3 {
 	left: 43%;
-	margin-top: -450px;
+	margin-top: -400px;
 	animation-delay: -0.2s;
 	animation-duration: 2.1s;
 }
 .andere-wunsche #wunsch4 {
-	left: 66%;
-	margin-top: -310px;
+	left: 61%;
+	margin-top: -230px;
 	animation-delay: 0;
 	animation-duration: 2s;
 }
 .andere-wunsche #wunsch5 {
-	left: 77%;
-	margin-top: -540px;
+	left: 73%;
+	margin-top: -490px;
 	animation-delay: -0.1s;
 	animation-duration: 1.8s;
 }
 .andere-wunsche #wunsch6 {
-	left: 89%;
-	margin-top: -360px;
+	left: 86%;
+	margin-top: -310px;
 	animation-delay: -2.3s;
 	animation-duration: 3.2s;
 }
