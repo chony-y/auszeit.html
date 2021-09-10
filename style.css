@@ -759,8 +759,8 @@ section.sternschnuppe {
 .andere-wunsche span {  /* andere Wunsche */
 	font-size: 18px;
 	visibility: hidden;
-    width: 330px;
-	margin-left: -165px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
+    width: 360px;
+	margin-left: -180px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
 	color: rgba(255, 255, 255, 0.9);
 	background-color: rgba(0, 0, 0, 0.3);
 	text-align: left;
