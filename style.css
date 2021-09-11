@@ -136,7 +136,8 @@ section.index-width {
 		width: 40vw; /*viewport width*/
 	}
 	header .mouse-scroll {
-		top: 92%;
+		top: 88%;
+		left: 49%;
 		transform: scale(90%);
 	}
 	header.sticky .logo, header.normal .logo {
@@ -307,6 +308,7 @@ footer ul li a:hover {
 	.page-title {
 		font-size: 42px;
 		margin: 0 10px;
+		line-height: 120%;
 	}
 	.scroll-text {
 		max-width: 450px; /* 말풍선 박스 가로사이즈 */
@@ -536,8 +538,9 @@ input.nameInput {
 		font-size: 30px;
 	}
 	.nameInput {
-		width: 40vw;
+		width: 50vw;
 		font-size: 20px;
+		border-radius: 4px;
 		padding: 0.5rem 0.6rem;
 		margin: 0.2rem;
 	}
@@ -546,7 +549,7 @@ input.nameInput {
 	}
 	#btn {
 		top: 80%;
-		left: 20%; /*버튼 위치인데 잘 모르겠네*/
+		left: 20%; /*버튼 위치인데 잘 모르겠네 checkkkkkkkkkkk @TODO */
 		transform: none;
 	}
 	#btn1, #btn2, #btn3 {
@@ -935,8 +938,12 @@ section.sternschnuppe {
 	animation-duration: 1.5s;
 }
 @media (max-width: 800px) {
+	body.wunsch {
+		margin-left: 10px;
+		margin-right: 10px;  /*checkkkkkkkkk*/
+	}
 	.stern-text h2 {
-		font-size: 33px;
+		font-size: 30px;
 		padding-bottom: 11px;
 	}
 	.stern-text p {
@@ -947,7 +954,7 @@ section.sternschnuppe {
 		padding-top: 200px;
 	}
 	#wunsch-main h2 {
-		font-size: 26px;
+		font-size: 24px;
 	}
 	.wunsch-input {
 		font-size: 19px;
@@ -1124,21 +1131,29 @@ section.sternschnuppe {
 }
 @media (max-width: 800px) {
 	.kontakt-body {
-		height: 90vh;
+		height: 78vh; /* 파란부분 높이 */
 	}
 	.kontakt-logo {
-		padding-top: 30vh;
-		width: 50vw;
+		padding-top: 25vh;
+		width: 60vw;
 	}
 	.kontakt-top h2 {
 		font-size: 35px;
 	}
 	.kontakt-top p {
-		font-size: 19px;
+		font-size: 18px;
 	}
 	.wave {
-		top: 90%;
+		top: 85%;
 		background-size: 700px 100px;
+	}
+	@keyframes animateW {
+		0%, 100% {
+			transform: translateY(5px);
+		}
+		50% {
+			transform: translateY(15px);
+		}
 	}
 	.kontakt-bottom {
 		padding: 0;
