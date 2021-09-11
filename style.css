@@ -128,16 +128,16 @@ section.index-width {
 	padding: 50px;
 }
 
-@media (max-width: 971px) {
-	section, header {
-		padding: 20px; /* 줄였을 때 헤더 높이 */
-	}
+@media (max-width: 900px) {
+	/* section, header {
+		padding: 20px; 
+	} 줄였을 때 헤더 높이???아닌데 뭐지*/
 	header .logo {
 		width: 40vw; /*viewport width*/
 	}
 	header .mouse-scroll {
-		top: 80%;
-		left: 50%;
+		top: 92%;
+		transform: scale(90%);
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -190,10 +190,6 @@ section.index-width {
 	}
 	footer .logo2 {
 		width: 90vw;
-	}
-	footer.ending-text {	
-		margin-left: 10vw;
-		margin-right: 10vw;
 	}
 }
 
@@ -262,16 +258,8 @@ img {
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
 .stress { /* 말풍선 중에 마지막 강조 */
-	font-size: 30px;
+	font-size: 31px;
 	font-weight: 500;
-}
-@media (max-width: 800px) {
-	.page-title {
-		font-size: 50px;
-	}
-	.balloons {
-		font-size: 20px;
-	}
 }
 #about {
 	padding: 0px;
@@ -285,11 +273,11 @@ img {
 }
 .ending-text {
 	color: white;
+	font-size: 25px;
 	position: relative;
 	margin-left: 21vw;
 	margin-right: 21vw;
 	box-sizing: border-box;
-	font-size: 25px;
 	text-align: center;
 	align-items: center;
 	z-index: 0;
@@ -314,6 +302,35 @@ img {
 }
 footer ul li a:hover {
 	color: darkcyan;
+}
+@media (max-width: 800px) {
+	.page-title {
+		font-size: 42px;
+		margin: 0 10px;
+	}
+	.scroll-text {
+		max-width: 450px; /* 말풍선 박스 가로사이즈 */
+	}
+	.balloons {
+		font-size: 20px;
+		padding: 1rem 1.2rem; 
+		border-radius: 6px;
+	}
+	.stress { /* 말풍선 중에 마지막 강조 */
+		font-size: 23px;
+	}
+	.ending-text {
+		font-size: 20px;
+		font-weight: 300;
+		margin-left: 8vw;
+		margin-right: 8vw;
+	}
+	.ending-text h1 {
+		font-size: 40px;
+	}
+	.grid {
+		font-size: 17px;
+	}
 }
 
 /* meditation */
@@ -477,7 +494,6 @@ input.nameInput {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
 #lob {
 	color : white;
 	width: 75%;
@@ -513,7 +529,33 @@ input.nameInput {
 	padding: 0.5rem 0.8rem;
 	margin: 0.3rem;
 }
-
+@media (max-width: 800px) {
+	.name {
+		width: 60%;
+		height: 100%;
+		font-size: 30px;
+	}
+	.nameInput {
+		width: 40vw;
+		font-size: 20px;
+		padding: 0.5rem 0.6rem;
+		margin: 0.2rem;
+	}
+	#lob {
+		font-size: 24px;
+	}
+	#btn {
+		top: 80%;
+		left: 20%; /*버튼 위치인데 잘 모르겠네*/
+		transform: none;
+	}
+	#btn1, #btn2, #btn3 {
+		font-size: 20px;
+		padding: 0.4rem 0.6rem;
+		margin: 6px;
+		align-items: center;
+	}
+}
 
 
 /* sternenwunsch */
@@ -892,6 +934,29 @@ section.sternschnuppe {
 	animation-delay: -2.3s;
 	animation-duration: 1.5s;
 }
+@media (max-width: 800px) {
+	.stern-text h2 {
+		font-size: 33px;
+		padding-bottom: 11px;
+	}
+	.stern-text p {
+		font-size: 17px;
+	}
+	#wunsch-main {
+		font-size: 17px;
+		padding-top: 200px;
+	}
+	#wunsch-main h2 {
+		font-size: 26px;
+	}
+	.wunsch-input {
+		font-size: 19px;
+		padding: 30px; 
+		margin-left: 8%;
+		margin-right: 8%;
+		padding-bottom: 200px;
+	}
+}
 
 
 
@@ -1058,12 +1123,63 @@ section.sternschnuppe {
 	font-size: 15px;
 }
 @media (max-width: 800px) {
+	.kontakt-body {
+		height: 90vh;
+	}
 	.kontakt-logo {
-		padding-top: 100px;
-		width: 200px;
+		padding-top: 30vh;
+		width: 50vw;
+	}
+	.kontakt-top h2 {
+		font-size: 35px;
+	}
+	.kontakt-top p {
+		font-size: 19px;
+	}
+	.wave {
+		top: 90%;
+		background-size: 700px 100px;
 	}
 	.kontakt-bottom {
-		margin: 30px;
 		padding: 0;
+		padding-top: 100px;/* 파도 아래 글씨 패딩간격 */
+		padding-bottom: 50px;
+		margin-left: 10%;
+		margin-right: 10%
+	}
+	.kontakt-input {
+		font-size: 20px;
+	}
+	.kontakt-input-item {
+		position: relative;
+		margin-bottom: 24px;
+		align-items: center; /* 소용이 없구나~ */
+	}
+	.kontakt-input-item input,
+	.kontakt-input-item textarea {
+		padding: 5px 0;
+		font-size: 18px;
+	}
+	.kontakt-input-item textarea {
+		height: 90px;
+	}
+	.kontakt-input-item span {
+		left: 0;
+		padding: 5px 3px;
+		font-size: 18px;
+	}
+	.kontakt-input-item input:focus ~ span,
+	.kontakt-input-item input:valid ~ span,
+	.kontakt-input-item textarea:focus ~ span,
+	.kontakt-input-item textarea:valid ~ span {
+		font-size: 13px;
+	}
+	.kontakt-input-item input[type="submit"] {
+		width: 300px;
+		padding: 10px;
+	}
+	.kontakt-bottom p.copyright {
+		padding-top: 30px;
+		font-size: 13px;
 	}
 }

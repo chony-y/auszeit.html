@@ -1,6 +1,6 @@
 var lob_ex = new Array(
     'es ist so erfrischend, mit dir zu arbeiten.', 
-    'wie toll! Ich bin immer wieder beeindruckt von deinen Ergebnissen !',
+    'wie toll ! Ich bin immer wieder beeindruckt von deinen Ergebnissen !',
     'das hast du super gemacht !',
     'ich weiß, wie schwer dieses Projekt ist, aber ich kann mir gar nicht vorstellen, ohne dich zu arbeiten.',
     'wow, du hast wirklich immer einen sehr guten Überblick !',
