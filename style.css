@@ -137,9 +137,9 @@ section.index-width {
 		width: 45vw; /*viewport width*/
 	}
 	header .mouse-scroll {
-		top: 88%;
+		top: 85%;
 		left: 50%;
-		transform: scale(70%) translateX(-50%);
+		transform: scale(60%) translateX(-50%);
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -1079,7 +1079,7 @@ section.sternschnuppe {
 	}
 	#wunsch-main {
 		font-size: 17px;
-		padding-top: 200px;
+		padding-top: 50px;
 	}
 	#wunsch-main h2 {
 		font-size: 22px;
@@ -1124,6 +1124,9 @@ section.sternschnuppe {
 		padding: 7px;
 		margin-top: 10px;
 		border-radius: 1px;
+	}
+	.andere-wunsche { 
+		margin-top: 700px; 
 	}
 	.andere-wunsche span {  /* Wunsche text */
 		font-size: 14px;
