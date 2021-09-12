@@ -304,11 +304,11 @@ footer ul li a:hover {
 }
 @media (max-width: 800px) {
 	section.index-width {
-		padding: 10px;
+		padding: 20px;
 	}
 	.page-title {
-		font-size: 37px;
-		margin: 0;
+		font-size: 40px;
+		margin: 30px;
 		line-height: 110%;
 	}
 	.scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
@@ -351,7 +351,7 @@ meditation
 */
 .meditation-body {
 	background-color: #333;
-	/*position: relative;*/
+	/* position: relative; */
 	padding: 0;
 	margin: 0;
 	width: 100%;
