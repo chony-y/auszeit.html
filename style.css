@@ -137,8 +137,7 @@ section.index-width {
 	}
 	header .mouse-scroll {
 		top: 88%;
-		left: 49%;
-		transform: scale(90%);
+		transform: scale(80%);
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -188,9 +187,6 @@ section.index-width {
 		background-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
-	}
-	footer .logo2 {
-		width: 90vw;
 	}
 }
 
@@ -306,36 +302,45 @@ footer ul li a:hover {
 }
 @media (max-width: 800px) {
 	.page-title {
-		font-size: 42px;
+		font-size: 37px;
 		margin: 0 10px;
 		line-height: 120%;
 	}
+	.scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
+		max-height: 90vh;
+	}
 	.scroll-text {
-		max-width: 450px; /* 말풍선 박스 가로사이즈 */
+		max-width: 400px; /* 말풍선 박스 가로사이즈 */
 	}
 	.balloons {
 		font-size: 20px;
-		padding: 1rem 1.2rem; 
+		padding: 0.9rem 1rem; 
 		border-radius: 6px;
 	}
 	.stress { /* 말풍선 중에 마지막 강조 */
 		font-size: 23px;
 	}
+	footer .logo2 {
+		width: 90vw;
+	}
 	.ending-text {
-		font-size: 20px;
+		font-size: 19px;
 		font-weight: 300;
 		margin-left: 8vw;
 		margin-right: 8vw;
 	}
 	.ending-text h1 {
-		font-size: 40px;
+		font-size: 35px;
 	}
 	.grid {
 		font-size: 17px;
 	}
 }
 
-/* meditation */
+
+/* 
+meditation 
+*/
 .meditation-body {
 	background-color: #333;
 	/*position: relative;*/
@@ -438,7 +443,6 @@ footer ul li a:hover {
 		font-size: 40px;
 	}
 }
-
 /*
 .music {
 	position: fixed;
@@ -448,8 +452,9 @@ footer ul li a:hover {
 */
 
 
-
-/* lob */
+/* 
+lob 
+*/
 .lobs {
 	min-height: 1000px;
 	font-family: 'Rajdhani', sans-serif;
@@ -542,26 +547,29 @@ input.nameInput {
 		font-size: 20px;
 		border-radius: 4px;
 		padding: 0.5rem 0.6rem;
-		margin: 0.2rem;
+		margin: 10px;
 	}
 	#lob {
 		font-size: 24px;
+		width: 85%;
 	}
 	#btn {
 		top: 80%;
-		left: 20%; /*버튼 위치인데 잘 모르겠네 checkkkkkkkkkkk @TODO */
-		transform: none;
 	}
 	#btn1, #btn2, #btn3 {
-		font-size: 20px;
-		padding: 0.4rem 0.6rem;
-		margin: 6px;
-		align-items: center;
+		display: block;
+		left: 50%;
+		font-size: 18px;
+		padding: 0.4rem 0.6rem; /*버튼 내부 패딩*/
+		margin: 10px;
+		transform: translate(-50%, -50%);
 	}
 }
 
 
-/* sternenwunsch */
+/* 
+sternenwunsch 
+*/
 body.wunsch {
 	margin: 0;
 	padding: 0;
@@ -784,6 +792,7 @@ section.sternschnuppe {
 	border: none;
 	max-width: 200px;
 	padding: 10px;
+	border-radius: 1px;
 }
 .andere-wunsche {
 	position: relative;
@@ -939,6 +948,7 @@ section.sternschnuppe {
 }
 @media (max-width: 800px) {
 	body.wunsch {
+		width: 100%;
 		margin-left: 10px;
 		margin-right: 10px;  /*checkkkkkkkkk*/
 	}
@@ -967,7 +977,9 @@ section.sternschnuppe {
 
 
 
-/* kontakt */
+/* 
+kontakt 
+*/
 .kontakt-body {
 	position: relative;
 	width: 100%; 
@@ -1131,10 +1143,10 @@ section.sternschnuppe {
 }
 @media (max-width: 800px) {
 	.kontakt-body {
-		height: 78vh; /* 파란부분 높이 */
+		height: 88vh; /* 파란부분 높이 */
 	}
 	.kontakt-logo {
-		padding-top: 25vh;
+		padding-top: 20vh;
 		width: 60vw;
 	}
 	.kontakt-top h2 {
@@ -1144,8 +1156,8 @@ section.sternschnuppe {
 		font-size: 18px;
 	}
 	.wave {
-		top: 85%;
-		background-size: 700px 100px;
+		top: 90%;
+		background-size: 700px 90px;
 	}
 	@keyframes animateW {
 		0%, 100% {
@@ -1157,7 +1169,7 @@ section.sternschnuppe {
 	}
 	.kontakt-bottom {
 		padding: 0;
-		padding-top: 100px;/* 파도 아래 글씨 패딩간격 */
+		padding-top: 130px;/* 파도 아래 글씨 패딩간격 */
 		padding-bottom: 50px;
 		margin-left: 10%;
 		margin-right: 10%
@@ -1192,6 +1204,7 @@ section.sternschnuppe {
 	.kontakt-input-item input[type="submit"] {
 		width: 300px;
 		padding: 10px;
+		border-radius: 1px;
 	}
 	.kontakt-bottom p.copyright {
 		padding-top: 30px;
