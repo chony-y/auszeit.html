@@ -133,11 +133,13 @@ section.index-width {
 		padding: 20px; 
 	} 줄였을 때 헤더 높이???아닌데 뭐지*/
 	header .logo {
-		width: 40vw; /*viewport width*/
+		top: 47%;
+		width: 45vw; /*viewport width*/
 	}
 	header .mouse-scroll {
 		top: 88%;
-		transform: scale(80%);
+		left: 50%;
+		transform: scale(70%) translateX(-50%);
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -310,27 +312,30 @@ footer ul li a:hover {
 		max-height: 90vh;
 	}
 	.scroll-text {
-		max-width: 400px; /* 말풍선 박스 가로사이즈 */
+		max-width: 350px; /* 말풍선 박스 가로사이즈 */
 	}
 	.balloons {
-		font-size: 20px;
-		padding: 0.9rem 1rem; 
-		border-radius: 6px;
+		font-size: 19px;
+		padding: 0.8rem 0.9rem; 
+		border-radius: 9px;
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: rgba(0, 0, 0, 0.2) 0 0 2px;
 	}
 	.stress { /* 말풍선 중에 마지막 강조 */
 		font-size: 23px;
 	}
 	footer .logo2 {
-		width: 90vw;
+		width: 100vw;
 	}
 	.ending-text {
-		font-size: 19px;
+		font-size: 18px;
 		font-weight: 300;
 		margin-left: 8vw;
 		margin-right: 8vw;
 	}
 	.ending-text h1 {
 		font-size: 35px;
+		margin-bottom: 10px;
 	}
 	.grid {
 		font-size: 17px;
@@ -537,6 +542,9 @@ input.nameInput {
 	margin: 0.3rem;
 }
 @media (max-width: 800px) {
+	.lobs {
+		min-height: 105vh;
+	}
 	.name {
 		width: 60%;
 		height: 100%;
@@ -554,15 +562,16 @@ input.nameInput {
 		width: 85%;
 	}
 	#btn {
-		top: 80%;
+		top: 85%;
 	}
 	#btn1, #btn2, #btn3 {
-		display: block;
-		left: 50%;
+		min-width: 100px;
 		font-size: 18px;
 		padding: 0.4rem 0.6rem; /*버튼 내부 패딩*/
-		margin: 10px;
-		transform: translate(-50%, -50%);
+		margin: 8px;
+		margin-left: 50%;
+		margin-right: 50%;
+		transform: translateX(-50%);
 	}
 }
 
@@ -608,7 +617,7 @@ body.wunsch {
 section.sternschnuppe {
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	height: 150%; /*배경의 높이라 높이면 아래부분도 커짐*/
 	background: url(images/stern_bg.png);
 	background-position-x: center;
@@ -948,9 +957,8 @@ section.sternschnuppe {
 }
 @media (max-width: 800px) {
 	body.wunsch {
-		width: 100%;
-		margin-left: 10px;
-		margin-right: 10px;  /*checkkkkkkkkk*/
+		padding-left: 10%;
+		padding-right: 10%;  /*checkkkkkkkkk*/
 	}
 	.stern-text h2 {
 		font-size: 30px;
