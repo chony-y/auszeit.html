@@ -991,7 +991,7 @@ kontakt
 .kontakt-body {
 	position: relative;
 	width: 100%; 
-	height: 97vh;
+	height: 95vh;
 	margin-top: 0;
 	background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);
 	z-index: -1;
@@ -1028,7 +1028,7 @@ kontakt
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 120%;
 	height: 100px;
 	background: url(images/wave.png);
 	background-size: 1000px 100px;
@@ -1062,10 +1062,10 @@ kontakt
 }
 @keyframes animateW {
 	0%, 100% {
-		transform: translateY(10px);
+		transform: translateY(4px);
 	}
 	50% {
-		transform: translateY(25px);
+		transform: translateY(13px);
 	}
 }
 .kontakt-bottom {
@@ -1151,11 +1151,12 @@ kontakt
 }
 @media (max-width: 800px) {
 	.kontakt-body {
-		height: 88vh; /* 파란부분 높이 */
+		height: 87vh; /* 파란부분 높이 */
 	}
 	.kontakt-logo {
-		padding-top: 20vh;
+		max-width: 280px;
 		width: 60vw;
+		padding-top: 25vh;
 	}
 	.kontakt-top h2 {
 		font-size: 35px;
@@ -1164,36 +1165,39 @@ kontakt
 		font-size: 18px;
 	}
 	.wave {
-		top: 90%;
-		background-size: 700px 90px;
+		top: 95%;
+		background-size: 70vw 5vh;
 	}
 	@keyframes animateW {
 		0%, 100% {
 			transform: translateY(5px);
 		}
 		50% {
-			transform: translateY(15px);
+			transform: none;
 		}
 	}
 	.kontakt-bottom {
 		padding: 0;
-		padding-top: 130px;/* 파도 아래 글씨 패딩간격 */
+		padding-top: 120px;/* 파도 아래 글씨 패딩간격 */
 		padding-bottom: 50px;
 		margin-left: 10%;
 		margin-right: 10%
 	}
+	.kontakt-bottom h2 {
+		font-size: 30px;
+	}
 	.kontakt-input {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.kontakt-input-item {
 		position: relative;
-		margin-bottom: 24px;
+		margin-bottom: 18px;
 		align-items: center; /* 소용이 없구나~ */
 	}
 	.kontakt-input-item input,
 	.kontakt-input-item textarea {
 		padding: 5px 0;
-		font-size: 18px;
+		font-size: 17px;
 	}
 	.kontakt-input-item textarea {
 		height: 90px;
@@ -1201,21 +1205,22 @@ kontakt
 	.kontakt-input-item span {
 		left: 0;
 		padding: 5px 3px;
-		font-size: 18px;
+		font-size: 17px;
 	}
 	.kontakt-input-item input:focus ~ span,
 	.kontakt-input-item input:valid ~ span,
 	.kontakt-input-item textarea:focus ~ span,
 	.kontakt-input-item textarea:valid ~ span {
+		transform: translateY(-20px);
 		font-size: 13px;
 	}
 	.kontakt-input-item input[type="submit"] {
-		width: 300px;
+		width: 150px;
 		padding: 10px;
 		border-radius: 1px;
 	}
 	.kontakt-bottom p.copyright {
 		padding-top: 30px;
-		font-size: 13px;
+		font-size: 12px;
 	}
 }
