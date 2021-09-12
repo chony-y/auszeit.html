@@ -386,7 +386,7 @@ meditation
 	z-index: 101;
 }
 .left-title:hover, .right-title:hover {
-	color: rgb(255, 222, 200);
+	color: rgb(255, 224, 230);
 }
 .split {
 	position: absolute;
@@ -445,7 +445,81 @@ meditation
 
 @media(max-width: 800px) {
 	.left-title, .right-title {
-		font-size: 40px;
+		font-size: 33px;
+		top: 46%;
+	}
+	.left-text, .right-text {
+		font-size: 17px;
+		top: 46%;
+		padding-top: 50px;
+	} 
+	.split {
+		width: 100%;
+		height: 50%;
+	}
+	.hover-left .left, .hover-left .right, .hover-right .right, .hover-right .left {
+		width: 100%;
+	}
+
+	.split.up {
+		top: 2%;
+		background: url(images/wave_illust3.jpg) center center no-repeat;
+		background-size: cover;
+	}
+	.split.up:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba(12, 39, 63, 0.6);
+		/*try1이랑 잘어울림 rgba(68, 144, 153, 0.7)*/
+		z-index: 1;
+	}
+	.split.down {
+		top: 52%;
+		background: url(images/wave_illust4.jpg) center center no-repeat;
+		background-size: cover;
+	}
+	.split.down:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba(12, 39, 63, 0.6);
+		z-index: 1;
+	}
+	.split.up, .split.down, .split.up:before, .split.down:before {
+		transition: 2500ms all ease-in-out;
+	}
+	.hover-up .up { /*위에 눌렀을 때 윗 부분*/
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 65%;
+	}
+	.hover-up .down { /*위에 눌렀을 때 아래 부분*/
+		top: 65%;
+		left: 0;
+		width: 100%;
+		height: 35%;
+	}
+	.hover-up .down:before {
+		z-index: 100;
+	}
+	.hover-down .down { /*아래 눌렀을 때 아래 부분*/
+		top: 35%;
+		left: 0;
+		width: 100%; 
+		height: 70%;
+	}
+	.hover-down .up { /*아래 눌렀을 때 윗 부분*/
+		top: 0; 
+		left: 0;
+		width: 100%;
+		height: 35%;
+	}
+	.hover-down .up:before {
+		z-index: 100;
 	}
 }
 /*
@@ -957,29 +1031,108 @@ section.sternschnuppe {
 }
 @media (max-width: 800px) {
 	body.wunsch {
+		width: 100%;
 		padding-left: 10%;
-		padding-right: 10%;  /*checkkkkkkkkk*/
+		padding-right: 10%; 
+	}
+	.mouse-scroll2 {
+		position: absolute;
+		width: 35px; 
+		top: 95%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		align-items: center;
+		z-index: 100; 
+	}
+	.sternschnuppe {
+		width: 100vw; /*얘를 0으로 하면 메뉴바가 괜찮은데 그러면 별똥별 안보임..*/
+		overflow-x: hidden;
+	}
+	@keyframes animateBg {
+		0%, 100% {
+			transform: scale(1) rotate(0deg); /*회전 좋은데 그러면 사진을 바꿔야*/
+		}
+		50% {
+			transform: scale(1.5);
+		}
+	}
+	.stern-text {
+		position: absolute;
+		width: 75%; /*WAS WÜNSCHEN SIE SICH?의 가로길이*/
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	.stern-text h2 {
-		font-size: 30px;
+		font-size: 25px;
 		padding-bottom: 11px;
 	}
 	.stern-text p {
 		font-size: 17px;
+	}
+	@keyframes animateS {
+		0% {
+			transform: rotate(37deg) translateX(-100vw);
+		}
+		100% {
+			transform: rotate(37deg) translateX(100vw);
+		}
 	}
 	#wunsch-main {
 		font-size: 17px;
 		padding-top: 200px;
 	}
 	#wunsch-main h2 {
-		font-size: 24px;
+		font-size: 22px;
 	}
 	.wunsch-input {
-		font-size: 19px;
+		font-size: 18px;
 		padding: 30px; 
-		margin-left: 8%;
-		margin-right: 8%;
-		padding-bottom: 200px;
+		margin:0;
+		padding-bottom: 150px;
+	}
+	.wunsch-input-item {
+		position: relative;
+		margin-bottom: 18px;
+		min-width: 300px;
+	}
+	.wunsch-input-item.w50 {
+		width: 100%;
+	}
+	.wunsch-input-item input,
+	.wunsch-input-item textarea {
+		padding: 5px 0;
+		font-size: 17px;
+	}
+	.wunsch-input-item textarea {
+		height: 90px;
+	}
+	.wunsch-input-item span {
+		left: 0;
+		padding: 5px 3px;
+		font-size: 17px;
+	}
+	.wunsch-input-item input:focus ~ span,
+	.wunsch-input-item input:valid ~ span,
+	.wunsch-input-item textarea:focus ~ span,
+	.wunsch-input-item textarea:valid ~ span {
+		transform: translateY(-20px);
+		font-size: 12px;
+	}
+	.wunsch-input-item input[type="submit"] {
+		max-width: none;
+		width: 160px;
+		padding: 7px;
+		margin-top: 10px;
+		border-radius: 1px;
+	}
+	.andere-wunsche span {  /* Wunsche text */
+		font-size: 14px;
+		width: 200px;
+		margin-left: -100px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
+		background-color: rgba(19, 19, 19, 0.7);
+		border-radius: 3px;
+		padding: 8px 10px; /*메세지 내부 간격*/
+		margin-top: 18px; /*별에서 메세지 간격*/
 	}
 }
 
@@ -1152,6 +1305,7 @@ kontakt
 @media (max-width: 800px) {
 	.kontakt-body {
 		height: 87vh; /* 파란부분 높이 */
+		overflow-x: hidden;
 	}
 	.kontakt-logo {
 		max-width: 280px;
