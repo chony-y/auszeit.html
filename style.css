@@ -303,10 +303,13 @@ footer ul li a:hover {
 	color: darkcyan;
 }
 @media (max-width: 800px) {
+	section.index-width {
+		padding: 10px;
+	}
 	.page-title {
 		font-size: 37px;
-		margin: 0 10px;
-		line-height: 120%;
+		margin: 0;
+		line-height: 110%;
 	}
 	.scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
 		max-height: 90vh;
@@ -1322,15 +1325,15 @@ kontakt
 		font-size: 18px;
 	}
 	.wave {
-		top: 95%;
-		background-size: 70vw 5vh;
+		top: 94%;
+		background-size: 75vw 6vh;
 	}
 	@keyframes animateW {
 		0%, 100% {
-			transform: translateY(5px);
+			transform: translateY(4px);
 		}
 		50% {
-			transform: none;
+			transform: translateY(-1px);
 		}
 	}
 	.kontakt-bottom {
