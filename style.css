@@ -1355,8 +1355,8 @@ kontakt
 		font-size: 18px;
 	}
 	.wave {
-		top: 94%;
-		background-size: 80vw 7vh;
+		top: 89%;
+		background-size: 160vw 11vh;
 	}
 	@keyframes animateW {
 		0%, 100% {
