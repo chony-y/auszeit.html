@@ -139,7 +139,7 @@ section.index-width {
 	header .mouse-scroll {
 		top: 85%;
 		left: 50%;
-		transform: scale(60%) translateX(-50%);
+		transform: scale(50%) translateX(-50%);
 	}
 	header.sticky .logo, header.normal .logo {
 		left: 40px;
@@ -215,7 +215,6 @@ img {
 	position: sticky; /* 스크롤 시 위에 붙여있게 하려고 */
 	top: 0;
 	height: 107vh; /* view point height */
-	max-height: 90%;
 	z-index: -1;
 }
 .scene-item { /* 각각의 이미지 덩어리 클래스 */
@@ -235,7 +234,7 @@ img {
 	opacity: 1;
 }
 .scene-img { /* 진짜 각각의 이미지 따로따로 클래스 */
-	max-height: 85vh;
+	max-height: 80vh;
 }
 .scroll-text {
 	position: relative;
@@ -1357,7 +1356,7 @@ kontakt
 	}
 	.wave {
 		top: 94%;
-		background-size: 75vw 6vh;
+		background-size: 80vw 7vh;
 	}
 	@keyframes animateW {
 		0%, 100% {
