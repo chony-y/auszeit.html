@@ -212,10 +212,9 @@ img {
 	text-align: center;
 }
 .scroll-graphic { /* 이미지들을 총 모은 클래스 */
-	overflow-x: hidden; /* 새 날아갔을 때 그 공간에 따라 스크롤 생기는 거 방지하려고 */
 	position: sticky; /* 스크롤 시 위에 붙여있게 하려고 */
 	top: 0;
-	height: 110vh; /* view point height */
+	height: 107vh; /* view point height */
 	max-height: 90%;
 	z-index: -1;
 }
@@ -1223,7 +1222,7 @@ kontakt
 	height: 100px;
 	background: url(images/wave.png);
 	background-size: 1000px 100px;
-	animation: animateW 5s ease-in-out infinite;
+	animation: animateW 5s ease-in-out infinite; /*정지했을 때 위아래 움직이는 애니메이션*/
 	animation-delay: calc(var c(--i) * 2s);
 }
 .wave#wave1 {

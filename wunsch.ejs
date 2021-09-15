@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : WUNSCHSTERN</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -78,24 +77,19 @@
 			</div>
 		</div>
 
+        <% user.forEach(function (value) { %>
 		<section class="andere-wunsche">
-			<div id="wunsch1"><span class="wunsch-text" id="wunsch-text1">Ich wunsche, dass meine Familie glücklich und gesund ist - Ann</span></div>
-			<div id="wunsch2"><span class="wunsch-text" id="wunsch-text2">Ich möchte dieses Jahr zum Abteilungsleiter aufrücken. - Lena </span></div>
-			<div id="wunsch3"><span class="wunsch-text" id="wunsch-text3">wünsche meinen Kindern das Beste. - Ebi</span></div>
-			<div id="wunsch4"><span class="wunsch-text" id="wunsch-text4">Seit Corona ist es schwierig, den Haushalt zu finanzieren. Ich wünsche mich 2022 ein stabiles Wirtschaftswachstum. - Pia</span></div>
-			<div id="wunsch5"><span class="wunsch-text" id="wunsch-text5">Es geht mir sehr gut, ich könnte mir nichts Besseres wünschen :) - Marco</span></div>
-			<div id="wunsch6"><span class="wunsch-text" id="wunsch-text6">wünsche alle ein gesegnetes und wunderschönes Jahr. - Chony</span></div>
-			<div id="wunsch7"><span class="wunsch-text" id="wunsch-text7">ich hoffe ich kann die wichtigste Präsentation gut hinter mir bringen. - Hannah</span></div>
-			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8">Ich wünsche mich eine friedliche Welt wünschen♥️</span></div>
-			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9">Ich wünsche meine Oma viel Kraft und Durchhaltevermögen, bis sie wieder gesund ist. Gute Besserung und ich freue mich darauf, sie bald in alter Frische wiederzusehen. - Leonie</span></div>
-			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10">Wir wünschen Ihnen und Ihrer Familie viel Spaß beim Durchklicken. - Mentale Auszeit</span></div>
-	
-			<!-- <span id="wunsch1"></span>
-			<span id="wunsch2"></span>
-			<span id="wunsch3"></span>
-			<span id="wunsch4"></span>
-			<span id="wunsch5"></span>
-			<span id="wunsch6"></span><br><br> -->
+			<div id="wunsch1"><span class="wunsch-text" id="wunsch-text1"><%= value.wish></span></div>
+			<div id="wunsch2"><span class="wunsch-text" id="wunsch-text2"><%= value.wish></span></div>
+			<div id="wunsch3"><span class="wunsch-text" id="wunsch-text3"><%= value.wish></span></div>
+			<div id="wunsch4"><span class="wunsch-text" id="wunsch-text4"></span></div>
+			<div id="wunsch5"><span class="wunsch-text" id="wunsch-text5"></span></div>
+			<div id="wunsch6"><span class="wunsch-text" id="wunsch-text6"></span></div>
+			<div id="wunsch7"><span class="wunsch-text" id="wunsch-text7"></span></div>
+			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8"></span></div>
+			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9"></span></div>
+			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10"></span></div>
+            <% }); %>
 
 			<h2>Sie können andere Wünsche sehen</h2>
 			<p>
