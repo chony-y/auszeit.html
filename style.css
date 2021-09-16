@@ -107,7 +107,7 @@ nav ul {
 header.sticky nav ul, header.normal nav ul {
 	transform: translate(100px);
 	opacity: 1;
-	transition-delay: 0.75s;
+	transition-delay: 0.50s;
 	visibility: visible;
 }
 nav ul li {
@@ -142,7 +142,9 @@ section.index-width {
 		transform: scale(50%) translateX(-50%);
 	}
 	header.sticky .logo, header.normal .logo {
-		left: 40px;
+		left: 30px;
+		top: 50%;
+		width: 60px;
 	}
 	header.sticky .banner, header.normal .banner {
 		opacity: 0;
@@ -175,7 +177,7 @@ section.index-width {
 	header.sticky .toggle, header.normal .toggle {
 		position: fixed;
 		top: 5px;
-		right: 20px;
+		right: 10px;
 		width: 50px;
 		height: 50px;
 		cursor: pointer;
@@ -1065,35 +1067,43 @@ section.sternschnuppe {
 @media (max-width: 800px) {
 	body.wunsch {
 		width: 100%;
-		padding-left: 10%;
-		padding-right: 10%; 
 	}
-	.mouse-scroll2 {
-		position: absolute;
-		width: 35px; 
-		top: 95%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		align-items: center;
-		z-index: 100; 
-	}
-	.sternschnuppe {
-		width: 100vw; /*얘를 0으로 하면 메뉴바가 괜찮은데 그러면 별똥별 안보임..*/
-		overflow-x: hidden;
+	section.sternschnuppe {
+		width: 100%;
+		height: 130%; /*배경의 높이라 높이면 아래부분도 커짐*/
+		background: url(images/stern_bg.png);
+		animation: animateBg 15s linear infinite;
 	}
 	@keyframes animateBg {
 		0%, 100% {
-			transform: scale(1) rotate(0deg); /*회전 좋은데 그러면 사진을 바꿔야*/
+			transform: scale(1) rotate(0deg); 
 		}
 		50% {
-			transform: scale(1.5);
+			transform: scale(1.2) rotate(2deg);
 		}
+	}
+	.sternschnuppe span {
+		position: absolute;
+		top: 50%;
+		width: 5px; /*별똥별 머리 가로*/
+		height: 3px;
+		background: rgb(255, 255, 255);
+		border-radius: 100%;
+		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
+		0 0 0 4px rgba(255, 255, 255, 0.2),
+		0 0 0 14px rgba(255, 255, 255, 0.03);
+		animation: animateS 30s linear infinite;
+	}
+	.sternschnuppe span::before {
+		width: 350px; /*별똥별 꼬리 길이*/
+		height: 1.4px; /*별똥별 꼬리 두께*/
 	}
 	.stern-text {
 		position: absolute;
 		width: 75%; /*WAS WÜNSCHEN SIE SICH?의 가로길이*/
+		top: 50%;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 	}
 	.stern-text h2 {
 		font-size: 25px;
@@ -1101,6 +1111,8 @@ section.sternschnuppe {
 	}
 	.stern-text p {
 		font-size: 17px;
+		padding-left: 8%;
+		padding-right: 8%;
 	}
 	@keyframes animateS {
 		0% {
@@ -1111,25 +1123,33 @@ section.sternschnuppe {
 		}
 	}
 	#wunsch-main {
-		font-size: 17px;
 		padding-top: 50px;
 	}
 	#wunsch-main h2 {
 		font-size: 22px;
+	}
+	#wunsch-main p {
+		font-size: 17px;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 	.wunsch-input {
 		font-size: 18px;
 		padding: 30px; 
 		margin:0;
 		padding-bottom: 150px;
+		align-items: center;
+		justify-content: center;
 	}
 	.wunsch-input-item {
 		position: relative;
 		margin-bottom: 18px;
-		min-width: 300px;
 	}
 	.wunsch-input-item.w50 {
-		width: 100%;
+		width: 70%;
+	}
+	.wunsch-input-item.w100 {
+		width: 70%;
 	}
 	.wunsch-input-item input,
 	.wunsch-input-item textarea {
@@ -1153,7 +1173,7 @@ section.sternschnuppe {
 	}
 	.wunsch-input-item input[type="submit"] {
 		max-width: none;
-		width: 160px;
+		width: 140px;
 		padding: 7px;
 		margin-top: 10px;
 		border-radius: 1px;
@@ -1220,8 +1240,8 @@ kontakt
 	width: 120%;
 	height: 100px;
 	background: url(images/wave.png);
-	background-size: 1000px 100px;
-	animation: animateW 5s ease-in-out infinite; /*정지했을 때 위아래 움직이는 애니메이션*/
+	background-size: 900px 100px;
+	animation: animateW 4s ease-in-out infinite; /*정지했을 때 위아래 움직이는 애니메이션*/
 	animation-delay: calc(var c(--i) * 2s);
 }
 .wave#wave1 {
