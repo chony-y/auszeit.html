@@ -52,9 +52,6 @@
 				Sternschnuppen fallen und es ist Zeit, sich etwas zu wünschen.<br>
 			</p>
 		</section>
-		<!-- 
-			<img class="mouse-scroll2" src="images/mouse_scroll.png">
-		-->
 	</section>
 
 	<main class="wunsch-section" id="wunsch-main">
@@ -64,7 +61,22 @@
 			und drücken Sie nicht innerlich, sondern in Worten aus.
 		</p>
 
-		<div class="wunsch-input">
+		<form name="frmWishes" method="post" action="config.php">
+			<div class="wunsch-input">
+				<div class="wunsch-input-item w100">
+					<textarea id="txtWish" required></textarea>
+					<span>WAS WÜNSCHEN SIE SICH ?</span>
+				</div>
+				<div class="wunsch-input-item w50">
+					<input type="text" id="txtName" required>
+					<span>NAME</span>
+				</div>
+				<div class="wunsch-input-item">
+					<input type="submit" id="Submit" value="WÜNSCHEN">
+				</div>
+			</div>
+		</form>
+		<!-- <div class="wunsch-input">
 			<div class="wunsch-input-item w100">
 				<textarea required></textarea>
 				<span>WAS WÜNSCHEN SIE SICH ?</span>
@@ -76,7 +88,7 @@
 			<div class="wunsch-input-item">
 				<input type="submit" value="WÜNSHCEN"><br>
 			</div>
-		</div>
+		</div> -->
 
 		<section class="andere-wunsche">
 			<div id="wunsch1"><span class="wunsch-text" id="wunsch-text1">Ich wunsche, dass meine Familie glücklich und gesund ist - Ann</span></div>
@@ -89,13 +101,6 @@
 			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8">Ich wünsche mich eine friedliche Welt wünschen♥️</span></div>
 			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9">Ich wünsche meine Oma viel Kraft und Durchhaltevermögen, bis sie wieder gesund ist. Gute Besserung und ich freue mich darauf, sie bald in alter Frische wiederzusehen. - Leonie</span></div>
 			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10">Wir wünschen Ihnen und Ihrer Familie viel Spaß beim Durchklicken. - Mentale Auszeit</span></div>
-	
-			<!-- <span id="wunsch1"></span>
-			<span id="wunsch2"></span>
-			<span id="wunsch3"></span>
-			<span id="wunsch4"></span>
-			<span id="wunsch5"></span>
-			<span id="wunsch6"></span><br><br> -->
 
 			<h2>Sie können andere Wünsche sehen</h2>
 			<p>

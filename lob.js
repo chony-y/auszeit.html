@@ -50,8 +50,8 @@ const form = document.querySelector('.name'),
       input = form.querySelector ('.nameInput'), 
       compliment = document.querySelector ('.js-compliment') 
 
-const showNM = 'showing'; // css에만 만들어져 있는 showing 이라는 class를 showNM 이라는 변수로 선언
-const userLS = 'currentUser'; // user가 입력한 이름
+const showNM = 'showing'; // css에만 있는 showing class를 showNM 이라는 변수로 선언
+const userLS = 'currentUser'; // user 이름
 
 var nameForLob = '';
 
@@ -62,15 +62,15 @@ function submitName(event) {
 }
 
 function askName() { 
-	form.classList.add(showNM); // 이름을 입력받기 위해 form의 class list에 .showing 이라는 class를 추가
+	form.classList.add(showNM); // 이름을 입력받기 위해 .showing 이라는 class를 추가
     form.addEventListener ('submit', submitName); // input에서 입력된 이름을 submitName로 제출
 }
 
-function showName(text) { // 화면 노출 이름
+function showName(text) { // 화면 노출
 	nameForLob = text;
     form.classList.remove(showNM); // input된 이름 제거
 	compliment.classList.add(showNM); // 칭찬메세지에서 다시 이름 추가
-	compliment.innerText = `${text}, `; // compliment (h4 class = "js-compliment") 에 입력될 텍스트를 작성
+	compliment.innerText = `${text}, `;
     `${text}` + typeWriter(lob_ex);
 }
 
@@ -136,7 +136,6 @@ document.getElementById('btn1').onclick = function weiter() {
 }
 
 // Button_speichern
-
 const screenshotTarget = document.body;
 
 html2canvas(screenshotTarget).then((canvas) => {
@@ -195,6 +194,8 @@ html2canvas(screenshotTarget).then((canvas) => {
 //         el.click();
 //     }
 // }
+
+
 
 /**
  * Changing bgcolors
