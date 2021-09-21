@@ -375,6 +375,10 @@ meditation
 	padding:0;
 	margin:0;
 }
+.left-title:hover, .right-title:hover {
+	color: #F2B729; /*#F6B65A*/
+	text-shadow: 2px 2px 0px #FFFFFF;
+}
 .left-text, .right-text {
 	position: absolute;
 	display: block;
@@ -387,9 +391,6 @@ meditation
 	transform: translateX(-50%);
 	white-space: nowrap;
 	z-index: 101;
-}
-.left-title:hover, .right-title:hover {
-	color: rgb(255, 240, 243);
 }
 .split {
 	position: absolute;
