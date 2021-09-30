@@ -110,13 +110,13 @@ void main()
         cnoise(
             vec3(
                 modelPosition.xz * uSmallWavesFrequency * i, 
-                uTime * uSmallWavesSpeed
+                uTime * uBigWavesSpeed * 0.6  //원래는 uTime * uSmallWavesSpeed
                 )
-            ) * uSmallWavesElevation / i
+            ) * uSmallWavesElevation / i 
         ); 
     }
 
-    modelPosition.y += elevation;
+    modelPosition.y += elevation * 0.8; //원래는 0.8곱하는거 없음
 
     vec4 viewPosition = viewMatrix * modelPosition;
     vec4 projectedMatrix = projectionMatrix * viewPosition;
