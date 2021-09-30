@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : MEDITATION</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=Neucha&display=swap" rel="stylesheet">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Neucha&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -70,10 +70,10 @@
 	</div>
 
 	<div id="video-vor">
-		<video poster="" controls controlsList="nodownload">
-			<source src="videos/video_vor2.mp4"> 
-			<track kind="subtitles" srclang="de" src="videos/sub_vor.vtt" label="Deutsch" default> 
-			<track kind="subtitles" srclang="de" src="videos/sub_vor.srt" label="Deutsch"> 
+		<video poster="" controls load="" controlsList="nodownload">
+			<source src="videos/video_vor.mp4"> 
+			<track kind="subtitles" srclang="de" src="videos/sub_vor_deutsch.vtt" label="Deutsch" default> 
+			<!-- <track kind="subtitles" srclang="de" src="videos/sub_vor.srt" label="Deutsch">  -->
 			<!-- <track kind="subtitles" src="" srclang="en" label="English">
 			<track kind="subtitles" src="" srclang="ko" label="한국어"> default는 자막 여러개일 때-->
 		</video>
@@ -81,10 +81,12 @@
 	</div>
 
 	<div id="video-nach">
-		<video src="videos/video_nach.mp4" poster="" controls autoplay></video>
+		<video poster="" controls load="" controlsList="nodownload">
+			<source src="videos/video_nach.mp4"> 
+			<track kind="subtitles" srclang="de" src="videos/sub_nach_deutsch.vtt" label="Deutsch" default>
+		</video>
 		<img class="close2" src="images/close01.png">
 	</div>
-
 
 	<script src="meditation.js"></script>
 </body>

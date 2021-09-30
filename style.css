@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&display=swap');
 /*
-font
-font-family: 'Caveat', cursive;
-font-family: 'Rajdhani', sans-serif;
 font-family: 'Staatliches', cursive;
+font-family: 'Rajdhani', sans-serif;
 font-family: 'Neucha', cursive;
 */
+
 
 html {
 	box-sizing: border-box;
@@ -201,7 +201,6 @@ img {
 	font-family: 'Staatliches', cursive;
 	letter-spacing: 4px;
 	line-height: 1.1;
-	/*font-family: 'Caveat', cursive;*/
 	font-size: 80px;
 	text-align: center;
 	padding-top: 40px;
@@ -622,13 +621,6 @@ track {
 		z-index: 100;
 	} */
 }
-/*
-.music {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-}
-*/
 
 
 /* 
