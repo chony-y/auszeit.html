@@ -10,13 +10,12 @@
 </head>
 
 <body class="index">
-	<header>
+	<header class="normal">
 		<img class="banner" src="images/logo_bg.jpg">
-		<img class="mouse-scroll" src="images/mouse_scroll.png">
 		<a href="index.html"><img class="logo" src="images/logo.png"></a>
 		<div class="toggle"></div>
 		<nav>
-			<ul>
+			<ul class="active">
 				<li><a href="home.html">HOME</a></li>
 				<li><a href="meditation.html">MEDITATION</a></li>
 				<li><a href="lob.html">LOB</a></li>
@@ -27,12 +26,6 @@
 	</header>
 
 	<script>
-		window.addEventListener("scroll", function(){
-			const header = document.querySelector('header');
-			header.classList.toggle('sticky', window.scrollY > 0);
-		});
-		// 로고를 클릭하거나 마우스 스크롤을 클릭했을 때도 sticky되게
-		
 		const navigation = document.querySelector('nav');
 		document.querySelector('.toggle').onclick = function(){
 			this.classList.toggle('active');
@@ -41,7 +34,7 @@
 	</script>
 
 	<div id="content"></div>
-	<section class="index-width">
+	<section class="index-width" style="margin-top: 100px">
 		<h2 class="page-title">Wie steht es um Ihre psychische Gesundheit<br> im Job ?</h2>
 	</section> 
 

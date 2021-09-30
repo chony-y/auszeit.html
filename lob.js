@@ -41,7 +41,20 @@ var lob_ex = new Array(
     'dank deiner warmherzigen und offenen Art, macht das arbeiten in unserem Team viel mehr Spaß.',
     'du sorgst mit deiner netten und kollegialen Einstellungen für ein besseres Arbeitsklima.',
     'es ist für unser Team sehr bereichernd, dass du immer ein offenes Ohr bei Problemen für uns hast.',
-    'ich bewundere deine tolle Einstellung – auch in dieser harten Phase.'
+    'ich bewundere deine tolle Einstellung – auch in dieser harten Phase.',
+    'die aktuellen Schwierigkeiten werden die Grundlage für deinen Erfolg sein. Bleib stark und noch einen tollen Tag !',
+    'nicht alles läuft immer nach Plan. Arbeite stetig in deinem eigenen Tempo weiter, dann wird es morgen besser laufen als heute.',
+    'erfolg kommt nur durch das Machen von Fehlern und Rückschlägen. Glaub an dich selbst und sei wieder mutig !',
+    'du weißt immer, wie du dir selbst helfen kannst.',
+    'setz dir keine Grenzen, du machst deine Arbeit sehr gut.',
+    'deine Art und Weise, Probleme zu lösen, ist sehr kreativ und wissenschaftlich !',
+    'unser Team benötigte eine andere Sicht- und Denkweise. Deine Ideen und Anmerkungen haben uns sehr geholfen. Vielen Dank.',
+    'du hast mich auf den richtigen Trichter gebracht ! Danke für deine Hilfe.',
+    'du erledigst jede Angelegenheit zuverlässig und sorgfältig. ',
+    'du bist immer sehr aktiv in allem, was du tust, und das motiviert uns im Projekt. Lasst uns zusammen das Projekt erfolgreich abschließen.',
+    'du brauchst keine Zweifel zu haben, da du deine Arbeit sehr gut machst. Du bist detail orientiert und möchtest stets ein perfektes Ergebnis erzielen. Ohne dich hätten wir dieses Ergebnis nicht erreicht.',
+    'du erledigst deine Arbeit stets sehr ordentlich.',
+    'ich möchte mir dich zum Vorbild nehmen, da du die verschiedensten Probleme durch unterschiedliche Sicht- beziehungsweise Denkweisen löst.'
 );
 
 
@@ -118,6 +131,7 @@ function core() { //askName과 showName 함수가 실행될 조건을 설정
 }
 core();
 
+
 /**
  * Buttons
  */
@@ -125,7 +139,6 @@ var buttons = document.getElementById('btn');
 function showButtons() {
     buttons.style.display = 'block';
 }
-
 function hideButtons() {
     buttons.style.display = 'none';
 }
@@ -135,34 +148,80 @@ document.getElementById('btn1').onclick = function weiter() {
     mehrLob();
 }
 
-// Button_speichern
-const screenshotTarget = document.body;
+// Button_Beifall
+var beifall1 = document.querySelector('.beifall1');
+var beifall2 = document.querySelector('.beifall2');
+var beifall3 = document.querySelector('.beifall3');
+document.getElementById('btn3').onclick = function clap() {
+    beifall1.play();
+    beifall2.play();
+    beifall3.play();
+}
 
-html2canvas(screenshotTarget).then((canvas) => {
-    const base64image = canvas.toDataURL("image/png");
-    window.location.href = base64image;
-});
-// document.getElementById('btn3').onclick = function speichern(){
+// document.getElementById('btn3').onclick = function clap() {
+//     for (let i = 0; i<=2; i++) {
+//         if (i == 0) {
+//             beifall1.play();
+//         }
+//         else if (i == 1) {
+//             beifall2.play();
+//         } else {
+//             beifall3.play();
+//         }
+//     }
+// }
+
+
+//Button_speichern (npm install --save html2canvas)
+// // 홈페이지에 나온 방법
+// document.getElementById('btn3').onclick = function screenshot(){
+//     html2canvas(document.querySelector("#capture")).then(canvas => {
+//         document.body.appendChild(canvas)
+//     });
+// }
+
+// document.getElementById('btn3').onclick = function screenshot(e){
 //     var startX, startY;
+//     var width = window.innterWidth;
 //     var height = window.innerHeight;
-//     var width = window.innerWidth;
 
+//     //마우스 이동하면서 선택한 영역 보여주기 위한 div생성
+//     var $screenShot = document.createElement('div');
+//     $screenShot.id = "screenshot";
+
+//     document.querySelector('body').appendChild($screenBg);
+//     document.querySelector('body').appendChild($screenShot);
+
+//     var selectArea = false;
+//     var body = document.querySelector('body');
+
+//     // 마우스 누르는 이벤트
 //     var mousedown = function(e) {
 //         e.preventDefault();
 //         selectArea = true;
 //         startX = e.clientX;
 //         startY = e.clientY;
 //         body.removeEventListner('mousedown', mousedown); //이벤트 한번만 동작하게 삭제
-    
-//     body.addEventListener('mousedown', mousedown); //마우스 누르는 이벤트
 //     }
-
+//     body.addEventListener('mousedown', mousedown); //마우스 누르는 이벤트
+    
+//     // 마우스 떼는 이벤트 
 //     var mouseup = function(e) {
 //         selectArea = false; 
-//         body.removeEventListner('mousedown', mousedown);
+//         body.removeEventListner('mousedown', mousedown); //초기화. 마우스 떼면서 마우스무브 삭제
 
+//         //스크린샷 위해 생성한 객체 삭제
+//         $screenShot.parentNode.removeChild($screenShot); 
+//         $screenBg.parentNode.removeChild($screenBg);
+//         var x = e.clientX;
+//         var y = e.clientY;
+//         var top = Math.min(y, startY);
+//         var left = Math.min(x, startX);
+//         var width = Math.max(x, startX) - left;
+//         var height = Math.max(y, startY) - top;
 //         html2canvas(document.body).then(
-//             function(canvas) {
+//             function(canvas) { //전체 화면 캡쳐
+//                 //선택 영역만큼 자르기
 //                 var img = canvas.getContext('2d').getImageData(left, top, width, height);
 //                 var c = document.createElement('canvas');
 //                 c.width = width;
@@ -171,30 +230,31 @@ html2canvas(screenshotTarget).then((canvas) => {
 //                 save(c); //crop한 이미지 저장
 //             }
 //         );
+//         body.removeEventListener('mouseup', mouseup); 
 //     }
-//     body.removeEventListener('mouseup', mouseup); 
-// };
-// body.addEventListener('mouseup', mouseup); 
+//     body.addEventListener('mouseup', mouseup); 
 
-// function mousemove(e) {
-//     var x = e.clientX;
-//     var y = e.clientY;
-
-// }
-
-// // 캡쳐한 이미지 저장
-// function save(canvas) {
-//     if(navigator.msSaveBlob) {
-//         var blob = canvas.msToBlob();
-//         return navigator.msSaveBlob(blob, 'lob.jpg');
-//     } else {
-//         var el = document.getElementById('target');
-//         el.href = canvas.toDataURL('image/jpeg');
-//         el.download = 'lob.jpg';
-//         el.click();
+//     // 캡쳐한 이미지 저장
+//     function save(canvas) {
+//         if(navigator.msSaveBlob) {
+//             var blob = canvas.msToBlob();
+//             return navigator.msSaveBlob(blob, 'lob.png');
+//         } else {
+//             var el = document.getElementById('target');
+//             el.href = canvas.toDataURL('image/png');
+//             el.download = 'lob.png';
+//             el.click();
+//         }
 //     }
 // }
 
+
+
+// const screenshotTarget = document.body;
+// html2canvas(screenshotTarget).then((canvas) => {
+//     const base64image = canvas.toDataURL("image/png");
+//     window.location.href = base64image;
+// });
 
 
 /**

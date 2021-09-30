@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AUSZEIT : LOB</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=Neucha&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +16,7 @@
 		<div class="toggle"></div>
 		<nav>
 			<ul class="active">
-				<li><a href="index.html">HOME</a></li>
+				<li><a href="home.html">HOME</a></li>
 				<li><a href="meditation.html">MEDITATION</a></li>
 				<li><a href="lob.html">LOB</a></li>
 				<li><a href="wunsch.html">WUNSCHSTERN</a></li>
@@ -37,17 +37,19 @@
 		<form class="name">
 			<input class="nameInput" type="text" placeholder="Wie heißen Sie ?"/>
 		</form>
-
 		<p class="js-compliment compliment" id="lob"></p>
-		
+
 		<div id="btn">
-			<button id="btn1">weiter !</button>
-			<button id="btn2" onclick="window.location.reload()">zurück</button>
-			<button id="btn3" onclick=screenShot()>speichern</button>
+			<button id="btn1">WEITER</button>
+			<button id="btn2" onclick="window.location.reload()">ZURÜCK</button>
+			<button id="btn3">BEIFALL</button>
 		</div>
 	</section>
 
-	<script src="./html2canvas/html2canvas.min.js"></script>
+	<audio class="beifall1" controls src="audios/applause1.mp3" hidden></audio>
+	<audio class="beifall2" controls src="audios/applause2.mp3" hidden></audio>
+	<audio class="beifall3" controls src="audios/applause3.mp3" hidden></audio>
+
 	<script src="lob.js"></script>
 </body>
 </html>

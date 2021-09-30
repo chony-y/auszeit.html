@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : MEDITATION</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=Neucha&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +16,7 @@
 		<div class="toggle"></div>
 		<nav>
 			<ul class="active">
-				<li><a href="index.html">HOME</a></li>
+				<li><a href="home.html">HOME</a></li>
 				<li><a href="meditation.html">MEDITATION</a></li>
 				<li><a href="lob.html">LOB</a></li>
 				<li><a href="wunsch.html">WUNSCHSTERN</a></li>
@@ -32,6 +32,8 @@
 			navigation.classList.toggle('active');
 		};
 	</script>
+
+	
 
 	<div class="container">
 		<div class="split left up">
@@ -49,7 +51,7 @@
 				<!-- Möchten Sie negative Energie oder Gedanken<br>
 				nicht in ihr Privatleben mitnehmen ? -->
 				Vergessen Sie Ihren Stress und die negative Energie, <br>
-		 		die bei der Arbeit aufgenommen sind, mit der Meditation 
+		 		die bei der Arbeit aufgenommen wird, mit dieser Meditation 
 			</p>
 			<!-- <p>
 				Eine Meditationszeit nach der Arbeit soll Ihnen helfen, <br>
@@ -60,18 +62,31 @@
 		</div>
 	</div>
 
-	<p class="medi-einleitung">
+	<div class="medi-einleitung">
 		Setzen Sie sich so, dass es für Sie angenehm ist. 
 		Dafür können Sie sich beispielsweise an den Schreibtisch 
 		oder auf den Boden setzen. Sie können Ihre Augen schließen 
 		oder dem Video entspannt folgen.
-	</p>
+	</div>
+
+	<div id="video-vor">
+		<video poster="" controls controlsList="nodownload">
+			<source src="videos/video_vor2.mp4"> 
+			<track kind="subtitles" srclang="de" src="videos/sub_vor.vtt" label="Deutsch" default> 
+			<track kind="subtitles" srclang="de" src="videos/sub_vor.srt" label="Deutsch"> 
+			<!-- <track kind="subtitles" src="" srclang="en" label="English">
+			<track kind="subtitles" src="" srclang="ko" label="한국어"> default는 자막 여러개일 때-->
+		</video>
+		<img class="close1" src="images/close01.png">
+	</div>
+
+	<div id="video-nach">
+		<video src="videos/video_nach.mp4" poster="" controls autoplay></video>
+		<img class="close2" src="images/close01.png">
+	</div>
+
 
 	<script src="meditation.js"></script>
-
-    <!--
-		<audio class="music" controls autoplay src="audios/lofi-ocean-waves.mp3"></audio>
-	-->
 </body>
 </html>
 

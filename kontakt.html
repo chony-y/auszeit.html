@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : KONTAKT</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=Neucha&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +16,7 @@
 		<div class="toggle"></div>
 		<nav>
 			<ul class="active">
-				<li><a href="index.html">HOME</a></li>
+				<li><a href="home.html">HOME</a></li>
 				<li><a href="meditation.html">MEDITATION</a></li>
 				<li><a href="lob.html">LOB</a></li>
 				<li><a href="wunsch.html">WUNSCHSTERN</a></li>
@@ -36,7 +36,7 @@
 <section class="kontakt-body">
 		
 	<div class="kontakt-top">
-		<img class="kontakt-background" src="images/stern_bg.png">
+		<img class="kontakt-background" src="images/stern_bg2.png">
 		<img class="kontakt-logo" src="images/logo.png">
 		<h2>MENTALE AUSZEIT</h2><br>
 		<p>
@@ -55,7 +55,35 @@
 
 <div class="kontakt-bottom">
 	<h2>KONTAKT</h2><br>
-	<div class="kontakt-input">
+	<form name="frmContact" method="post" action="config2.php">
+		<div class="kontakt-input">
+			<div class="kontakt-input-item w50">
+				<input name="txtName" id="txtName" type="text" required>
+				<span>VORNAME</span>
+			</div>
+			<div class="kontakt-input-item w50">
+				<input name="txtName2" id="txtName2" type="text" required>
+				<span>NACHNAME </span>
+			</div>
+			<div class="kontakt-input-item w50">
+				<input name="txtEmail" id="txtEmail" type="text" required>
+				<span>EMAIL ADDRESSE</span>
+			</div>
+			<div class="kontakt-input-item w50">
+				<input name="txtPhone" id="txtPhone" type="text" required>
+				<span>HANDYNUMMER</span>
+			</div>
+			<div class="kontakt-input-item w100">
+				<textarea name="txtMessage" id="txtMessage" required></textarea>
+				<span>NACHRICHT</span>
+			</div>
+			<div class="kontakt-input-item">
+				<input id="Submit" type="submit" value="ABSCHICKEN"><br>
+			</div>
+		</div>	
+	</form>
+
+	<!-- <div class="kontakt-input">
 		<div class="kontakt-input-item w50">
 			<input type="text" required>
 			<span>VORNAME</span>
@@ -65,7 +93,7 @@
 			<span>NACHNAME </span>
 		</div>
 		<div class="kontakt-input-item w50">
-			<input type="email" required>
+			<input type="text" required>
 			<span>EMAIL ADDRESSE</span>
 		</div>
 		<div class="kontakt-input-item w50">
@@ -79,7 +107,7 @@
 		<div class="kontakt-input-item">
 			<input type="submit" value="ABSCHICKEN"><br>
 		</div>
-	</div>
+	</div> -->
 	
 
 	<p class="copyright">
