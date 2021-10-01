@@ -1,10 +1,11 @@
-window.addEventListener("scroll", () => {   
-	let mouse = document.getElementsByClassName('mouse-scroll2');
+// window.addEventListener("scroll", () => {   
+// 	let mouse = document.getElementsByClassName('mouse-scroll2');
 
-	if(window.scrollY < 0) {
-		document.getElementsByClassName('mouse-scroll2').style.display = 'none';
-	}
-});
+// 	if(window.scrollY < 0) {
+// 		document.getElementsByClassName('mouse-scroll2').style.display = 'none';
+// 	}
+// });
+
 
 // window.addEventListener("scroll", () => {   
 

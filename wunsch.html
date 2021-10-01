@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AUSZEIT : WUNSCHSTERN</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&family=swap" rel="stylesheet">
+    <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Neucha&family=Rajdhani:wght@300;400;500;600&family=Staatliches&display=swap" rel="stylesheet" as="font" crossorigin> -->
 	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body class="wunsch">
@@ -16,7 +16,7 @@
 		<div class="toggle"></div>
 		<nav>
 			<ul class="active">
-				<li><a href="index.html">HOME</a></li>
+				<li><a href="home.html">HOME</a></li>
 				<li><a href="meditation.html">MEDITATION</a></li>
 				<li><a href="lob.html">LOB</a></li>
 				<li><a href="wunsch.html">WUNSCHSTERN</a></li>
@@ -45,11 +45,11 @@
 
 	<section class="wunsch-section" id="wunsch-top">
 		<section class="stern-text">
-			<h2>WAS WÜNSCHEN SIE SICH ?</h2>
+			<h2>Was wünschen Sie sich ?</h2>
 			<p>
 				Wann haben Sie das letzte Mal auf Ihre innere Stimme gehört ? <br>
-				Wir verpassen oft Signale, die uns unser Bewusstsein sendet. <br>
-				Sternschnuppen fallen und es ist Zeit, sich etwas zu wünschen.<br>
+				<!-- Wir verpassen oft Signale, die uns unser Bewusstsein sendet. <br> -->
+				Sternschnuppen fallen und es ist Zeit, sich etwas zu wünschen<br>
 			</p>
 		</section>
 	</section>
@@ -58,7 +58,7 @@
 		<h2>Schreiben Sie hier Ihren Wunsch</h2>
 		<p>
 			Hören Sie einfach auf Ihr Herz <br>
-			und drücken Sie nicht innerlich, sondern in Worten aus.
+			und drücken Sie nicht innerlich, sondern in Worten aus
 		</p>
 
 		<form name="frmWishes" method="post" action="config.php">
@@ -101,10 +101,34 @@
 			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8">Ich wünsche mich eine friedliche Welt wünschen♥️</span></div>
 			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9">Ich wünsche meine Oma viel Kraft und Durchhaltevermögen, bis sie wieder gesund ist. Gute Besserung und ich freue mich darauf, sie bald in alter Frische wiederzusehen. - Leonie</span></div>
 			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10">Wir wünschen Ihnen und Ihrer Familie viel Spaß beim Durchklicken. - Mentale Auszeit</span></div>
+			
+			<!-- <?php
 
-			<h2>Sie können andere Wünsche sehen</h2>
-			<p>
-				Bewege den Cursor über die Sterne 
+			include "dbConn.php"; // Using database connection file here
+			
+			$records = mysqli_query($db,"select * from tblemp"); // fetch data from database
+			
+			while($data = mysqli_fetch_array($records))
+			{
+			#?>
+			  <tr>
+				<td><?php echo $data['id']; ?></td>
+				<td><?php echo $data['fullname']; ?></td>
+				<td><?php echo $data['age']; ?></td>
+			  </tr>	
+			<?php
+			}
+			#?>
+			<?php mysqli_close($db); // Close connection ?> -->
+
+			<p class="ending-com">
+				Bewegen Sie den Cursor über die Sterne.
+				Sie können andere Wünsche sehen
+			</p>
+
+			<p class="ending-phone">
+				Klicken Sie auf die Sterne <br>
+				Sie können andere Wünsche sehen
 			</p>
 		</section>
 	</main>

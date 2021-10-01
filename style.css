@@ -1,10 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Rajdhani:wght@300;400;500;600;700&family=Staatliches&display=swap');
 /*
 font-family: 'Staatliches', cursive;
 font-family: 'Rajdhani', sans-serif;
 font-family: 'Neucha', cursive;
 */
 
+/* staatliches */
+@font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+	font-display: fallback;  
+    src: local(''), 
+		 url('fonts/staatliches-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	 	 url('fonts/staatliches-regular.woff') format('woff'), /* Modern Browsers */ 
+         url('fonts/staatliches-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('fonts/staatliches-v6-latin-regular.svg#Staatliches') format('svg'); /* Legacy iOS */
+}
+/* bebas-neue  */
+@font-face {
+	font-family: 'Bebas Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-display: fallback; 
+	src: local(''),
+		 url('fonts/bebas-neue.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/bebas-neue.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/bebas-neue.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* rajdhani-300 */
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 300;
+	src: local(''),
+		 url('fonts/rajdhani-300.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/rajdhani-300.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/rajdhani-300.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* rajdhani-400 */
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('fonts/rajdhani-400.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/rajdhani-400.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/rajdhani-400.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* rajdhani-500 */
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 500;
+	src: local(''),
+		 url('fonts/rajdhani-500.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/rajdhani-500.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/rajdhani-500.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* rajdhani-600 */
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+	 	 url('fonts/rajdhani-600.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/rajdhani-600.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/rajdhani-600.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* neucha-regular */
+@font-face {
+	font-family: 'Neucha';
+	font-style: normal;
+	font-weight: 400;
+	font-display: fallback; 
+	src: local(''),
+	 	 url('fonts/neucha-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/neucha-regular.woff') format('woff'), /* Modern Browsers */
+		 url('fonts/neucha-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
 
 html {
 	box-sizing: border-box;
@@ -198,7 +271,7 @@ img {
 	height: auto;
 }
 .page-title {
-	font-family: 'Staatliches', cursive;
+	font-family: 'Staatliches', 'Bebas Neue', cursive; /*'Staatliches'*/
 	letter-spacing: 4px;
 	line-height: 1.1;
 	font-size: 80px;
@@ -302,7 +375,7 @@ footer ul li a:hover {
 	letter-spacing: 7px;
 	transition: 1s;
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
 	section.index-width {
 		padding: 0;
 	}
@@ -530,7 +603,7 @@ track {
 	font-size: 18px;
 	font-weight: 400;
 }
-@media(max-width: 800px) {
+@media(max-width: 780px) {
 	.left-title, .right-title {
 		color: white;
 		font-size: 33px;
@@ -730,7 +803,7 @@ input.nameInput {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
 	.lobs {
 		min-height: 105vh;
 		width: 100%;
@@ -1126,7 +1199,7 @@ section.sternschnuppe {
 	animation-delay: -2.3s;
 	animation-duration: 1.5s;
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
 	body.wunsch {
 		width: 100%;
 		font-size: 16px;
@@ -1439,7 +1512,7 @@ kontakt
 	padding-top: 7vh;
 	padding-bottom: 5vh;
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
 	.kontakt-body {
 		height: 87vh; /* 파란부분 높이 */
 		overflow-x: hidden;
