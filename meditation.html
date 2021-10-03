@@ -36,7 +36,7 @@
 	
 
 	<div class="container">
-		<div class="split left up">
+		<div class="split left">
 			<h3 class="left-title">VOR DER ARBEIT</h3>
 			<p class="left-text">
 				<!-- Möchten Sie den Tag gut anfangen ?<br>
@@ -44,8 +44,13 @@
 				Nehmen Sie sich nur fünf Minuten vor der Arbeit und <br>
 				fangen Sie Ihre Arbeit mit einer innerlichen Ruhe an
 			</p>
+			<span class="medi-einleitung">
+				Setzen Sie sich so, dass es für Sie angenehm ist. <br>
+				Dafür können Sie sich beispielsweise an den Schreibtisch oder auf den Boden setzen.<br> 
+				Sie können Ihre Augen schließen oder dem Video entspannt folgen.
+			</span>
 		</div>
-		<div class="split right down">
+		<div class="split right">
 			<h3 class="right-title">NACH DER ARBEIT</h3>
 			<p class="right-text">
 				<!-- Möchten Sie negative Energie oder Gedanken<br>
@@ -53,6 +58,11 @@
 				Vergessen Sie Ihren Stress und die negative Energie, <br>
 		 		die bei der Arbeit aufgenommen wird, mit dieser Meditation 
 			</p>
+			<span class="medi-einleitung">
+				Setzen Sie sich so, dass es für Sie angenehm ist. <br>
+				Dafür können Sie sich beispielsweise an den Schreibtisch oder auf den Boden setzen.<br> 
+				Sie können Ihre Augen schließen oder dem Video entspannt folgen.
+			</span>
 			<!-- <p>
 				Eine Meditationszeit nach der Arbeit soll Ihnen helfen, <br>
 				die negative Energie, die Sie während des Tages aufgenommen <br>
@@ -62,30 +72,41 @@
 		</div>
 	</div>
 
-	<div class="medi-einleitung">
-		Setzen Sie sich so, dass es für Sie angenehm ist. 
-		Dafür können Sie sich beispielsweise an den Schreibtisch 
-		oder auf den Boden setzen. Sie können Ihre Augen schließen 
-		oder dem Video entspannt folgen.
-	</div>
-
 	<div id="video-vor">
+		<div class="medi-einleitung2">
+			Setzen Sie sich so, dass es für Sie angenehm ist. <br>
+			z.B. an den Schreibtisch oder auf den Boden. <br>
+			Sie können Ihre Augen schließen oder  <br>
+			dem Video entspannt folgen.
+		</div>
+
 		<video poster="" controls load="" controlsList="nodownload">
-			<source src="videos/video_vor.mp4"> 
+			<source src="videos/video_vor.mp4" type="video/mp4"> 
+			<source src="videos/video_vor.webm" type="video/webm"> 
 			<track kind="subtitles" srclang="de" src="videos/sub_vor_deutsch.vtt" label="Deutsch" default> 
 			<!-- <track kind="subtitles" srclang="de" src="videos/sub_vor.srt" label="Deutsch">  -->
 			<!-- <track kind="subtitles" src="" srclang="en" label="English">
 			<track kind="subtitles" src="" srclang="ko" label="한국어"> default는 자막 여러개일 때-->
 		</video>
-		<img class="close1" src="images/close01.png">
+		<img id="close1" class="close-vor" src="images/close01.png">
+		<img id="close2" class="close-vor" src="images/close01.png">
 	</div>
 
 	<div id="video-nach">
+		<div class="medi-einleitung2">
+			Setzen Sie sich so, dass es für Sie angenehm ist. <br>
+			z.B. an den Schreibtisch oder auf den Boden. <br>
+			Sie können Ihre Augen schließen oder  <br>
+			dem Video entspannt folgen.
+		</div>
+
 		<video poster="" controls load="" controlsList="nodownload">
-			<source src="videos/video_nach.mp4"> 
+			<source src="videos/video_nach.mp4" type="video/mp4"> 
+			<source src="videos/video_nach.webm" type="video/webm"> 
 			<track kind="subtitles" srclang="de" src="videos/sub_nach_deutsch.vtt" label="Deutsch" default>
 		</video>
-		<img class="close2" src="images/close01.png">
+		<img id="close3" class="close-nach" src="images/close01.png">
+		<img id="close4" class="close-nach" src="images/close01.png">
 	</div>
 
 	<script src="meditation.js"></script>

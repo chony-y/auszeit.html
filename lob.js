@@ -112,7 +112,7 @@ function randomItem(a) {
  */
 var i = 0;
 var txt =  randomItem(lob_ex);
-var speed = 100;
+var speed = 120;
 
 function typeWriter() {
     if (i < txt.length) {
@@ -121,7 +121,7 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
     if (i == (txt.length)){
-        setTimeout(showButtons, 1000);
+        setTimeout(showButtons, 2000);
     }
 }
 
@@ -144,15 +144,15 @@ function hideButtons() {
 }
 
 // Button_weiter
-document.getElementById('btn1').onclick = function weiter() {
-    mehrLob();
+document.querySelector('.btn1').onclick = function weiter() {
+    mehrLob(); 
 }
 
 // Button_Beifall
 var beifall1 = document.querySelector('.beifall1');
 var beifall2 = document.querySelector('.beifall2');
 var beifall3 = document.querySelector('.beifall3');
-document.getElementById('btn3').onclick = function clap() {
+document.querySelector('.btn3').onclick = function clap() {
     beifall1.play();
     beifall2.play();
     beifall3.play();

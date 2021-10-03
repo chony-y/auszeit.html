@@ -57,8 +57,8 @@
 	<main class="wunsch-section" id="wunsch-main">
 		<h2>Schreiben Sie hier Ihren Wunsch</h2>
 		<p>
-			Hören Sie einfach auf Ihr Herz <br>
-			und drücken Sie nicht innerlich, sondern in Worten aus
+			Hören Sie einfach auf Ihr Herz und drücken Sie nicht innerlich, <br>
+			sondern in Worten aus
 		</p>
 
 		<form name="frmWishes" method="post" action="config.php">
@@ -76,31 +76,18 @@
 				</div>
 			</div>
 		</form>
-		<!-- <div class="wunsch-input">
-			<div class="wunsch-input-item w100">
-				<textarea required></textarea>
-				<span>WAS WÜNSCHEN SIE SICH ?</span>
-			</div>
-			<div class="wunsch-input-item w50">
-				<input type="text" required>
-				<span>NAME</span>
-			</div>
-			<div class="wunsch-input-item">
-				<input type="submit" value="WÜNSHCEN"><br>
-			</div>
-		</div> -->
 
 		<section class="andere-wunsche">
-			<div id="wunsch1"><span class="wunsch-text" id="wunsch-text1">Ich wunsche, dass meine Familie glücklich und gesund ist - Ann</span></div>
-			<div id="wunsch2"><span class="wunsch-text" id="wunsch-text2">Ich möchte dieses Jahr zum Abteilungsleiter aufrücken. - Lena </span></div>
-			<div id="wunsch3"><span class="wunsch-text" id="wunsch-text3">wünsche meinen Kindern das Beste. - Ebi</span></div>
-			<div id="wunsch4"><span class="wunsch-text" id="wunsch-text4">Seit Corona ist es schwierig, den Haushalt zu finanzieren. Ich wünsche mich 2022 ein stabiles Wirtschaftswachstum. - Pia</span></div>
-			<div id="wunsch5"><span class="wunsch-text" id="wunsch-text5">Es geht mir sehr gut, ich könnte mir nichts Besseres wünschen :) - Marco</span></div>
-			<div id="wunsch6"><span class="wunsch-text" id="wunsch-text6">wünsche alle ein gesegnetes und wunderschönes Jahr. - Chony</span></div>
-			<div id="wunsch7"><span class="wunsch-text" id="wunsch-text7">ich hoffe ich kann die wichtigste Präsentation gut hinter mir bringen. - Hannah</span></div>
-			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8">Ich wünsche mich eine friedliche Welt wünschen♥️</span></div>
-			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9">Ich wünsche meine Oma viel Kraft und Durchhaltevermögen, bis sie wieder gesund ist. Gute Besserung und ich freue mich darauf, sie bald in alter Frische wiederzusehen. - Leonie</span></div>
-			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10">Wir wünschen Ihnen und Ihrer Familie viel Spaß beim Durchklicken. - Mentale Auszeit</span></div>
+			<div id="wunsch1"><span class="wunsch-text" id="wunsch-text1">Ich wunsche, dass meine Familie glücklich und gesund ist<br>- Ann</span></div>
+			<div id="wunsch2"><span class="wunsch-text" id="wunsch-text2">Ich hoffe, dass ich dieses Jahr zum Abteilungsleiter aufrücken kann und meine Familie ein glückliches Leben führen kann.<br>- Oskar</span></div>
+			<div id="wunsch3"><span class="wunsch-text" id="wunsch-text3">Seit Corona ist es schwierig, den Haushalt zu finanzieren. Ich wünsche mich 2022 ein stabiles Wirtschaftswachstum.<br>- Pia</span></div>
+			<div id="wunsch4"><span class="wunsch-text" id="wunsch-text4">wünsche meinen Kindern das Beste.<br>- Ebi</span></div>
+			<div id="wunsch5"><span class="wunsch-text" id="wunsch-text5">Es geht mir sehr gut, ich könnte mir nichts Besseres wünschen :)<br>- Marco</span></div>
+			<div id="wunsch6"><span class="wunsch-text" id="wunsch-text6">Ich wünschte, es würde wieder wärmer werden. Es wird immer kühler, sodass ich nicht viel Zeit im Freien verbringen konnte.<br>- Chony</span></div>
+			<div id="wunsch7"><span class="wunsch-text" id="wunsch-text7">Ich würde gerne ein Team von Entwicklern leiten, das an neuen Technologien für das Internet und die mobile Telekommunikation arbeitet.<br>- Elias</span></div>
+			<div id="wunsch8"><span class="wunsch-text" id="wunsch-text8">Ich wünsche mich eine friedliche Welt wünschen♥️<br>- Nora</span></div>
+			<div id="wunsch9"><span class="wunsch-text" id="wunsch-text9">Ich wünsche meine Oma viel Kraft und Durchhaltevermögen, bis sie wieder gesund ist. Gute Besserung und ich freue mich darauf, sie bald in alter Frische wiederzusehen.<br>- Lilli</span></div>
+			<div id="wunsch10"><span class="wunsch-text" id="wunsch-text10">Wir wünschen Ihnen viel Spaß beim Durchklicken und von ganzen Herzen alles Gute. <br>- Mentale Auszeit</span></div>
 			
 			<!-- <?php
 
@@ -113,8 +100,9 @@
 			#?>
 			  <tr>
 				<td><?php echo $data['id']; ?></td>
-				<td><?php echo $data['fullname']; ?></td>
-				<td><?php echo $data['age']; ?></td>
+				<td><?php echo $data['wish']; ?></td>
+				<td><?php echo $data['name']; ?></td>
+				<td><?php echo $data['date']; ?></td>
 			  </tr>	
 			<?php
 			}

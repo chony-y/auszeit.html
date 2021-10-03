@@ -6,22 +6,22 @@ font-family: 'Neucha', cursive;
 
 /* staatliches */
 @font-face {
-    font-family: 'Staatliches';
+    font-family: Staatliches;
     font-style: normal;
     font-weight: 400;
-	font-display: fallback;  
+	font-display: block;  
     src: local(''), 
 		 url('fonts/staatliches-regular.woff2') format('woff2'), /* Super Modern Browsers */
 	 	 url('fonts/staatliches-regular.woff') format('woff'), /* Modern Browsers */ 
          url('fonts/staatliches-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-		 url('fonts/staatliches-v6-latin-regular.svg#Staatliches') format('svg'); /* Legacy iOS */
+		 url('fonts/staatliches-regular.svg#Staatliches') format('svg'); /* Legacy iOS */
 }
 /* bebas-neue  */
 @font-face {
 	font-family: 'Bebas Neue';
 	font-style: normal;
 	font-weight: 400;
-	font-display: fallback; 
+	font-display: block; 
 	src: local(''),
 		 url('fonts/bebas-neue.woff2') format('woff2'), /* Super Modern Browsers */
 		 url('fonts/bebas-neue.woff') format('woff'), /* Modern Browsers */
@@ -29,7 +29,7 @@ font-family: 'Neucha', cursive;
 }
 /* rajdhani-300 */
 @font-face {
-	font-family: 'Rajdhani';
+	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),
@@ -39,7 +39,7 @@ font-family: 'Neucha', cursive;
 }
 /* rajdhani-400 */
 @font-face {
-	font-family: 'Rajdhani';
+	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
@@ -49,7 +49,7 @@ font-family: 'Neucha', cursive;
 }
 /* rajdhani-500 */
 @font-face {
-	font-family: 'Rajdhani';
+	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: 500;
 	src: local(''),
@@ -59,7 +59,7 @@ font-family: 'Neucha', cursive;
 }
 /* rajdhani-600 */
 @font-face {
-	font-family: 'Rajdhani';
+	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: 600;
 	src: local(''),
@@ -69,10 +69,10 @@ font-family: 'Neucha', cursive;
 }
 /* neucha-regular */
 @font-face {
-	font-family: 'Neucha';
+	font-family: Neucha;
 	font-style: normal;
 	font-weight: 400;
-	font-display: fallback; 
+	font-display: block; 
 	src: local(''),
 	 	 url('fonts/neucha-regular.woff2') format('woff2'), /* Super Modern Browsers */
 		 url('fonts/neucha-regular.woff') format('woff'), /* Modern Browsers */
@@ -81,16 +81,17 @@ font-family: 'Neucha', cursive;
 
 html {
 	box-sizing: border-box;
+	font-family: sans-serif;
 }
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: Rajdhani, sans-serif;
 }
 body {
 	color: black;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: Rajdhani, sans-serif;
 	font-size: 20px;
 	height: auto;
 }
@@ -271,7 +272,7 @@ img {
 	height: auto;
 }
 .page-title {
-	font-family: 'Staatliches', 'Bebas Neue', cursive; /*'Staatliches'*/
+	font-family: Staatliches, 'Bebas Neue', cursive; /*'Staatliches'*/
 	letter-spacing: 4px;
 	line-height: 1.1;
 	font-size: 80px;
@@ -425,8 +426,9 @@ footer ul li a:hover {
 meditation 
 */
 .meditation-body {
-	background-color: #9197a0;
+	background-color: #7e848d;
 	/* position: relative; */
+	font-family: Rajdhani, sans-serif;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -438,7 +440,7 @@ meditation
 	position: absolute;
 	display: block;
 	color: rgb(206, 227, 236);
-	font-family: 'Neucha', cursive;
+	font-family: Neucha, cursive;
 	font-size: 65px;
 	font-weight: 600;
 	letter-spacing: 5px;
@@ -451,20 +453,40 @@ meditation
 	padding: 0;
 	margin: 0;
 }
-.left-title:hover, .right-title:hover {
-	color: white; /*#F2B729 #F6B65A*/
-	text-shadow: 0px -30px 0px rgba(255, 255, 255, 0.08),
-	             0px -60px 0px rgba(255, 255, 255, 0.03);
-	/* border-top: 2px solid whitesmoke; */
-	letter-spacing: 3px;
-	transition: 0.4s;
-	cursor: pointer;
+@media (hover: hover) {
+	.left-title:hover, .right-title:hover {
+		color: white; /*#F2B729 #F6B65A*/
+		text-shadow: 0px -25px 0px rgba(255, 255, 255, 0.07),
+					 0px -50px 0px rgba(255, 255, 255, 0.03);
+		/* border-bottom: 2px solid whitesmoke; */
+		letter-spacing: 3px;
+		transition: 0.4s;
+		cursor: pointer;
+	}
+	/* .left:hover {
+		width: 60%;
+	}
+	.left:hover + .right {
+		width: 40%;
+	}
+	.left:hover + .right:before {
+		z-index: 100;
+	}
+	.right:hover {
+		width: 60%;
+	}
+	.right:hover + .left {
+		width: 40%;
+	}
+	.right:hover + .left:before {
+		z-index: 100;
+	} */
 }
 .left-text, .right-text {
 	position: absolute;
 	display: block;
 	color: whitesmoke;
-	font-size: 20px;
+	font-size: 21px;
 	font-weight: 300;
 	line-height: 1.2;
 	text-align: center;
@@ -480,6 +502,40 @@ meditation
 	height: 100%;
 	overflow: hidden;
 }
+.split .medi-einleitung {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	display: block;
+	color: whitesmoke;
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 1.6;
+	letter-spacing: 0.2px;
+	text-align: center;
+	left: 50%;
+	top: 51%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	z-index: 101;
+}
+.medi-einleitung2 {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	color: whitesmoke;
+	font-size: 15.5px;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.2px;
+	justify-content: center;
+	text-align: center;
+	left: 50%;
+	top: 78%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	z-index: 1000;
+}
 .split.left {
 	left: 0;
 	background: url(images/wave_illust1.jpg) center center no-repeat;
@@ -490,7 +546,7 @@ meditation
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(12, 39, 63, 0.6);
+	background-color: rgba(12, 39, 63, 0.5);
 	/*try1이랑 잘어울림 rgba(68, 144, 153, 0.7)*/
 	z-index: 1;
 }
@@ -504,7 +560,7 @@ meditation
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(12, 39, 63, 0.6);
+	background-color: rgba(12, 39, 63, 0.5);
 	z-index: 1;
 }
 .split.left, .split.right, .split.left:before, .split.right:before {
@@ -533,36 +589,66 @@ meditation
 	width: 100%;
 	transition: 2.5s ease-in;
 }
+.click-left .left-title, .click-left .left-text {
+	visibility: hidden;
+	opacity: 0;
+	transition: 2s ease-in;
+	transition-delay: 0.5s;
+}
 .click-left .right {
 	width: 30%;
 	right: -30%;
 	transition: 2.5s ease-in;
 }
-.click-left .right-title, .click-left .right-text {
-	animation: animateM 0.5s ease-in;
-	animation-fill-mode: forwards;
+.click-left .split.left:before, .click-left .split.right:before {
+	background-color: rgba(12, 39, 63, 0.75);
+	transition: 1.5s ease-in;
+	transition-delay: 2s;
 }
+.click-left .medi-einleitung{
+	visibility: visible;
+	opacity: 1;
+	transition: 1.5s ease-in;
+	transition-delay: 2.8s;
+}
+.click-left .right-title, .click-left .right-text {
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.7s ease-in;
+}
+
 .click-right .right {
 	width: 100%;
 	transition: 2.5s ease-in;
+}
+.click-right .right-title, .click-right .right-text {
+	visibility: hidden;
+	opacity: 0;
+	transition: 2s ease-in;
+	transition-delay: 0.5s;
 }
 .click-right .left {
 	width: 30%;
 	left: -30%;
 	transition: 2.5s ease-in;
 }
+.click-right .split.right:before, .click-right .split.left:before {
+	background-color: rgba(12, 39, 63, 0.75);
+	transition: 1.5s ease-in;
+	transition-delay: 2s;
+}
+.click-right .medi-einleitung{
+	visibility: visible;
+	opacity: 1;
+	transition: 1.5s ease-in;
+	transition-delay: 2.8s;
+}
 .click-right .left-title, .click-right .left-text {
-	animation: animateM 0.5s ease-in;
-	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.7s ease-in;
 }
-@keyframes animateM {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
+
 #video-vor, #video-nach {
 	/* display: none;
 	position: relative; */
@@ -584,115 +670,177 @@ meditation
 #video-vor.active, #video-nach.active {
 	visibility: visible;
 	opacity: 1;
-	transition-delay: 4s; /*버튼 클릭하고 얼마 후에 비디오 보여지는지*/
+	transition-delay: 11s; /*버튼 클릭하고 얼마 후에 비디오 보여지는지*/
 }
 #video-vor video, #video-nach video {
+	max-width: 1200px;
 	outline: none;
 }
-.close1, .close2 {
+#close1, #close3 {
 	position: absolute;
 	top: 30px;
 	right: 40px;
 	max-width: 30px;
 	cursor: pointer;
+	z-index: 700;
+}
+#close2, #close4  {
+	visibility: hidden;
+	opacity: 0;
 }
 track {
 	color: white;
 	top: 70%;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: Rajdhani, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 }
 @media(max-width: 780px) {
+	.meditation-body {
+		background-color: rgba(20, 20, 29, 0.9);
+		/* position: relative; */
+		width: 100%;
+		height: auto;
+		overflow-y: hidden;
+	}
+	.medi-einleitung {
+		display: none;
+	}
+	.medi-einleitung2 {
+		visibility: hidden;
+		opacity: 0;
+	}
 	.left-title, .right-title {
 		color: white;
 		font-size: 33px;
-		top: 46%;
+		top: 47%;
 	}
 	.left-text, .right-text {
-		color: whitesmoke;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 400;
-		top: 52%;
-		padding-top: 50px;
-		line-height: 1.2;
+		top: 55%;
+		transform: translateX(-50%);
 	} 
 	.split {
 		width: 100%;
 		height: 50%;
 	}
-	.hover-left .left, .hover-left .right, .hover-right .right, .hover-right .left {
-		width: 100%;
-	}
-	.split.up {
-		top: 4%;
+	.split.left {
+		top: 3%;
 		width: 100%;
 		background: url(images/wave_illust3.jpg) center center no-repeat;
-		background-color: rgba(12, 39, 63, 0.6);
 		background-size: cover;
-		position: absolute;
-		content: "";
 		z-index: 1;
 	}
-	/* .split.up:before {
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 100%;
-		background-color: rgba(12, 39, 63, 0.6);
-		z-index: 1;
-	} */
-	.split.down {
-		top: 54%;
+	.split.right {
+		top: 53%;
 		width: 100%;
 		background: url(images/wave_illust4.jpg) center center no-repeat;
-		background-color: rgba(12, 39, 63, 0.6);
 		background-size: cover;
-		position: absolute;
-		content: "";
 		z-index: 1;
 	}
-	/* .split.down:before {
-		position: absolute;
-		content: "";
+	.split.left, .split.right, .split.left:before, .split.right:before {
+		transition: none;
+	}
+	.hover-left .left {
 		width: 100%;
-		height: 100%;
-		background-color: rgba(12, 39, 63, 0.6);
-		z-index: 1;
 	}
-	.split.up, .split.down, .split.up:before, .split.down:before {
-		transition: 2500ms all ease-in-out;
-	}
-	.hover-up .up {
-		top: 0;
-		left: 0;
+	.hover-left .right {
 		width: 100%;
-		height: 65%;
 	}
-	.hover-up .down { 
-		top: 65%;
-		left: 0;
+	.hover-right .right {
 		width: 100%;
-		height: 35%;
 	}
-	.hover-up .down:before {
-		z-index: 100;
-	}
-	.hover-down .down { 
-		top: 35%;
-		left: 0;
-		width: 100%; 
-		height: 70%;
-	}
-	.hover-down .up { 
-		top: 0; 
-		left: 0;
+	.hover-right .left {
 		width: 100%;
-		height: 35%;
 	}
-	.hover-down .up:before {
-		z-index: 100;
+
+	.click-left .left {
+		visibility: hidden;
+		opacity: 0;
+		transition: none;
+	}
+	.click-left .right {
+		visibility: hidden;
+		opacity: 0;
+		transition: none;
+	}
+	.click-left .split.left:before {
+		background-color: rgba(7, 16, 24);
+		transition: none;
+		transition-delay: none;
+		z-index: 500;
+	}
+	.click-left .split.right:before {
+		background-color: rgba(7, 16, 24);
+		transition: none;
+		transition-delay: none;
+		z-index: 500;
+	}
+	/* .click-left .medi-einleitung2{
+		visibility: visible;
+		opacity: 1;
+		transition: 1s;
+		transition-delay: none;
+		z-index: 1000;
 	} */
+
+	.click-right .right {
+		visibility: hidden;
+		opacity: 0;
+		transition: none;
+	}
+	.click-right .left {
+		visibility: hidden;
+		opacity: 0;
+		transition: none;
+	}
+	.click-right .split.right:before {
+		background-color: rgb(7, 16, 24);
+		transition: none;
+		transition-delay: none;
+		z-index: 1000;
+	}
+	.click-right .split.left:before {
+		background-color: rgb(5, 15, 24);
+		transition: none;
+		transition-delay: none;
+		z-index: 500;
+	}
+	/* .click-right .medi-einleitung2{
+		visibility: visible;
+		opacity: 1;
+		transition: 1s;
+		transition-delay: none;
+		z-index: 1000;
+	}  */
+	#video-vor.active, #video-nach.active {
+		visibility: visible;
+		opacity: 1;
+		transition-delay: 0s; /*버튼 클릭하고 얼마 후에 비디오 보여지는지*/
+	}
+	#video-vor.active .medi-einleitung2, #video-nach.active .medi-einleitung2 {
+		visibility: visible;
+		opacity: 1;
+	}
+	#video-vor video, #video-nach video {
+		width: 100%;
+	}
+	#close1, #close3 {
+		visibility: hidden;
+		opacity: 0;
+	}
+	#close2, #close4 {
+		visibility: visible;
+		opacity: 1;
+		position: fixed;
+		top: 27%;
+		right: 10px;
+		transform: translate(-50%, -50%);
+		width: 22px;
+		cursor: pointer;
+		z-index: 700;
+	}
 }
 
 
@@ -701,7 +849,7 @@ lob
 */
 .lobs {
 	min-height: 1000px;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: Rajdhani, sans-serif;
 	margin-top: -30px;
 	background: linear-gradient(130deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	z-index: -1;
@@ -761,7 +909,7 @@ input.nameInput {
 	transform: translate(-50%, -50%);
 	flex-flow: wrap;
 }
-#btn1, #btn2, #btn3 {
+.btn1, .btn2, .btn3 {
 	width: 110px;
 	height: 110px;
 	color: white;
@@ -780,17 +928,19 @@ input.nameInput {
 	background-repeat: repeat-x;
 	background-position: 0 -46%;
 }
-#btn1:hover, #btn2:hover, #btn3:hover {
-	cursor: pointer;
-	/* border: 1px solid none;
-	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3),
-	0 0 0 8px rgba(255, 255, 255, 0.1);
-	background-color: rgba(255, 255, 255, 0.8); */
-	animation: animateH 0.6s infinite ease;
-	transition: 2s ease-out;
-	background-position: 180% 20%;
+@media (hover: hover) {
+	.btn1:hover, .btn2:hover, .btn3:hover {
+		cursor: pointer;
+		/* border: 1px solid none;
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3),
+		0 0 0 8px rgba(255, 255, 255, 0.1);
+		background-color: rgba(255, 255, 255, 0.8); */
+		animation: animateH 0.6s infinite ease;
+		transition: 2s ease-out;
+		background-position: 180% 20%;
+	}
 }
-#btn1:active, #btn2:active, #btn3:active {
+.btn1:active, .btn2:active, .btn3:active {
 	font-weight: 500;
 	transition: 0.1s;
 }
@@ -820,29 +970,24 @@ input.nameInput {
 	}
 	#lob {
 		font-size: 24px;
-		width: 100%;
+		width: 90%;
 	}
 	#btn {
-		top: 81%;
-		width: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		text-align: center;
-		align-content: center;
-	}
-	#btn:active {
-		font-weight: 400;
-	}
-	#btn1, #btn2, #btn3 {
-		max-width: 80px;
-		font-size: 16px;
-		letter-spacing: 1px;
-		padding: 0;
-		margin: 0;
-		background-image: none;
-	}
-	#btn1:hover, #btn2:hover, #btn3:hover {
 		display: none;
+		position: absolute;
+		width: 70%;
+		top: 91%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.btn1, .btn2, .btn3 {
+		width: 60px;
+		height: 60px;
+		font-size: 15px;
+		display: inline-block;
+		padding: 0;
+		margin: 10px;
+		background: none;
 	}
 }
 
@@ -856,11 +1001,11 @@ body.wunsch {
 	box-sizing: border-box;
 	overflow-x: hidden; 
 	/*background-color: #052536;*/
-	background: linear-gradient(183deg, #01141f 5%, #021f2e 15%, #052536 74%, #1d2b47 89%, #603e56 96%, #833b4e 99%, #9b373a 100%);
+	background: linear-gradient(178deg, #01141f 5%, #021f2e 15%, #052536 84%, #2a3346 93%, #833b4e 98.5%, #9b373a 99.5%);
+	/* linear-gradient(178deg, #02141f 10%, #041c29 30%, #052536 81%, #2a3346 93%, #833b4e 99%, #9b373a 99.5%); */
 	color: white;
 	font-size: 20px;
 	font-weight: 300;
-	color:whitesmoke;
 }
 section.sternschnuppe {
 	position: absolute;
@@ -870,15 +1015,15 @@ section.sternschnuppe {
 	background: url(images/stern_bg.png);
 	background-position-x: center;
 	background-size: cover;
-	animation: animateBg 10s linear infinite;
+	animation: animateBg 10s ease-in-out infinite;
 	z-index: -1;
 }
 @keyframes animateBg {
 	0%, 100% {
-		transform: scale(1) rotate(1.4deg); /*회전 좋은데 그러면 사진을 바꿔야*/
+		transform: scale(1) rotate(0deg); /*회전 좋은데 그러면 사진을 바꿔야*/
 	}
 	50% {
-		transform: scale(1.2);
+		transform: scale(1.15) rotate(1.3deg);
 	}
 }
 .sternschnuppe span {
@@ -891,35 +1036,38 @@ section.sternschnuppe {
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
 	0 0 0 4px rgba(255, 255, 255, 0.2),
 	0 0 0 14px rgba(255, 255, 255, 0.03);
-	animation: animateS 5s linear infinite;
+	animation: animateS 2s linear infinite;
 }
 .sternschnuppe span::before {
 	content: '';
 	position: absolute;
 	top: 50%;
 	right: 100%;
-	width: 550px; /*별똥별 꼬리 길이*/
+	width: 580px; /*별똥별 꼬리 길이*/
 	height: 2px; /*별똥별 꼬리 두께*/
 	background: linear-gradient(270deg, rgba(231, 255, 165, 0.35) 10%,  rgba(254, 255, 172, 0.25) 30%, rgba(188, 255, 202, 0.1) 65%, rgba(97, 50, 97, 0.08) 85%, transparent);
 }
 @keyframes animateS {
 	0% {
 		transform: rotate(37deg) translateX(0);
+		opacity: 0.1;
+	}
+	15% {
 		opacity: 1;
 	}
-	70% {
-		opacity: 0.6;
+	94% {
+		opacity: 0.7;
 	}
 	100% {
-		transform: rotate(37deg) translateX(1000px);
-		opacity: 1;
+		transform: rotate(37deg) translateX(550px);
+		opacity: 0;
 	}
 }
 .sternschnuppe span:nth-child(1) {
-	top: 13%;
-	left: 30%;
-	animation-delay: -0.3;
-	animation-duration: 2s;
+	top: 21%;
+	left: 35%;
+	animation-delay: -0.1;
+	animation-duration: 2.4s;
 }
 .sternschnuppe span:nth-child(2) {
 	top: 18%;
@@ -927,31 +1075,31 @@ section.sternschnuppe {
 	animation-delay: -0.2s;
 	animation-duration: 2.1s;
 }
-.sternschnuppe span:nth-child(3) {
-	top: 32%;
-	left: 11%;
-	animation-delay: -0.9s;
-	animation-duration: 2.5s;
+.sternschnuppe span:nth-child(3) { /*왼쪽에서 두번째*/
+	top: 40%;
+	left: 22%;
+	animation-delay: -5.6s;
+	animation-duration: 1.9s;
 }
 .sternschnuppe span:nth-child(4) {
 	top: 20%;
 	right: 40%;
 	animation-delay: -1.6s;
-	animation-duration: 1.5s;
+	animation-duration: 2.0s;
 }
-.sternschnuppe span:nth-child(5) {
-	top: 71%;
-	right: 18%;
+.sternschnuppe span:nth-child(5) { /*맨아래*/
+	top: 68%;
+	right: 19%;
 	animation-delay: -1.5s;
-	animation-duration: 2.1s;
+	animation-duration: 2.4s;
 }
-.sternschnuppe span:nth-child(6) {
-	top: 29%;
-	right: 80%;
-	animation-delay: -2.3s;
-	animation-duration: 3s;
+.sternschnuppe span:nth-child(6) { /*왼쪽에서 세번째*/
+	top: 46%;
+	right: 60%;
+	animation-delay: -1.0s;
+	animation-duration: 2.3s;
 }
-.sternschnuppe span:nth-child(7) {
+.sternschnuppe span:nth-child(7) { /*왼쪽에서 첫번째*/
 	top: 54%;
 	right: 88%;
 	animation-delay: -1.9s;
@@ -971,7 +1119,7 @@ section.sternschnuppe {
 	z-index: 200;
 }
 .stern-text h2 {
-	font-family: 'Neucha', cursive;
+	font-family: Neucha, cursive;
 	letter-spacing: 3px;
 	font-size: 60px;
 	padding-bottom: 7px;
@@ -1013,11 +1161,11 @@ section.sternschnuppe {
 }
 .wunsch-input-item.w50 {
 	width: 200px;
-	min-width: 200px;
+	min-width: 180px;
 }
 .wunsch-input-item.w100 {
 	width: 100%;
-	min-width: 200px;
+	min-width: 180px;
 	/* height: 40px; 높이는 맞는데 하면 겹쳐짐*/ 
 }
 .wunsch-input-item input,
@@ -1033,7 +1181,7 @@ section.sternschnuppe {
 	border: 1px solid white;
 }
 .wunsch-input-item textarea {
-	height: 120px;
+	height: 100px;
 }
 .wunsch-input-item span {
 	position: absolute;
@@ -1069,7 +1217,7 @@ section.sternschnuppe {
 .andere-wunsche {
 	position: relative;
 	margin-top: 800px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .andere-wunsche div {
 	position: absolute;
@@ -1084,7 +1232,8 @@ section.sternschnuppe {
 	z-index: 1;
 }
 .andere-wunsche span {  /* Wunsche text */
-	font-size: 18px;
+	font-size: 17px;
+	line-height: 1.25;
 	visibility: hidden;
     width: 360px;
 	margin-left: -180px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
@@ -1098,8 +1247,12 @@ section.sternschnuppe {
 	position: absolute;
 	z-index: 500;
 }
+.andere-wunsche p {  /* ending-text */
+	top: 95%;
+}
 .ending-phone {
 	visibility: hidden;
+	opacity: 0;
 }
 @keyframes animateA {
 	0% {
@@ -1140,7 +1293,7 @@ section.sternschnuppe {
 	}
 }
 .andere-wunsche #wunsch1 {
-	left: 26%;
+	left: 23%;
 	margin-top: -520px;
 	animation-delay: -1.6s;
 	animation-duration: 1.8s;
@@ -1152,20 +1305,20 @@ section.sternschnuppe {
 	animation-duration: 1.9s;
 }
 .andere-wunsche #wunsch3 {
-	left: 47%;
-	margin-top: -580px;
+	left: 59%;
+	margin-top: -575px;
 	animation-delay: -0.2s;
 	animation-duration: 1.7s;
 }
 .andere-wunsche #wunsch4 {
-	left: 61%;
+	left: 71%;
 	margin-top: -630px;
 	animation-delay: 0;
 	animation-duration: 1.6s;
 }
 .andere-wunsche #wunsch5 {
-	left: 67%;
-	margin-top: -460px;
+	left: 76%;
+	margin-top: -510px;
 	animation-delay: -0.1s;
 	animation-duration: 2.0s;
 }
@@ -1176,19 +1329,19 @@ section.sternschnuppe {
 	animation-duration: 1.8s;
 }
 .andere-wunsche #wunsch7 {
-	left: 31%;
+	left: 33%;
 	margin-top: -277px;
 	animation-delay: -0.9s;
 	animation-duration: 1.9s;
 }
 .andere-wunsche #wunsch8 {
-	left: 39%;
-	margin-top: -374px;
+	left: 49%;
+	margin-top: -384px;
 	animation-delay: -0.7s;
 	animation-duration: 1.7s;
 }
 .andere-wunsche #wunsch9 {
-	left: 52%;
+	left: 65%;
 	margin-top: -315px;
 	animation-delay: 0;
 	animation-duration: 2.0s;
@@ -1315,15 +1468,62 @@ section.sternschnuppe {
 	}
 	.andere-wunsche { 
 		margin-top: 700px; 
+		margin-bottom: 30px;
+	}
+	.andere-wunsche div {  /* andere Wunsche 별 */
+		width: 14px; 
+		height: 14px;
 	}
 	.andere-wunsche span {  /* Wunsche text */
-		font-size: 14px;
-		width: 180px;
-		margin-left: -90px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
+		font-size: 13px;
+		width: 200px;
+		margin-left: -100px; /*중앙맞춤하려고 width반으로 나눈거 뺀거*/
 		background-color: rgba(19, 19, 19, 0.7);
 		border-radius: 3px;
 		padding: 8px 10px; /*메세지 내부 간격*/
 		margin-top: 18px; /*별에서 메세지 간격*/
+	}
+	.andere-wunsche #wunsch1 {
+		margin-top: -390px;
+	}
+	.andere-wunsche #wunsch2 {
+		margin-top: -500px;
+	}
+	.andere-wunsche #wunsch3 {
+		margin-top: -430px;
+	}
+	.andere-wunsche #wunsch4 {
+		margin-top: -475px;
+	}
+	.andere-wunsche #wunsch5 {
+		margin-top: -330px;
+	}
+	.andere-wunsche #wunsch6 {
+		margin-top: -230px;
+	}
+	.andere-wunsche #wunsch7 {
+		margin-top: -147px;
+	}
+	.andere-wunsche #wunsch8 {
+		margin-top: -244px;
+	}
+	.andere-wunsche #wunsch9 {
+		margin-top: -185px;
+	}
+	.andere-wunsche #wunsch10 {
+		margin-top: -225px;
+	}
+	.andere-wunsche #wunsch-text1 {
+		margin-left: -80px;
+	}
+	.andere-wunsche #wunsch-text6 {
+		margin-left: -30px;
+	}
+	.andere-wunsche #wunsch-text5 {
+		margin-left: -140px;
+	}
+	.andere-wunsche #wunsch-text10 {
+		margin-left: -170px;
 	}
 	.andere-wunsche div:active {
 		background-color: rgb(255, 255, 234);
@@ -1333,11 +1533,13 @@ section.sternschnuppe {
 		visibility: visible;
 		animation: none;
 	}
-	.ending-phone {
-		visibility: visible;
-	}
 	.ending-com {
 		display: none;
+	}
+	.ending-phone {
+		visibility: visible;
+		opacity: 1;
+		margin-top: 0;
 	}
 }
 
@@ -1351,7 +1553,7 @@ kontakt
 	width: 100%; 
 	height: 95vh;
 	margin-top: 0;
-	background: linear-gradient(180deg,#398FC1 5%, #419FD5 50%);
+	background: linear-gradient(180deg,#398FC1 5%, #419FD5 97%, white 98%);
 	z-index: -1;
 	overflow-x: none;
 }

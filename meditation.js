@@ -39,22 +39,29 @@ right.addEventListener('mouseleave', () => {
 // });
 
 /*
-Click event 클릭하면 아예 밀려서 덮어버리는거 안되나 
+Click event 
 */
 const lTitle = document.querySelector('.left-title');
 const rTitle = document.querySelector('.right-title');
+const video = document.querySelector('video');
 const vVideo = document.getElementById('video-vor');
 const nVideo = document.getElementById('video-nach');
-const close1 = document.querySelector('.close1');
-const close2 = document.querySelector('.close2');
+const close1 = document.getElementById('close1');
+const close2 = document.getElementById('close2');
+const close3 = document.getElementById('close3');
+const close4 = document.getElementById('close4');
 
 lTitle.addEventListener('click', () => {
 	container.classList.add('click-left');
 	vVideo.classList.toggle('active');
+	video.currentTime = 0;
+	video.pause();
 });
 rTitle.addEventListener('click', () => {
 	container.classList.add('click-right');
 	nVideo.classList.toggle('active');
+	video.currentTime = 0;
+	video.pause();
 });
 close1.addEventListener('click', () => {
 	vVideo.classList.toggle('active');
@@ -62,12 +69,22 @@ close1.addEventListener('click', () => {
 	// window.location.reload();
 });
 close2.addEventListener('click', () => {
+	window.location.reload();
+});
+close3.addEventListener('click', () => {
 	nVideo.classList.toggle('active');
 	nVideo.remove();
 	// window.location.reload();
 });
+close4.addEventListener('click', () => {
+	window.location.reload();
+});
 
 
+/**
+ * getDay() 로컬 시간의 주를 구하는
+ * 일요일 0, 월요일 1, 화요일 2, 수요일 3, 목요일 4, 금요일 5, 토요일 6
+ */
 
 
 // /* 
